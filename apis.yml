@@ -1,23 +1,495 @@
 aid: shipcloud
+
 name: shipcloud
-description: 'shipcloud is a company surfaced via the API Evangelist harvest backlog (source: spectral-ruleset-github)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: shipcloud (shipcloud GmbH) is a German multi-carrier shipping platform that lets online shops, apps and services create shipments,
+  print labels, request pickups and track parcels across many carriers through a single REST API. Its developer portal at developers.shipcloud.io
+  offers concepts, carrier-specific guides, integration tools, examples, an API reference and an OpenAPI spec, with a free developer plan for
+  testing.
+
 url: https://raw.githubusercontent.com/api-evangelist/shipcloud/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:spectral-ruleset-github
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-09 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-09'
+
 modified: '2026-10-09'
+
 tags:
 - Company
-apis: []
+- Shipping
+- Logistics
+- Carriers
+- Labels
+- Tracking
+- E-Commerce
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://developers.shipcloud.io/assets/images/logos/shipcloud_logo.png
+
 common:
+- type: AgenticAccess
+  url: agentic-access/shipcloud-agentic-access.yml
+- type: RateLimits
+  url: rate-limits/shipcloud-rate-limits.yml
+- type: Spectral
+  url: rules/shipcloud-shipcloud-developer-portal-spectral-rules.yml
+- type: Spectral
+  url: rules/shipcloud-rules.yml
+- type: JSONLD
+  url: json-ld/shipcloud-context.jsonld
+- type: Vocabulary
+  url: vocabulary/shipcloud-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/shipcloud-webhooks.yml
+- type: DataModel
+  url: data-model/shipcloud-data-model.yml
+- type: ChangeLog
+  url: changelog/shipcloud-changelog.yml
+- type: Conventions
+  url: conventions/shipcloud-conventions.yml
+- type: Sandbox
+  url: sandbox/shipcloud-sandbox.yml
+- type: Deprecation
+  url: lifecycle/shipcloud-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/shipcloud-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/shipcloud-problem-types.yml
+- type: Conformance
+  url: conformance/shipcloud-conformance.yml
+- type: Overlay
+  url: overlays/shipcloud-api-overlay.yaml
+- type: LLMsTxt
+  url: llms/shipcloud-llms.txt
+- type: SecurityTxt
+  url: well-known/shipcloud-support-security.txt
+- type: SecurityTxt
+  url: well-known/shipcloud-status-security.txt
+- type: WellKnown
+  url: well-known/shipcloud-well-known.yml
+- type: Hosts
+  url: hosts/shipcloud-hosts.yml
+- type: Vendors
+  url: vendors/shipcloud-vendors.yml
+- type: SDKs
+  url: packages/shipcloud-packages.yml
+- type: Packages
+  url: packages/shipcloud-packages.yml
+- type: Authentication
+  url: authentication/shipcloud-authentication.yml
+- type: DomainSecurity
+  url: security/shipcloud-domain-security.yml
 - type: Website
   url: https://www.shipcloud.io/
+- type: SpectralRules
+  url: https://github.com/shipcloud/shipcloud-developer-portal/blob/bc60ff1dbb31cede3a2b512127f1bc195dcc41c4/.spectral.yml
+- type: DeveloperPortal
+  url: https://developers.shipcloud.io/
+- type: Documentation
+  url: https://developers.shipcloud.io/concepts/
+- type: APIReference
+  url: https://developers.shipcloud.io/reference/
+- type: GettingStarted
+  url: https://developers.shipcloud.io/
+- type: Support
+  url: https://developers.shipcloud.io/support
+- type: HelpCenter
+  url: https://support.shipcloud.io/de/
+- type: StatusPage
+  url: https://status.shipcloud.io/
+- type: GitHubOrganization
+  url: https://github.com/shipcloud
+- type: SignUp
+  url: https://app.shipcloud.io/de/users/sign_up?plan=developer
+- type: Login
+  url: https://app.shipcloud.io/users/sign_in/
+- type: Twitter
+  url: https://x.com/shipcloud_devs
+
+apis:
+- aid: shipcloud:shipcloud-addresses-api
+  name: shipcloud Addresses API
+  description: The Addresses API from shipcloud — 2 operation(s) for addresses.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Addresses
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-addresses-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-carriers-api
+  name: shipcloud Carriers API
+  description: The Carriers API from shipcloud — 1 operation(s) for carriers.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Carriers
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-carriers-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-default-returns-address-api
+  name: shipcloud Default Returns Address API
+  description: >-
+    The Default Returns Address API from shipcloud — 1 operation(s) for default returns address.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Default Returns Address
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-default-returns-address-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-default-shipping-address-api
+  name: shipcloud Default Shipping Address API
+  description: >-
+    The Default Shipping Address API from shipcloud — 1 operation(s) for default shipping address.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Default Shipping Address
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-default-shipping-address-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-invoice-address-api
+  name: shipcloud Invoice Address API
+  description: The Invoice Address API from shipcloud — 1 operation(s) for invoice address.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Invoice Address
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-invoice-address-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-manifests-api
+  name: shipcloud Manifests API
+  description: The Manifests API from shipcloud — 2 operation(s) for manifests.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Manifests
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-manifests-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-me-api
+  name: shipcloud Me API
+  description: The Me API from shipcloud — 1 operation(s) for me.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-me-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-orders-api
+  name: shipcloud Orders API
+  description: The Orders API from shipcloud — 2 operation(s) for orders.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-pickup-dropoff-locations-api
+  name: shipcloud Pickup Dropoff Locations API
+  description: >-
+    The Pickup Dropoff Locations API from shipcloud — 1 operation(s) for pickup dropoff locations.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Pickup Dropoff Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-pickup-dropoff-locations-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-pickup-requests-api
+  name: shipcloud Pickup Requests API
+  description: The Pickup Requests API from shipcloud — 2 operation(s) for pickup requests.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Pickup Requests
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-pickup-requests-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-shipment-quotes-api
+  name: shipcloud Shipment Quotes API
+  description: The Shipment Quotes API from shipcloud — 1 operation(s) for shipment quotes.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Shipment Quotes
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-shipment-quotes-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-shipments-api
+  name: shipcloud Shipments API
+  description: The Shipments API from shipcloud — 4 operation(s) for shipments.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Shipments
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-shipments-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-trackers-api
+  name: shipcloud Trackers API
+  description: The Trackers API from shipcloud — 2 operation(s) for trackers.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Trackers
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-trackers-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+- aid: shipcloud:shipcloud-webhooks-api
+  name: shipcloud Webhooks API
+  description: The Webhooks API from shipcloud — 2 operation(s) for webhooks.
+  humanURL: https://developers.shipcloud.io/reference/
+  baseURL: https://api.shipcloud.io/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/shipcloud-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://developers.shipcloud.io/reference/
+  - type: SwaggerUI
+    url: https://developers.shipcloud.io/swagger-ui
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-pickup-dropoff-location-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-put-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-order-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-shipment-response-object-schema.json
+  - type: JSONSchema
+    url: json-schema/shipcloud-current-user-schema.json
+x-enrichment:
+  date: '2026-10-09'
+  status: enriched
+  artifacts_added: 37
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

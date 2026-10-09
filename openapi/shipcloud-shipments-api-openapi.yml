@@ -1,0 +1,2056 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Shipments API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Shipments across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Shipments
+paths:
+  /shipments:
+    get:
+      description: Returns a list of shipments
+      responses:
+        '200':
+          description: A list of shipments.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/shipment_response_object'
+              examples:
+                Shipments list:
+                  value:
+                  - id: 3a186c51d4281acbecf5ed38805b1db92a9d668b
+                    carrier_tracking_no: '84168117830018'
+                    carrier_tracking_url: https://nolp.dhl.de/nextt-online-public/set_identcodes.do?extendedSearch=true&idc=84168117830018
+                    carrier: dhl
+                    service: standard
+                    created_at: '2024-08-27T17:13:12+02:00'
+                    price: 3.4
+                    reference_number: ref123456
+                    notification_email: receiver@notification.com
+                    shipper_notification_email: shipper@notification.com
+                    tracking_url: https://track.shipcloud.io/3a186c51d4
+                    label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+                    from:
+                      id: 522a7cb1-d6c8-418c-ac26-011127ab5bbe
+                      company: Musterfirma
+                      first_name: Hans
+                      last_name: Meier
+                      care_of: null
+                      street: Musterstraße
+                      street_no: '22'
+                      city: Musterstadt
+                      state: null
+                      zip_code: '12345'
+                      country: DE
+                    to:
+                      id: 522a7cb1-d6c8-418c-ac26-011127ab5bbe
+                      company: Receiver Inc.
+                      first_name: Max
+                      last_name: Mustermann
+                      care_of: null
+                      street: Beispielstrasse
+                      street_no: '42'
+                      city: Hamburg
+                      state: null
+                      zip_code: '22100'
+                      country: DE
+                    packages:
+                    - id: 3af8f7e5af196e1950deebd389a87406e1e5bb80
+                      weight: 1.5
+                      length: 10.1
+                      width: 6.3
+                      height: 8.9
+                      tracking_events:
+                      - timestamp: '2024-08-29T16:55:24+02:00'
+                        location: Hamburg, Deutschland
+                        status: delivered
+                        details: Die Sendung wurde erfolgreich zugestellt.
+                        id: ttzisojr-1phm-gcq0-jvch-hbdhd48scsuf
+                      - timestamp: '2024-08-29T08:12:12+02:00'
+                        location: Hamburg, Deutschland
+                        status: out_for_delivery
+                        details: Die Sendung wurde in das Zustellfahrzeug geladen.
+                        id: szyucq5x-9rh9-5jh3-3oge-cbiv1wjlnq53
+                      - timestamp: '2024-08-28T11:46:34+02:00'
+                        location: Hamburg, Deutschland
+                        status: transit
+                        details: Die Sendung wurde im Start-Paketzentrum bearbeitet.
+                        id: 65x11ww4-gtk0-2ycy-eo0n-ryktpl40ev6e
+                  - id: c0f9611533339109f35d852en21dk70435e1838b
+                    carrier_tracking_url: https://www.ups.com/track?loc=en_GB&tracknum=1ZV306W06896102223
+                    carrier_tracking_no: 1ZV306W06896102223
+                    carrier: ups
+                    service: standard
+                    created_at: '2021-09-01T11:37:07Z'
+                    price: 5.9
+                    reference_number: ref123456
+                    notification_email: receiver@notification.com
+                    shipper_notification_email: shipper@notification.com
+                    tracking_url: https://track.shipcloud.io/c0f9611533
+                    label_url: https://shipping-labels.shipcloud.io/shipments/c0f96115/33339109f3/label/shipping_label_c0f9611533.pdf
+                    to:
+                      id: ffdbcfc7-a900-4285-8855-6417xaca37f3
+                      first_name: Roger
+                      last_name: Receiver
+                      company: null
+                      care_of: null
+                      street: Receiver Str.
+                      street_no: '1'
+                      city: Hamburg
+                      state: null
+                      zip_code: '20535'
+                      country: DE
+                    from:
+                      id: f999ac2b-435c-4de2-8809-6c0e86a77756
+                      first_name: Serge
+                      last_name: Sender
+                      company: Sender Corp.
+                      care_of: null
+                      street: Sender Str.
+                      street_no: '99'
+                      zip_code: '20148'
+                      city: Hamburg
+                      state: null
+                      country: DE
+                    packages:
+                    - id: 46ec98d23617c0cd4d11a6305e98748aac2e20fd
+                      weight: 0.45
+                      length: 10.2
+                      width: 20.9
+                      height: 30.5
+                      tracking_events:
+                      - timestamp: '2021-09-02T11:46:34+02:00'
+                        location: Hamburg, Deutschland
+                        status: transit
+                        details: Die Sendung wurde im Start-Paketzentrum bearbeitet.
+                        id: 6eupdr9f-rkc3-r5or-0gus-3n6jmtv9tvm9
+                    - id: h6as9c7y0qmpge8vggvdar4rdrtgeceqalm0x537
+                      weight: 3
+                      length: 30
+                      width: 30
+                      height: 30
+                      tracking_events:
+                      - timestamp: '2021-09-02T11:46:34+02:00'
+                        location: Hamburg, Deutschland
+                        status: transit
+                        details: Die Sendung wurde im Start-Paketzentrum bearbeitet.
+                        id: 4yl61hsa-4ffz-j7ky-wpib-x9wkqjl3hi62
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Get shipments
+      x-summary-source: derived
+      operationId: getShipments
+      x-operation-id-source: derived
+    post:
+      description: Create a shipment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/shipment'
+              - type: object
+                properties:
+                  packages:
+                    type: array
+                    description: array of packages
+                    items:
+                      $ref: '#/components/schemas/package'
+            examples:
+              Simple shipment creation request:
+                $ref: '#/components/examples/shipment_create_request_example_simple'
+              Shipment creation request with multiple packages:
+                $ref: '#/components/examples/shipment_create_request_multiple_packages'
+              Shipment creation request with customs declaration data:
+                $ref: '#/components/examples/shipment_create_request_with_customs_declaration_example'
+              Shipment creation request with customs declaration data and multiple packages:
+                $ref: '#/components/examples/shipment_create_request_with_customs_declaration_and_multiple_packages_example'
+              Shipment creation request to a DHL Packstation:
+                $ref: '#/components/examples/shipment_create_request_example_packstation'
+              Shipment creation request with returned items:
+                $ref: '#/components/examples/shipment_create_request_example_returned_items'
+        required: true
+      responses:
+        '200':
+          description: A shipment was created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/shipment_response_object'
+              examples:
+                Shipment creation response:
+                  $ref: '#/components/examples/shipment_response_example'
+                Shipment creation response with multiple packages:
+                  $ref: '#/components/examples/shipment_response_multiple_packages_example'
+                Shipment creation response with customs declaration:
+                  $ref: '#/components/examples/shipment_response_with_customs_declaration_example'
+                Shipment creation response with customs declaration and multiple packages:
+                  $ref: '#/components/examples/shipment_response_with_customs_declaration_and_multiple_packages_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '422':
+          $ref: '#/components/responses/422'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Create shipments
+      x-summary-source: derived
+      operationId: postShipments
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+  /shipments/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: a shipment identifier
+      schema:
+        type: string
+    get:
+      description: Returns a single shipment based on the id
+      responses:
+        '200':
+          description: Detailed information about a single shipment
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/shipment_response_object'
+              examples:
+                Shipment response:
+                  $ref: '#/components/examples/shipment_response_example'
+                Shipment response with multiple packages:
+                  $ref: '#/components/examples/shipment_response_multiple_packages_example'
+                Shipment response with customs declaration data:
+                  $ref: '#/components/examples/shipment_response_with_customs_declaration_example'
+                Shipment response with customs declaration data and multiple packages:
+                  $ref: '#/components/examples/shipment_response_with_customs_declaration_and_multiple_packages_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Get shipments by id
+      x-summary-source: derived
+      operationId: getShipmentsById
+      x-operation-id-source: derived
+    put:
+      description: Updates a single shipment based on the id. Unfortunately you can't update the `customs_declaration` attribute at the moment.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/shipment_put'
+              - type: object
+                properties:
+                  package:
+                    $ref: '#/components/schemas/package'
+            examples:
+              Simple shipment update request:
+                $ref: '#/components/examples/shipment_create_request_example_simple'
+        required: true
+      responses:
+        '200':
+          description: Updated information about a single shipment
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/shipment_response_object'
+              examples:
+                Shipment response:
+                  $ref: '#/components/examples/shipment_response_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '422':
+          $ref: '#/components/responses/422'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Replace shipments by id
+      x-summary-source: derived
+      operationId: putShipmentsById
+      x-operation-id-source: derived
+    delete:
+      description: Deletes a single shipment. **Notice:** Prepared shipments (where `create_shipping_label` is `false`) can be deleted at any time, because no transaction with the carrier has happened until this point and no actual shipping label has been created. In case you've created a shipping label you can delete it before the cutoff time of the carrier. Cutoff times differ from carrier to carrier and are some time between 5pm and 8pm.
+      responses:
+        '204':
+          description: Shipment was deleted successfully
+          content:
+            application/json:
+              examples:
+                Empty response:
+                  value: {}
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Delete shipments by id
+      x-summary-source: derived
+      operationId: deleteShipmentsById
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+  shipments/{shipment_id}/shipment_documents:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: a shipment identifier
+      schema:
+        type: string
+    get:
+      description: Returns a list of shipment documents for a single shipment based on the id (available as of mid-March 2025)
+      responses:
+        '200':
+          description: A list of shipment documents.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/shipment_document_response_object'
+              examples:
+                Shipment documents list:
+                  value:
+                  - id: 3a186c51d428
+                    document_type: commercial_invoice
+                    document_format: pdf
+                    document_url: https://documents.shipcloud.io/shipments/3589eba4a174bb3a29b1000538100573822f1c96/shipment_documents/2a5ce9c3-da93-4a70-bb91-6a1f7b08db59/document.pdf
+                  - id: 3a186c51d428
+                    document_type: proforma_invoice
+                    document_format: pdf
+                    document_url: https://documents.shipcloud.io/shipments/3589eba4a174bb3a29b1000538100573822f1c96/shipment_documents/097e1739-bf7d-48cb-be5c-aaa01410ad39/document.pdf
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Get shipments by shipment id shipment documents
+      x-summary-source: derived
+      operationId: getShipmentsByShipmentIdShipmentDocuments
+      x-operation-id-source: derived
+    post:
+      description: Create a shipment document (available as of mid-March 2025)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                documents:
+                  description: array of documents
+                  type: array
+                  $ref: '#/components/schemas/shipment_document'
+            examples:
+              Shipment document creation request:
+                $ref: '#/components/examples/shipment_document_create_request_example'
+              Shipment document creation request with multiple documents:
+                $ref: '#/components/examples/shipment_document_create_request_with_multiple_documents_example'
+        required: true
+      responses:
+        '200':
+          description: A shipment document was created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/shipment_document_response_object'
+              examples:
+                Shipment document response:
+                  $ref: '#/components/examples/shipment_document_response_example'
+                Shipment document response with multiple documents:
+                  $ref: '#/components/examples/shipment_document_response_with_multiple_documents_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '422':
+          $ref: '#/components/responses/422'
+      tags:
+      - Shipments
+      summary: Create shipments by shipment id shipment documents
+      x-summary-source: derived
+      operationId: postShipmentsByShipmentIdShipmentDocuments
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+  shipments/{shipment_id}/shipment_documents/{shipment_document_id}:
+    parameters:
+    - name: shipment_id
+      in: path
+      required: true
+      description: a shipment identifier
+      schema:
+        type: string
+    - name: shipment_document_id
+      in: path
+      required: true
+      description: a shipment document identifier
+      schema:
+        type: string
+    get:
+      description: Returns a single shipment document based on the id (available as of mid-March 2025)
+      responses:
+        '200':
+          description: Detailed information about a single shipment document
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/shipment_document_response_object'
+              examples:
+                Shipment document response:
+                  $ref: '#/components/examples/shipment_document_response_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipments
+      summary: Get shipments by shipment id shipment documents by shipment document id
+      x-summary-source: derived
+      operationId: getShipmentsByShipmentIdShipmentDocumentsByShipmentDocumentId
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  responses:
+    '404':
+      description: The api endpoint or ressource you were trying to reach can't be found.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '422':
+      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '400':
+      description: Your request was not correct. Please see the response body for more detailed information.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  description: Strings that describe, what has gone wrong. We're tunnelling error responses from the carriers. When this is the case, we try to prefix an error with 'The carrier {xyz} returned the following error:'
+                  type: string
+          examples:
+            Single error:
+              value:
+                errors:
+                - simple error message
+            Multiple errors:
+              value:
+                errors:
+                - simple error message
+                - another error message
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  examples:
+    shipment_response_with_customs_declaration_example:
+      value:
+        id: 199f803bf82fab79e17654213b61993fa78b0524
+        created_at: '2024-08-27T17:13:12+02:00'
+        carrier: dhl
+        service: standard
+        carrier_tracking_no: '84168117830018'
+        tracking_url: https://track.shipcloud.io/199f803bf8
+        label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+        price: 10.7
+        from:
+          id: 7ea2a290-b456-4ecf-9010-e82b3da298f0
+          company: Musterfirma
+          first_name: Hans
+          last_name: Meier
+          care_of: null
+          street: Musterstraße
+          street_no: '22'
+          city: Musterstadt
+          state: null
+          zip_code: '12345'
+          country: DE
+        to:
+          id: 7ea2a290-b456-4ecf-9010-e82b3da298f0
+          company: Receiver Inc.
+          first_name: Max
+          last_name: Mustermann
+          care_of: null
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          state: null
+          zip_code: '22100'
+          country: DE
+        customs_declaration:
+          id: cd-f466905c
+          contents_type: commercial_goods
+          contents_explanation: Alcoholic beverages
+          invoice_number: 123ABC
+          drop_off_location: DE
+          movement_reference_number: AAA111
+          posting_date: '2024-08-27'
+          additional_fees: 1.22
+          total_value_amount: 247.31
+          currency: EUR
+          created_at: '2024-08-27T17:13:12+02:00'
+          updated_at: '2024-08-27T17:13:12+02:00'
+          carrier_declaration_document_url: https://documents.shipcloud.io/shipments/519895c7165cdc032356d42c6d9babe8e3151473/customs_declaration_document.pdf
+          items:
+          - id: cdi-50a46bf8
+            description: Linkwood 25 years
+            hs_tariff_number: '501293884'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '138.5'
+            created_at: '2024-08-27T17:13:12+02:00'
+            updated_at: '2024-08-27T17:13:12+02:00'
+          - id: cdi-081a523d
+            description: Caol Ila 18 years
+            hs_tariff_number: '123384890'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '108.5'
+            created_at: '2024-08-27T17:13:12+02:00'
+            updated_at: '2024-08-27T17:13:12+02:00'
+        packages:
+        - id: 3af8f7e5af196e1950deebd389a87406e1e5bb80
+          weight: 1.5
+          length: 10.1
+          width: 6.3
+          height: 8.9
+          carrier_tracking_no: '84168117830018'
+          type: parcel
+          label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+          tracking_events:
+          - timestamp: '2024-08-27T17:13:13+02:00'
+            location: Hamburg
+            details: A shipment has been created
+            id: aa006b9b-3475-406c-80e0-e86ee8357b56
+    shipment_create_request_with_customs_declaration_example:
+      value:
+        from:
+          first_name: Serge
+          last_name: Sender
+          street: Sender Str. 99
+          zip_code: '20148'
+          city: Hamburg
+          country: DE
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse 42
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+          customs_declration_items:
+          - description: Linkwood 25 years
+            hs_tariff_number: '501293884'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '138.5'
+          - description: Caol Ila 18 years
+            hs_tariff_number: '123384890'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '108.5'
+        customs_declaration:
+          contents_type: commercial_goods
+          contents_explanation: Alcoholic beverages
+          invoice_number: 123ABC
+          drop_off_location: DE
+          movement_reference_number: AAA111
+          posting_date: '2024-08-27'
+          additional_fees: 1.22
+          total_value_amount: 247.31
+          currency: EUR
+        carrier: dhl
+        service: standard
+        create_shipping_label: true
+    shipment_create_request_example_returned_items:
+      value:
+        from:
+          first_name: Serge
+          last_name: Sender
+          street: Sender Str. 99
+          zip_code: '20148'
+          city: Hamburg
+          country: DE
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse 42
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+        carrier: dhl
+        service: standard
+        returned_items:
+        - order_line_item_id: 3198c529-d294-4ab4-a29e-160ad9c6d719
+          quantity: 1
+          reason_for_return: garment_expectation_failed_style
+        - order_line_item_id: f38e1d1f-c165-4699-8568-c2a3aaf289b0
+          quantity: 4
+          reason_for_return: delivery_too_late
+        create_shipping_label: true
+    shipment_document_response_with_multiple_documents_example:
+      value:
+        documents:
+        - id: 2a5ce9c3-da93-4a70-bb91-6a1f7b08db59
+          document_type: commercial_invoice
+          document_format: pdf
+          document_url: https://documents.shipcloud.io/shipments/3589eba4a174bb3a29b1000538100573822f1c96/shipment_documents/2a5ce9c3-da93-4a70-bb91-6a1f7b08db59/document.pdf
+        - id: 583cfd8b-77c7-4447-a3a0-1568bb9cc553
+          document_type: proforma_invoice
+          document_format: pdf
+          document_url: https://documents.shipcloud.io/shipments/3589eba4a174bb3a29b1000538100573822f1c96/shipment_documents/583cfd8b-77c7-4447-a3a0-1568bb9cc553/document.pdf
+    shipment_response_multiple_packages_example:
+      value:
+        id: 3a186c51d4281acbecf5ed38805b1db92a9d668b
+        carrier_tracking_no: 1ZV306W06896102223
+        carrier_tracking_url: https://www.ups.com/track?loc=en_GB&tracknum=1ZV306W06896102223
+        carrier: ups
+        service: standard
+        created_at: '2024-08-27T17:13:12+02:00'
+        price: 3.4
+        reference_number: ref123456
+        tracking_url: https://track.shipcloud.io/3a186c51d4
+        label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        from:
+          company: FromCompany
+          first_name: FromFirstName
+          last_name: FromlastName
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - id: ab23ab82ae8a5caf01ea34afad20c467cd7f9627
+          weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          carrier_tracking_no: '84168117830018'
+          type: parcel
+          label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+          tracking_events:
+          - timestamp: '2024-08-27T17:13:13+02:00'
+            location: Hamburg
+            details: A shipment has been created
+            id: aa006b9b-3475-406c-80e0-e86ee8357b56
+        - id: 46ec98d23617c0cd4d11a6305e98748aac2e20fd
+          weight: 3
+          length: 30
+          width: 30
+          height: 30
+          carrier_tracking_no: '14627368965456'
+          type: parcel
+          label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+          tracking_events:
+          - timestamp: '2024-08-27T17:13:13+02:00'
+            location: Hamburg
+            details: A shipment has been created
+            id: 51e36743-c6ea-40c8-a9b4-c74e3e724d13
+    shipment_document_create_request_example:
+      value:
+        documents:
+        - document_type: commercial_invoice
+          document_format: pdf
+          content: base64encodedstring
+    shipment_create_request_with_customs_declaration_and_multiple_packages_example:
+      value:
+        from:
+          first_name: Serge
+          last_name: Sender
+          street: Sender Str. 99
+          zip_code: '20148'
+          city: Hamburg
+          country: DE
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse 42
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+          customs_declration_items:
+          - description: Linkwood 25 years
+            hs_tariff_number: '501293884'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '138.5'
+        - weight: 3
+          lenght: 30
+          width: 30
+          height: 30
+          type: parcel
+          customs_declaration_items:
+          - description: Caol Ila 18 years
+            hs_tariff_number: '123384890'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '108.5'
+        customs_declaration:
+          contents_type: commercial_goods
+          contents_explanation: Alcoholic beverages
+          invoice_number: 123ABC
+          drop_off_location: DE
+          movement_reference_number: AAA111
+          posting_date: '2024-08-27'
+          additional_fees: 1.22
+          total_value_amount: 247.31
+          currency: EUR
+        carrier: ups
+        service: standard
+        create_shipping_label: true
+    shipment_create_request_example_packstation:
+      value:
+        to:
+          first_name: Roger
+          last_name: Receiver
+          street: Packstation
+          street_no: '109'
+          city: Hamburg
+          zip_code: '22419'
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+        carrier: dhl
+        service: standard
+        reference_number: ref123456
+        notification_email: person@example.com
+        create_shipping_label: true
+    shipment_create_request_example_simple:
+      value:
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+        carrier: dhl
+        service: standard
+        reference_number: ref123456
+        notification_email: person@example.com
+        create_shipping_label: true
+    shipment_document_response_example:
+      value:
+        id: 2a5ce9c3-da93-4a70-bb91-6a1f7b08db59
+        document_type: commercial_invoice
+        document_format: pdf
+        document_url: https://documents.shipcloud.io/shipments/3589eba4a174bb3a29b1000538100573822f1c96/shipment_documents/2a5ce9c3-da93-4a70-bb91-6a1f7b08db59/document.pdf
+    shipment_create_request_multiple_packages:
+      value:
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+        - weight: 3
+          lenght: 30
+          width: 30
+          height: 30
+          type: parcel
+        carrier: ups
+        service: standard
+        reference_number: ref123456
+        notification_email: person@example.com
+        create_shipping_label: true
+    shipment_response_example:
+      value:
+        id: 3a186c51d4281acbecf5ed38805b1db92a9d668b
+        carrier_tracking_no: '84168117830018'
+        carrier_tracking_url: https://nolp.dhl.de/nextt-online-public/set_identcodes.do?extendedSearch=true&idc=84168117830018
+        carrier: dhl
+        service: standard
+        created_at: '2024-08-27T17:13:12+02:00'
+        price: 3.4
+        reference_number: ref123456
+        tracking_url: https://track.shipcloud.io/3a186c51d4
+        label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        from:
+          company: FromCompany
+          first_name: FromFirstName
+          last_name: FromlastName
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        packages:
+        - id: ab23ab82ae8a5caf01ea34afad20c467cd7f9627
+          weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          carrier_tracking_no: '84168117830018'
+          type: parcel
+          label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+          tracking_events:
+          - timestamp: '2024-08-27T17:13:13+02:00'
+            location: Hamburg
+            details: A shipment has been created
+            id: aa006b9b-3475-406c-80e0-e86ee8357b56
+    shipment_response_with_customs_declaration_and_multiple_packages_example:
+      value:
+        id: 199f803bf82fab79e17654213b61993fa78b0524
+        carrier_tracking_no: 1ZV306W06896102223
+        carrier_tracking_url: https://www.ups.com/track?loc=en_GB&tracknum=1ZV306W06896102223
+        carrier: ups
+        service: standard
+        created_at: '2024-08-27T17:13:12+02:00'
+        price: 3.4
+        reference_number: ref123456
+        tracking_url: https://track.shipcloud.io/3a186c51d4
+        label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+        to:
+          company: Receiver Inc.
+          last_name: Mustermann
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        from:
+          company: FromCompany
+          first_name: FromFirstName
+          last_name: FromlastName
+          street: Beispielstrasse
+          street_no: '42'
+          city: Hamburg
+          zip_code: '22100'
+          country: DE
+        customs_declaration:
+          id: cd-f466905c
+          contents_type: commercial_goods
+          contents_explanation: Alcoholic beverages
+          invoice_number: 123ABC
+          drop_off_location: DE
+          movement_reference_number: AAA111
+          posting_date: '2024-08-27'
+          additional_fees: 1.22
+          total_value_amount: 247.31
+          currency: EUR
+          created_at: '2024-08-27T17:13:12+02:00'
+          updated_at: '2024-08-27T17:13:12+02:00'
+          carrier_declaration_document_url: https://documents.shipcloud.io/shipments/519895c7165cdc032356d42c6d9babe8e3151473/customs_declaration_document.pdf
+          items:
+          - id: cdi-50a46bf8
+            description: Linkwood 25 years
+            hs_tariff_number: '501293884'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '138.5'
+            created_at: '2024-08-27T17:13:12+02:00'
+            updated_at: '2024-08-27T17:13:12+02:00'
+          - id: cdi-081a523d
+            description: Caol Ila 18 years
+            hs_tariff_number: '123384890'
+            net_weight: 0.8
+            origin_country: DE
+            quantity: 1
+            value_amount: '108.5'
+            created_at: '2024-08-27T17:13:12+02:00'
+            updated_at: '2024-08-27T17:13:12+02:00'
+        packages:
+        - id: ab23ab82ae8a5caf01ea34afad20c467cd7f9627
+          weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          carrier_tracking_no: '84168117830018'
+          type: parcel
+          label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+          tracking_events:
+          - timestamp: '2024-08-27T17:13:13+02:00'
+            location: Hamburg
+            details: A shipment has been created
+            id: aa006b9b-3475-406c-80e0-e86ee8357b56
+        - id: 46ec98d23617c0cd4d11a6305e98748aac2e20fd
+          weight: 3
+          length: 30
+          width: 30
+          height: 30
+          carrier_tracking_no: '14627368965456'
+          type: parcel
+          label_url: https://shipping-labels.shipcloud.io/shipments/01370b4d/199f803bf8/label/shipping_label_199f803bf8.pdf
+          tracking_events:
+          - timestamp: '2024-08-27T17:13:13+02:00'
+            location: Hamburg
+            details: A shipment has been created
+            id: 51e36743-c6ea-40c8-a9b4-c74e3e724d13
+    shipment_document_create_request_with_multiple_documents_example:
+      value:
+        documents:
+        - document_type: commercial_invoice
+          document_format: pdf
+          content: base64encodedstring
+        - document_type: proforma_invoice
+          document_format: pdf
+          content: base64encodedstring
+  schemas:
+    customs_declaration:
+      type: object
+      description: declaration of customs related information
+      properties:
+        contents_type:
+          type: string
+          enum:
+          - commercial_goods
+          - commercial_sample
+          - documents
+          - gift
+          - returned_goods
+          description: Type of contents
+        contents_explanation:
+          type: string
+          description: description of contents. Mandatory if contents_type is `commercial_goods`. Max 256 characters, when using DHL as your carrier
+        currency:
+          type: string
+          description: a valid ISO 4217 curreny code
+        additional_fees:
+          type: number
+          description: additional custom fees to be payed
+        drop_off_location:
+          type: string
+          description: location where the package will be dropped of with the carrier
+        exporter_reference:
+          type: string
+          description: a note for the exporter
+        importer_reference:
+          type: string
+          description: a note for the importer
+        movement_reference_number:
+          type: string
+          description: the movement reference number (MRN)
+        posting_date:
+          type: string
+          format: date
+          description: date of commital at carrier
+        invoice_number:
+          type: string
+          description: invoice number for the order
+        total_value_amount:
+          type: number
+          minimum: 0
+          maximum: 1000
+          description: the overall value of the shipments' contents
+      required:
+      - contents_type
+      - currency
+      - total_value_amount
+      - items
+    pickup:
+      type: object
+      description: for some carriers a pickup has to be requested when creating a shipment
+      properties:
+        pickup_time:
+          $ref: '#/components/schemas/pickup_time_object'
+        pickup_address:
+          $ref: '#/components/schemas/address_with_id'
+    shipment_response_object:
+      allOf:
+      - $ref: '#/components/schemas/shipment'
+      - type: object
+        properties:
+          to:
+            $ref: '#/components/schemas/address_with_id'
+          from:
+            $ref: '#/components/schemas/address_with_id'
+      - type: object
+        properties:
+          id:
+            type: string
+            description: identifier of the shipment
+          carrier_tracking_no:
+            type: string
+            description: the original tracking number that can be used on the carriers website
+          carrier_tracking_url:
+            type: string
+            description: the original tracking URL of the carrier
+          created_at:
+            type: string
+            format: date-time
+            description: timestamp the shipment was created
+          label_url:
+            type: string
+            description: URL where you can download the label in pdf format
+          packages:
+            type: array
+            items:
+              allOf:
+              - $ref: '#/components/schemas/package_with_id'
+          price:
+            type: number
+            description: price that we're going to charge you (exl. VAT)
+          shipper_notification_email:
+            type: string
+            description: email address of the shipper who should be notified of a change of shipment status by shipcloud
+          tracking_url:
+            type: string
+            description: URL you can send your customers so they can track this shipment
+          customs_declaration:
+            $ref: '#/components/schemas/customs_declaration_response'
+        required:
+        - id
+        - carrier
+        - created_at
+        - tracking_url
+        - from
+        - to
+        - packages
+        - price
+        - service
+    pickup_time_object:
+      type: object
+      properties:
+        earliest:
+          type: string
+          format: date-time
+          description: Earliest pickup date and time
+        latest:
+          type: string
+          format: date-time
+          description: Latest pickup date and time
+      description: defines a time window in which the carrier should pickup shipments
+      required:
+      - earliest
+      - latest
+    shipment_put:
+      type: object
+      properties:
+        carrier:
+          $ref: '#/components/schemas/carrier_shipping'
+        to:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - anyOf:
+            - type: object
+              properties:
+                company:
+                  type: string
+                  description: name of the company
+              required:
+              - company
+            - type: object
+              properties:
+                last_name:
+                  type: string
+                  description: last_name of the person
+              required:
+              - last_name
+          - description: the receivers address
+        from:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - anyOf:
+            - type: object
+              properties:
+                company:
+                  type: string
+                  description: name of the company
+              required:
+              - company
+            - type: object
+              properties:
+                last_name:
+                  type: string
+                  description: last_name of the person
+              required:
+              - last_name
+          - description: If missing, the default sender address (if defined in your shipcloud account) will be used
+        cover_address:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - description: Overwrites the sender address on the shipping label
+            required:
+            - street
+            - street_no
+            - zip_code
+            - city
+        service:
+          $ref: '#/components/schemas/service'
+        reference_number:
+          type: string
+          description: a reference number (max. 30 characters) that you want this shipment to be identified with. You can use this afterwards to easier find the shipment in the shipcloud.io backoffice
+        description:
+          type: string
+          description: 'text that describes the contents of the shipment. This parameter is mandatory if you''re using UPS and the following conditions are true: from and to countries are not the same; from and/or to countries are not in the EU; from and to countries are in the EU and the shipments service is not `standard`. The parameter is also mandatory when using DHL Express as carrier.'
+        label:
+          $ref: '#/components/schemas/label'
+        notification_email:
+          type: string
+          description: email address that we should notify once there's an update for this shipment (usually the recipients')
+        incoterm:
+          type: string
+          enum:
+          - ddp
+          - ddp_untaxed
+          - dap
+          - dap_cleared
+          - ddu
+          - ddu_cleared
+        pickup:
+          $ref: '#/components/schemas/pickup'
+        create_shipping_label:
+          type: boolean
+          description: determines if a shipping label should be created at the carrier (this means you will be charged when using the production api key)
+        metadata:
+          type: object
+          description: here you can save additional data that you want to be associated with the shipment. Any combination of key-value pairs is possible
+      required:
+      - carrier
+      - to
+    customs_declaration_items:
+      type: object
+      properties:
+        origin_country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        description:
+          type: string
+          description: a description of the item
+        hs_tariff_number:
+          type: string
+          description: customs tariff number. See https://en.wikipedia.org/wiki/Harmonized_System#Tariffs_by_region for detailed information on region specific tariff numbers
+          maxLength: 10
+        quantity:
+          type: integer
+          description: Number that defines how many items of this kind are in the shipment
+        value_amount:
+          type: string
+          description: The total value for items of this kind
+        net_weight:
+          type: number
+          description: Total net weight for a single item of this kind
+        gross_weight:
+          type: number
+          description: Total gross weight for a single item of this kind
+      required:
+      - origin_country
+      - description
+      - quantity
+      - value_amount
+      - net_weight
+    address:
+      type: object
+      properties:
+        care_of:
+          type:
+          - string
+          - 'null'
+          description: Additional care of field
+        city:
+          type: string
+          description: Name of the city
+        country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        first_name:
+          type:
+          - string
+          - 'null'
+          description: A persons first name
+        state:
+          type:
+          - string
+          - 'null'
+          description: The state the address is in
+        street:
+          type: string
+          description: Name of the street. Can hold the house number
+        street_no:
+          type:
+          - string
+          - 'null'
+          description: House number of the address (when a carrier requires it separately)
+        zip_code:
+          type: string
+          description: Zipcode of the address
+        phone:
+          type: string
+          description: 'Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)'
+        email:
+          type: string
+          description: Email address for this person. Some carrier are using the email address to send notifications
+      required:
+      - street
+      - city
+      - zip_code
+      - country
+    package:
+      allOf:
+      - $ref: '#/components/schemas/package_minimal'
+      - properties:
+          declared_value:
+            type: object
+            description: Object that is used for booking an additional insurance at the carrier (if applicable)
+            properties:
+              amount:
+                type: number
+                description: The total amount of the goods value that an additional insurance should be booked for
+              currency:
+                type: string
+                description: The currency used. Currently only EUR is applicable
+          description:
+            type: string
+            description: if you're using UPS with service `returns` this is mandatory otherwise it's optional
+          type:
+            type: string
+            description: type of shipment you would like to book
+            enum:
+            - books
+            - bulk
+            - letter
+            - parcel
+            - parcel_letter
+            default: parcel
+          customs_declaration_items:
+            type: array
+            description: array of item objects
+            items:
+              $ref: '#/components/schemas/customs_declaration_items'
+    package_response_object:
+      allOf:
+      - $ref: '#/components/schemas/package_minimal'
+      - properties:
+          declared_value:
+            type: object
+            description: Object that is used for booking an additional insurance at the carrier (if applicable)
+            properties:
+              amount:
+                type: number
+                description: The total amount of the goods value that an additional insurance should be booked for
+              currency:
+                type: string
+                description: The currency used. Currently only EUR is applicable
+          description:
+            type: string
+            description: if you're using UPS with service `returns` this is mandatory otherwise it's optional
+          type:
+            type: string
+            description: type of shipment you would like to book
+            enum:
+            - books
+            - bulk
+            - letter
+            - parcel
+            - parcel_letter
+            default: parcel
+    package_with_id:
+      allOf:
+      - $ref: '#/components/schemas/package_response_object'
+      - properties:
+          id:
+            type: string
+            description: A unique identifier for this package
+          tracking_events:
+            type: array
+            items:
+              type: object
+              properties:
+                timestamp:
+                  type: string
+                  format: date-time
+                  description: timestamp of when this event occured
+                location:
+                  type: string
+                  description: location of the package at this moment
+                status:
+                  type: string
+                  enum:
+                  - awaits_pickup_by_receiver
+                  - canceled
+                  - delayed
+                  - delivered
+                  - destroyed
+                  - exception
+                  - label_created
+                  - not_delivered
+                  - notification
+                  - out_for_delivery
+                  - picked_up
+                  - transit
+                  - unknown
+                  description: A key that is describing the status
+                details:
+                  type: string
+                  description: Message the carrier sent to describe the package status
+              required:
+              - timestamp
+              - location
+              - status
+              - details
+        required:
+        - id
+    carrier_shipping:
+      type: string
+      enum:
+      - angel_de
+      - asendia
+      - cargo_international
+      - dhl
+      - dhl_express
+      - dpag
+      - dpd
+      - gls
+      - go
+      - hermes
+      - iloxx
+      - parcel_one
+      - ups
+      description: acronym of the carrier
+    label:
+      type: object
+      properties:
+        format:
+          type: string
+          enum:
+          - pdf_100x70mm
+          - pdf_103x199mm
+          - pdf_a5
+          - pdf_a6
+          - pdf_a7
+          - zpl2_4x6in_203dpi
+          - zpl2_4x6in_300dpi
+          - zpl2_100x70mm_203dpi
+          - zpl2_103x199mm_203dpi
+          description: defines the format that the returned label should have
+        size:
+          type: string
+          enum:
+          - A5
+          - A6
+          - A7
+          - 100x70mm
+          description: defines the size that the returned label should have
+          deprecated: true
+      description: label specific definitions
+    customs_declaration_response:
+      allOf:
+      - $ref: '#/components/schemas/customs_declaration'
+      - type: object
+        properties:
+          created_at:
+            type: string
+            format: date-time
+            description: timestamp of when the customs declaration was created
+          updated_at:
+            type: string
+            format: date-time
+            description: timestamp of when the customs declaration was last updated
+          carrier_declaration_document_url:
+            type: string
+            format: uri
+            description: A URL that points to the customs declaration document
+          items:
+            type: array
+            items:
+              allOf:
+              - $ref: '#/components/schemas/customs_declaration_items'
+              - type: object
+                properties:
+                  id:
+                    type: string
+                    description: A unique identifier for this item
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: timestamp of when the item was created
+                  updated_at:
+                    type: string
+                    format: date-time
+                    description: timestamp of when the item was last updated
+                required:
+                - id
+                - created_at
+                - updated_at
+    package_minimal:
+      type: object
+      properties:
+        height:
+          type: number
+          description: Height of the parcel in cm
+        length:
+          type: number
+          description: Length of the parcel in cm
+        weight:
+          type: number
+          description: Weight of the parcel in kg
+        width:
+          type: number
+          description: Width of the parcel in cm
+      required:
+      - width
+      - height
+      - length
+      - weight
+      description: defines package attributes
+    address_with_id:
+      allOf:
+      - $ref: '#/components/schemas/address'
+      - type: object
+        properties:
+          id:
+            type: string
+            description: identifier of a previously created address
+        required:
+        - id
+        - first_name
+        - last_name
+        - company
+        - care_of
+        - state
+        - street_no
+    shipment_document_response_object:
+      type: object
+      properties:
+        id:
+          type: string
+          description: id of the document
+        document_type:
+          type: string
+          description: type of the document
+        document_format:
+          type: string
+          description: format of the document
+        document_url:
+          type: string
+          description: URL where you can download the document in pdf format
+    shipment:
+      type: object
+      properties:
+        carrier:
+          $ref: '#/components/schemas/carrier_shipping'
+        to:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - anyOf:
+            - type: object
+              properties:
+                company:
+                  type: string
+                  description: name of the company
+              required:
+              - company
+            - type: object
+              properties:
+                last_name:
+                  type: string
+                  description: last_name of the person
+              required:
+              - last_name
+          - description: the receivers address
+        from:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - anyOf:
+            - type: object
+              properties:
+                company:
+                  type: string
+                  description: name of the company
+              required:
+              - company
+            - type: object
+              properties:
+                last_name:
+                  type: string
+                  description: last_name of the person
+              required:
+              - last_name
+          - description: If missing, the default sender address (if defined in your shipcloud account) will be used
+        cover_address:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - description: Overwrites the sender address on the shipping label
+            required:
+            - street
+            - street_no
+            - zip_code
+            - city
+        service:
+          $ref: '#/components/schemas/service'
+        reference_number:
+          type: string
+          description: a reference number (max. 30 characters) that you want this shipment to be identified with. You can use this afterwards to easier find the shipment in the shipcloud.io backoffice
+        description:
+          type: string
+          description: 'text that describes the contents of the shipment. This parameter is mandatory if you''re using UPS and the following conditions are true: from and to countries are not the same; from and/or to countries are not in the EU; from and to countries are in the EU and the shipments service is not `standard`. The parameter is also mandatory when using DHL Express as carrier.'
+        label:
+          $ref: '#/components/schemas/label'
+        notification_email:
+          type: string
+          description: email address that we should notify once there's an update for this shipment (usually the recipients')
+        incoterm:
+          type: string
+          enum:
+          - ddp
+          - ddp_untaxed
+          - dap
+          - dap_cleared
+          - ddu
+          - ddu_cleared
+        billing:
+          type: object
+          properties:
+            transportation:
+              type: object
+              description: Determines, who will pay for transportation. This is applicable for domestic and international shipments
+              properties:
+                type:
+                  type: string
+                  description: Providing the key that will determine, who will pay for transportation
+                  enum:
+                  - receiver
+                  - sender
+                  - third_party
+                account_number:
+                  type: string
+                  description: The account number that will be billed
+                zip_code:
+                  type: string
+                  description: The zip code / postalcode associated with the provided account number
+                country:
+                  type: string
+                  description: The country code associated with the provided account number
+              required:
+              - type
+            duties_and_taxes:
+              type: object
+              description: Determines, who will pay for duties and taxes. This is only applicable for international shipments
+              properties:
+                type:
+                  type: string
+                  description: Providing the key that will determine, who will pay for duties and taxes
+                  enum:
+                  - receiver
+                  - sender
+                  - third_party
+                account_number:
+                  type: string
+                  description: The account number that will be billed
+                zip_code:
+                  type: string
+                  description: The zip code / postalcode associated with the provided account number
+                country:
+                  type: string
+                  description: The country code associated with the provided account number
+              required:
+              - type
+        additional_services:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                enum:
+                - advance_notice
+                - angel_de_delivery_date_time
+                - asendia_bonus_tracking
+                - cash_on_delivery
+                - delivery_date
+                - delivery_note
+                - delivery_time
+                - dhl_endorsement
+                - dhl_gogreen
+                - dhl_ident_check
+                - dhl_named_person_only
+                - dhl_no_neighbor_delivery
+                - dhl_parcel_outlet_routing
+                - dhl_preferred_neighbor
+                - dpd_food
+                - drop_authorization
+                - gls_guaranteed24service
+                - hazardous_goods
+                - hermes_identservice
+                - hermes_next_day
+                - premium_international
+                - saturday_delivery
+                - ups_adult_signature
+                - ups_carbon_neutral
+                - ups_direct_delivery_only
+                - ups_signature_required
+                - visual_age_check
+                description: key to identify the additional service
+              properties:
+                type: object
+                properties:
+                  amount:
+                    type: number
+                    description: Amount that should be payed (cash_on_delivery)
+                  bank_account_holder:
+                    type: string
+                    description: Name of the person the bank account belongs to (cash_on_delivery)
+                  bank_account_number:
+                    type: string
+                    description: IBAN (cash_on_delivery)
+                  bank_code:
+                    type: string
+                    description: BIC/SWIFT (cash_on_delivery)
+                  bank_name:
+                    type: string
+                    description: Name of the bank (cash_on_delivery)
+                  currency:
+                    type: string
+                    description: Currency as uppercase ISO 4217 code (cash_on_delivery)
+                  date:
+                    type: string
+                    format: date
+                    description: Date (angel_de_delivery_date_time, delivery_date
+                  date_of_birth:
+                    type: string
+                    format: date
+                    description: A recipients date of birth (dhl_ident_check)
+                  email:
+                    type: string
+                    format: email
+                    description: eMail address (advanced_notice)
+                  first_name:
+                    type: string
+                    description: The persons first name (dhl_ident_check)
+                  id_type:
+                    type: string
+                    enum:
+                    - german_identity_card
+                    - german_passport
+                    - international_passport
+                    description: Type of ID document that should be used for verifying (hermes_ident_check)
+                  id_number:
+                    type: string
+                    description: Number of the ID document (hermes_ident_check)
+                  language:
+                    type: string
+                    description: Language (in ISO-639-1 format) the customer should be notified in (advanced_notice)
+                  last_name:
+                    type: string
+                    description: The persons last name (dhl_ident_check)
+                  minimum_age:
+                    type: string
+                    description: Minimum age that should be checked (dhl_ident_check, visual_age_check)
+                  phone:
+                    type: string
+                    description: Phone number that can be called for making the delivery (advanced_notice)
+                  reference1:
+                    type: string
+                    description: Text that should be displayed as the reason for transfer (cash_on_delivery)
+                  sms:
+                    type: string
+                    description: Phone number that can be texted for making the delivery (advanced_notice)
+                  time_of_day_earliest:
+                    type: string
+                    description: Earliest pickup date and time (angel_de_delivery_date_time)
+                  time_of_day_latest:
+                    type: string
+                    description: Latest pickup date and time(angel_de_delivery_date_time)
+          required:
+          - name
+        pickup:
+          $ref: '#/components/schemas/pickup'
+        customs_declaration:
+          $ref: '#/components/schemas/customs_declaration'
+        order_id:
+          type: string
+          description: Identifier of a previously created order.
+        returned_items:
+          type: array
+          description: List of items that get returned with this shipment
+          items:
+            type: object
+            properties:
+              order_line_item_id:
+                type: string
+                description: UUID of the corresponding order line item within an order
+              quantity:
+                type: number
+                description: Number that defines how many items of this kind are in the shipment
+              reason_for_return:
+                type: string
+                description: A key that represents the reason why the item(s) will be returned
+                enum:
+                - delivery_too_late
+                - delivery_wrong_product
+                - garment_expectation_failed_style
+                - garment_too_large
+                - garment_too_long
+                - garment_too_short
+                - garment_too_small
+                - ordered_choices
+                - other
+                - product_description_differing
+                - product_expectation_failed_color
+                - product_expectation_failed_material
+                - product_expectation_failed_price
+                - product_faulty
+        create_shipping_label:
+          type: boolean
+          description: determines if a shipping label should be created at the carrier (this means you will be charged when using the production api key)
+        metadata:
+          type: object
+          description: here you can save additional data that you want to be associated with the shipment. Any combination of key-value pairs is possible
+      required:
+      - carrier
+      - to
+    shipment_document:
+      type: object
+      properties:
+        document_type:
+          type: string
+          description: type of the document
+          enum:
+          - commercial_invoice
+          - proforma_invoice
+        document_format:
+          type: string
+          description: format of the document
+          enum:
+          - pdf
+          - png
+          - jpg
+        content:
+          type: string
+          description: base64 encoded content of the document
+      required:
+      - document_type
+      - document_format
+      - content
+    service:
+      type: string
+      enum:
+      - standard
+      - one_day
+      - one_day_early
+      - returns
+      - asendia_epaq_standard_economy
+      - asendia_epaq_standard_priority
+      - cargo_international_express
+      - dhl_europaket
+      - dhl_prio
+      - dhl_warenpost
+      - dpag_warenpost
+      - dpag_warenpost_signature
+      - dpag_warenpost_untracked
+      - gls_express_0800
+      - gls_express_0900
+      - gls_express_1000
+      - gls_express_1200
+      - ups_express_1200
+      default: standard
+      description: The service that should be used for the shipment.
+  headers:
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

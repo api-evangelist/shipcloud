@@ -1,0 +1,28 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/integrations/
+packages:
+- name: shipcloud
+  registry: rubygems
+  url: https://rubygems.org/gems/shipcloud
+  source_code: https://github.com/shipcloud/shipcloud-ruby
+  language: ruby
+  official: true
+  version: 0.12.0
+  published: '2023-01-02'
+  note: Linked from the shipcloud developer portal Integrations page as "shipcloud-ruby". The GitHub repository shipcloud/shipcloud-ruby is ARCHIVED (GitHub API, checked 2026-10-09); last gem release 0.12.0 on 2023-01-02; the gem is no longer maintained.
+checked_absent:
+- registry: npm
+  name: shipcloud
+  note: registry.npmjs.org/shipcloud answers 200 but carries no dist-tags (no published version); not attributed to shipcloud GmbH.
+- registry: pypi
+  name: shipcloud
+  note: 404
+- registry: packagist
+  name: shipcloud/shipcloud-php
+  note: 404
+other_first_party_code:
+- name: shipcloud-for-woocommerce
+  url: https://github.com/shipcloud/shipcloud-for-woocommerce
+  language: php
+  note: WooCommerce plugin in the shipcloud GitHub org (last push 2024-12-06); not a registry package.

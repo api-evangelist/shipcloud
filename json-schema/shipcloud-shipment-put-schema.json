@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/shipcloud/main/json-schema/shipcloud-shipment-put-schema.json",
+  "title": "shipment_put",
+  "x-generated": "2026-10-09",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/shipcloud-openapi.yml#/components/schemas/shipment_put",
+  "type": "object",
+  "properties": {
+    "carrier": {
+      "$ref": "#/$defs/carrier_shipping"
+    },
+    "to": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/address"
+        },
+        {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "type": "string",
+                  "description": "name of the company"
+                }
+              },
+              "required": [
+                "company"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "last_name": {
+                  "type": "string",
+                  "description": "last_name of the person"
+                }
+              },
+              "required": [
+                "last_name"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "the receivers address"
+        }
+      ]
+    },
+    "from": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/address"
+        },
+        {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "type": "string",
+                  "description": "name of the company"
+                }
+              },
+              "required": [
+                "company"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "last_name": {
+                  "type": "string",
+                  "description": "last_name of the person"
+                }
+              },
+              "required": [
+                "last_name"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "If missing, the default sender address (if defined in your shipcloud account) will be used"
+        }
+      ]
+    },
+    "cover_address": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/address"
+        },
+        {
+          "description": "Overwrites the sender address on the shipping label",
+          "required": [
+            "street",
+            "street_no",
+            "zip_code",
+            "city"
+          ]
+        }
+      ]
+    },
+    "service": {
+      "$ref": "#/$defs/service"
+    },
+    "reference_number": {
+      "type": "string",
+      "description": "a reference number (max. 30 characters) that you want this shipment to be identified with. You can use this afterwards to easier find the shipment in the shipcloud.io backoffice"
+    },
+    "description": {
+      "type": "string",
+      "description": "text that describes the contents of the shipment. This parameter is mandatory if you're using UPS and the following conditions are true: from and to countries are not the same; from and/or to countries are not in the EU; from and to countries are in the EU and the shipments service is not `standard`. The parameter is also mandatory when using DHL Express as carrier."
+    },
+    "label": {
+      "$ref": "#/$defs/label"
+    },
+    "notification_email": {
+      "type": "string",
+      "description": "email address that we should notify once there's an update for this shipment (usually the recipients')"
+    },
+    "incoterm": {
+      "type": "string",
+      "enum": [
+        "ddp",
+        "ddp_untaxed",
+        "dap",
+        "dap_cleared",
+        "ddu",
+        "ddu_cleared"
+      ]
+    },
+    "pickup": {
+      "$ref": "#/$defs/pickup"
+    },
+    "create_shipping_label": {
+      "type": "boolean",
+      "description": "determines if a shipping label should be created at the carrier (this means you will be charged when using the production api key)"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "here you can save additional data that you want to be associated with the shipment. Any combination of key-value pairs is possible"
+    }
+  },
+  "required": [
+    "carrier",
+    "to"
+  ],
+  "$defs": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "care_of": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Additional care of field"
+        },
+        "city": {
+          "type": "string",
+          "description": "Name of the city"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country as uppercase ISO 3166-1 alpha-2 code"
+        },
+        "first_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "A persons first name"
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The state the address is in"
+        },
+        "street": {
+          "type": "string",
+          "description": "Name of the street. Can hold the house number"
+        },
+        "street_no": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "House number of the address (when a carrier requires it separately)"
+        },
+        "zip_code": {
+          "type": "string",
+          "description": "Zipcode of the address"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)"
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address for this person. Some carrier are using the email address to send notifications"
+        }
+      },
+      "required": [
+        "street",
+        "city",
+        "zip_code",
+        "country"
+      ]
+    },
+    "address_with_id": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/address"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "identifier of a previously created address"
+            }
+          },
+          "required": [
+            "id",
+            "first_name",
+            "last_name",
+            "company",
+            "care_of",
+            "state",
+            "street_no"
+          ]
+        }
+      ]
+    },
+    "carrier_shipping": {
+      "type": "string",
+      "enum": [
+        "angel_de",
+        "asendia",
+        "cargo_international",
+        "dhl",
+        "dhl_express",
+        "dpag",
+        "dpd",
+        "gls",
+        "go",
+        "hermes",
+        "iloxx",
+        "parcel_one",
+        "ups"
+      ],
+      "description": "acronym of the carrier"
+    },
+    "label": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": [
+            "pdf_100x70mm",
+            "pdf_103x199mm",
+            "pdf_a5",
+            "pdf_a6",
+            "pdf_a7",
+            "zpl2_4x6in_203dpi",
+            "zpl2_4x6in_300dpi",
+            "zpl2_100x70mm_203dpi",
+            "zpl2_103x199mm_203dpi"
+          ],
+          "description": "defines the format that the returned label should have"
+        },
+        "size": {
+          "type": "string",
+          "enum": [
+            "A5",
+            "A6",
+            "A7",
+            "100x70mm"
+          ],
+          "description": "defines the size that the returned label should have",
+          "deprecated": true
+        }
+      },
+      "description": "label specific definitions"
+    },
+    "pickup": {
+      "type": "object",
+      "description": "for some carriers a pickup has to be requested when creating a shipment",
+      "properties": {
+        "pickup_time": {
+          "$ref": "#/$defs/pickup_time_object"
+        },
+        "pickup_address": {
+          "$ref": "#/$defs/address_with_id"
+        }
+      }
+    },
+    "pickup_time_object": {
+      "type": "object",
+      "properties": {
+        "earliest": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Earliest pickup date and time"
+        },
+        "latest": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Latest pickup date and time"
+        }
+      },
+      "description": "defines a time window in which the carrier should pickup shipments",
+      "required": [
+        "earliest",
+        "latest"
+      ]
+    },
+    "service": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "one_day",
+        "one_day_early",
+        "returns",
+        "asendia_epaq_standard_economy",
+        "asendia_epaq_standard_priority",
+        "cargo_international_express",
+        "dhl_europaket",
+        "dhl_prio",
+        "dhl_warenpost",
+        "dpag_warenpost",
+        "dpag_warenpost_signature",
+        "dpag_warenpost_untracked",
+        "gls_express_0800",
+        "gls_express_0900",
+        "gls_express_1000",
+        "gls_express_1200",
+        "ups_express_1200"
+      ],
+      "default": "standard",
+      "description": "The service that should be used for the shipment."
+    }
+  }
+}

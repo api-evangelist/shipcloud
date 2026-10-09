@@ -1,0 +1,468 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Addresses API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Addresses across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Addresses
+paths:
+  /addresses:
+    get:
+      description: Getting a list of addresses
+      parameters:
+      - name: care_of
+        in: query
+        description: Filter addresses by care_of
+        schema:
+          type: string
+      - name: city
+        in: query
+        description: Filter addresses by city
+        schema:
+          type: string
+      - name: company
+        in: query
+        description: Filter addresses by company name
+        schema:
+          type: string
+      - name: country
+        in: query
+        description: Filter addresses by country code
+        schema:
+          type: string
+      - name: first_name
+        in: query
+        description: Filter addresses by first name
+        schema:
+          type: string
+      - name: last_name
+        in: query
+        description: Filter addresses by last name
+        schema:
+          type: string
+      - name: page
+        in: query
+        description: Number of page that should be returned
+        schema:
+          type: integer
+      - name: per_page
+        in: query
+        description: Number of items that should be shown on a page (default value is 100)
+        schema:
+          type: integer
+          default: 100
+      - name: phone
+        in: query
+        description: Filter addresses by phone number
+        schema:
+          type: string
+      - name: street
+        in: query
+        description: Filter addresses by street name
+        schema:
+          type: string
+      - name: street_no
+        in: query
+        description: Filter addresses by house number
+        schema:
+          type: string
+      - name: zip_code
+        in: query
+        description: Filter addresses by zip code
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of addresses
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/address_with_id'
+              examples:
+                List of addresses:
+                  $ref: '#/components/examples/list_of_addresses_with_id_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Addresses
+      summary: Get addresses
+      x-summary-source: derived
+      operationId: getAddresses
+      x-operation-id-source: derived
+    post:
+      description: Creating an address
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/address'
+            examples:
+              A basic address creation request:
+                $ref: '#/components/examples/address_request_example'
+      responses:
+        '200':
+          description: An address was created
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/address_with_id'
+                - description: An address that was created. It is referenced by its id.
+              examples:
+                Address with ID:
+                  $ref: '#/components/examples/address_with_id_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '422':
+          $ref: '#/components/responses/422'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Addresses
+      summary: Create addresses
+      x-summary-source: derived
+      operationId: postAddresses
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+  /addresses/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: The identifier of a previously created address
+      schema:
+        type: string
+    get:
+      description: Returns a single address based on its identifier
+      responses:
+        '200':
+          description: Detailed information about a single address
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/address_with_id'
+              examples:
+                Address with ID:
+                  $ref: '#/components/examples/address_with_id_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Addresses
+      summary: Get addresses by id
+      x-summary-source: derived
+      operationId: getAddressesById
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  responses:
+    '404':
+      description: The api endpoint or ressource you were trying to reach can't be found.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '400':
+      description: Your request was not correct. Please see the response body for more detailed information.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  description: Strings that describe, what has gone wrong. We're tunnelling error responses from the carriers. When this is the case, we try to prefix an error with 'The carrier {xyz} returned the following error:'
+                  type: string
+          examples:
+            Single error:
+              value:
+                errors:
+                - simple error message
+            Multiple errors:
+              value:
+                errors:
+                - simple error message
+                - another error message
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '422':
+      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  headers:
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  examples:
+    list_of_addresses_with_id_example:
+      value:
+      - id: 1c81efb7-9b95-4dd8-92e3-cac1bca3df6f
+        first_name: Max
+        last_name: Mustermann
+        company: null
+        care_of: null
+        street: Musterstraße
+        street_no: '42'
+        zip_code: '12345'
+        city: Musterstadt
+        state: null
+        country: DE
+        email: max@mustermann.baz
+        phone: '+491234567890'
+    address_with_id_example:
+      value:
+        id: 1c81efb7-9b95-4dd8-92e3-cac1bca3df6f
+        first_name: Max
+        last_name: Mustermann
+        company: null
+        care_of: null
+        street: Musterstraße
+        street_no: '42'
+        zip_code: '12345'
+        city: Musterstadt
+        state: null
+        country: DE
+        email: max@mustermann.baz
+        phone: '+491234567890'
+    address_request_example:
+      value:
+        first_name: Serge
+        last_name: Sender
+        company: Sender Corp.
+        street: Sender Str.
+        street_no: '99'
+        zip_code: '20148'
+        city: Hamburg
+        country: DE
+  schemas:
+    address_with_id:
+      allOf:
+      - $ref: '#/components/schemas/address'
+      - type: object
+        properties:
+          id:
+            type: string
+            description: identifier of a previously created address
+        required:
+        - id
+        - first_name
+        - last_name
+        - company
+        - care_of
+        - state
+        - street_no
+    address:
+      type: object
+      properties:
+        care_of:
+          type:
+          - string
+          - 'null'
+          description: Additional care of field
+        city:
+          type: string
+          description: Name of the city
+        country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        first_name:
+          type:
+          - string
+          - 'null'
+          description: A persons first name
+        state:
+          type:
+          - string
+          - 'null'
+          description: The state the address is in
+        street:
+          type: string
+          description: Name of the street. Can hold the house number
+        street_no:
+          type:
+          - string
+          - 'null'
+          description: House number of the address (when a carrier requires it separately)
+        zip_code:
+          type: string
+          description: Zipcode of the address
+        phone:
+          type: string
+          description: 'Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)'
+        email:
+          type: string
+          description: Email address for this person. Some carrier are using the email address to send notifications
+      required:
+      - street
+      - city
+      - zip_code
+      - country
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

@@ -1,0 +1,39 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/reference/
+format: custom-json
+envelope:
+  field: errors
+  shape: '{"errors": ["<message>", ...]} (array of message strings, per OpenAPI examples)'
+  source: openapi/_original/shipcloud_v1_oai3.json
+problems:
+- status: 400
+  title: bad request
+  description: Your request was not correct. Please see the response body for more detailed information.
+- status: 401
+  title: Unauthorized
+  description: You didn't authorize with our api. Probably because you forgot to send your api key for authorizing at our api.
+  remediation: Send the API key as the HTTP Basic auth username.
+- status: 402
+  title: payment required
+  description: You've reached the maximum of your current plan. Please upgrade to a higher plan.
+  remediation: Upgrade to a higher plan.
+- status: 403
+  title: forbidden
+  description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+- status: 404
+  title: not found
+  description: The api endpoint you were trying to reach can't be found.
+- status: 422
+  title: unprocessable entity
+  description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information.
+- status: 500
+  title: internal server error
+  description: Something has seriously gone wrong. Don't worry, we'll have a look at it.
+- status: 502
+  title: bad gateway
+  description: Something has gone wrong while talking to the carrier backend. Please see the response body for more detailed information.
+- status: 504
+  title: gateway timeout
+  description: Unfortunately we couldn't connect to the carrier backend. It is either very slow or not reachable at all.
+  remediation: Follow @shipcloud_devs for carrier status.

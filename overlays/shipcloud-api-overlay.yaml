@@ -1,0 +1,250 @@
+overlay: 1.0.0
+info:
+  title: shipcloud API — API Evangelist overlay
+  version: 1.0.0
+extends: ../openapi/_original/shipcloud-openapi.yml
+x-generated: '2026-10-09'
+x-method: generated
+actions:
+- target: $.info
+  description: Mark this as the API Evangelist enhancement layer
+  update:
+    x-api-evangelist-overlay:
+      generated: '2026-10-09'
+      note: The provider spec ships no operationIds, tags or operation summaries; this overlay adds derived ones without mutating the original.
+- target: $.paths['/addresses'].get
+  description: Add derived operationId/summary/tag to GET /addresses
+  update:
+    operationId: listAddresses
+    summary: Getting a list of addresses
+    tags:
+    - Addresses
+- target: $.paths['/addresses'].post
+  description: Add derived operationId/summary/tag to POST /addresses
+  update:
+    operationId: createAddress
+    summary: Creating an address
+    tags:
+    - Addresses
+- target: $.paths['/addresses/{id}'].get
+  description: Add derived operationId/summary/tag to GET /addresses/{id}
+  update:
+    operationId: getAddress
+    summary: Returns a single address based on its identifier
+    tags:
+    - Addresses
+- target: $.paths['/carriers'].get
+  description: Add derived operationId/summary/tag to GET /carriers
+  update:
+    operationId: listCarriers
+    summary: Returns all carriers for the user associated with the api key
+    tags:
+    - Carriers
+- target: $.paths['/default_returns_address'].get
+  description: Add derived operationId/summary/tag to GET /default_returns_address
+  update:
+    operationId: getDefaultReturnsAddress
+    summary: Getting the default returns address
+    tags:
+    - Default Returns Address
+- target: $.paths['/default_shipping_address'].get
+  description: Add derived operationId/summary/tag to GET /default_shipping_address
+  update:
+    operationId: getDefaultShippingAddress
+    summary: Getting the default shipping address
+    tags:
+    - Default Shipping Address
+- target: $.paths['/invoice_address'].get
+  description: Add derived operationId/summary/tag to GET /invoice_address
+  update:
+    operationId: getInvoiceAddress
+    summary: Getting the invoice address
+    tags:
+    - Invoice Address
+- target: $.paths['/manifests'].post
+  description: Add derived operationId/summary/tag to POST /manifests
+  update:
+    operationId: createManifest
+    summary: Create a manifest
+    tags:
+    - Manifests
+- target: $.paths['/manifests/{id}'].get
+  description: Add derived operationId/summary/tag to GET /manifests/{id}
+  update:
+    operationId: getManifest
+    summary: Getting information about a manifest
+    tags:
+    - Manifests
+- target: $.paths['/me'].get
+  description: Add derived operationId/summary/tag to GET /me
+  update:
+    operationId: getMe
+    summary: Getting information about the current user
+    tags:
+    - Me
+- target: $.paths['/orders'].get
+  description: Add derived operationId/summary/tag to GET /orders
+  update:
+    operationId: listOrders
+    summary: Getting a list of previously created orders
+    tags:
+    - Orders
+- target: $.paths['/orders'].post
+  description: Add derived operationId/summary/tag to POST /orders
+  update:
+    operationId: createOrder
+    summary: Create a new order
+    tags:
+    - Orders
+- target: $.paths['/orders/{id}'].get
+  description: Add derived operationId/summary/tag to GET /orders/{id}
+  update:
+    operationId: getOrder
+    summary: Getting a previously created order
+    tags:
+    - Orders
+- target: $.paths['/pickup_dropoff_locations'].get
+  description: Add derived operationId/summary/tag to GET /pickup_dropoff_locations
+  update:
+    operationId: searchPickupDropoffLocations
+    summary: Search pickup dropoff locations by address or geographical coordinates
+    tags:
+    - Pickup Dropoff Locations
+- target: $.paths['/pickup_requests'].get
+  description: Add derived operationId/summary/tag to GET /pickup_requests
+  update:
+    operationId: listPickupRequests
+    summary: Get all pickup requests for this user
+    tags:
+    - Pickup Requests
+- target: $.paths['/pickup_requests'].post
+  description: Add derived operationId/summary/tag to POST /pickup_requests
+  update:
+    operationId: createPickupRequest
+    summary: Create a pickup request with a carrier, so they come and get the parcels
+    tags:
+    - Pickup Requests
+- target: $.paths['/pickup_requests/{id}'].get
+  description: Add derived operationId/summary/tag to GET /pickup_requests/{id}
+  update:
+    operationId: getPickupRequest
+    summary: Returns a single pickup request based on the id
+    tags:
+    - Pickup Requests
+- target: $.paths['/shipment_quotes'].post
+  description: Add derived operationId/summary/tag to POST /shipment_quotes
+  update:
+    operationId: createShipmentQuote
+    summary: Find out how much we will charge you for a specific shipment when using shipcloud carrier contracts
+    tags:
+    - Shipment Quotes
+- target: $.paths['/shipments'].get
+  description: Add derived operationId/summary/tag to GET /shipments
+  update:
+    operationId: listShipments
+    summary: Returns a list of shipments
+    tags:
+    - Shipments
+- target: $.paths['/shipments'].post
+  description: Add derived operationId/summary/tag to POST /shipments
+  update:
+    operationId: createShipment
+    summary: Create a shipment
+    tags:
+    - Shipments
+- target: $.paths['/shipments/{id}'].get
+  description: Add derived operationId/summary/tag to GET /shipments/{id}
+  update:
+    operationId: getShipment
+    summary: Returns a single shipment based on the id
+    tags:
+    - Shipments
+- target: $.paths['/shipments/{id}'].put
+  description: Add derived operationId/summary/tag to PUT /shipments/{id}
+  update:
+    operationId: updateShipment
+    summary: 'Updates a single shipment based on the id. Unfortunately you can''t update the `customs_declaration` '
+    tags:
+    - Shipments
+- target: $.paths['/shipments/{id}'].delete
+  description: Add derived operationId/summary/tag to DELETE /shipments/{id}
+  update:
+    operationId: deleteShipment
+    summary: Deletes a single shipment. **Notice:**  Prepared shipments (where `create_shipping_label` is `false`
+    tags:
+    - Shipments
+- target: $.paths['shipments/{shipment_id}/shipment_documents'].get
+  description: Add derived operationId/summary/tag to GET shipments/{shipment_id}/shipment_documents
+  update:
+    operationId: listShipmentDocuments
+    summary: Returns a list of shipment documents for a single shipment based on the id (available as of mid-Marc
+    tags:
+    - Shipment Documents
+- target: $.paths['shipments/{shipment_id}/shipment_documents'].post
+  description: Add derived operationId/summary/tag to POST shipments/{shipment_id}/shipment_documents
+  update:
+    operationId: createShipmentDocument
+    summary: Create a shipment document (available as of mid-March 2025)
+    tags:
+    - Shipment Documents
+- target: $.paths['shipments/{shipment_id}/shipment_documents/{shipment_document_id}'].get
+  description: Add derived operationId/summary/tag to GET shipments/{shipment_id}/shipment_documents/{shipment_document_id}
+  update:
+    operationId: getShipmentDocument
+    summary: Returns a single shipment document based on the id (available as of mid-March 2025)
+    tags:
+    - Shipment Documents
+- target: $.paths['/trackers'].get
+  description: Add derived operationId/summary/tag to GET /trackers
+  update:
+    operationId: listTrackers
+    summary: Get a list of previously created trackers
+    tags:
+    - Trackers
+- target: $.paths['/trackers'].post
+  description: Add derived operationId/summary/tag to POST /trackers
+  update:
+    operationId: createTracker
+    summary: Creating a tracker
+    tags:
+    - Trackers
+- target: $.paths['/trackers/{id}'].get
+  description: Add derived operationId/summary/tag to GET /trackers/{id}
+  update:
+    operationId: getTracker
+    summary: Get a single tracker
+    tags:
+    - Trackers
+- target: $.paths['/webhooks'].get
+  description: Add derived operationId/summary/tag to GET /webhooks
+  update:
+    operationId: listWebhooks
+    summary: Get a list of previously created webhooks
+    tags:
+    - Webhooks
+- target: $.paths['/webhooks'].post
+  description: Add derived operationId/summary/tag to POST /webhooks
+  update:
+    operationId: createWebhook
+    summary: Creating a webhook on the shipcloud platform
+    tags:
+    - Webhooks
+- target: $.paths['/webhooks/{id}'].get
+  description: Add derived operationId/summary/tag to GET /webhooks/{id}
+  update:
+    operationId: getWebhook
+    summary: Returns a single webhook based on the provided id
+    tags:
+    - Webhooks
+- target: $.paths['/webhooks/{id}'].delete
+  description: Add derived operationId/summary/tag to DELETE /webhooks/{id}
+  update:
+    operationId: deleteWebhook
+    summary: Deletes a single webhook identified by its id
+    tags:
+    - Webhooks
+- target: $.paths
+  description: Flag provider paths missing a leading slash (shipment_documents) — left as-is because overlays cannot rename path keys
+  update:
+    x-api-evangelist-note: Three shipment_documents paths in the provider spec lack a leading slash (e.g. "shipments/{shipment_id}/shipment_documents");
+      they resolve to /shipments/{shipment_id}/shipment_documents under https://api.shipcloud.io/v1.

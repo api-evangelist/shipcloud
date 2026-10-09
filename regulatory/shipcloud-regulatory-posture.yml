@@ -1,0 +1,32 @@
+generated: '2026-10-09'
+method: none
+source:
+- https://www.shipcloud.com/datenschutz
+- https://www.shipcloud.com/impressum
+- https://www.shipcloud.io/datenschutz/
+- https://www.shipcloud.io/agb/
+- https://www.shipcloud.io/en/privacy
+- https://support.shipcloud.io/de/
+probe: true
+signals: {}
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  note: >-
+    The privacy, imprint and terms links published on developers.shipcloud.io, app.shipcloud.io and
+    support.shipcloud.io point to www.shipcloud.com and www.shipcloud.io. On 2026-10-09,
+    www.shipcloud.com/datenschutz, www.shipcloud.com/impressum and shipcloud.io returned HTTP 202 with a
+    SiteGround "Robot Challenge Screen" (/.well-known/sgcaptcha/). A headless-browser render also got only
+    the challenge. www.shipcloud.io (/, /datenschutz/, /agb/, /en/privacy) gave no HTTP response, the same
+    "unreachable" result the pre-flight dossier recorded. Searching the Intercom Help Center
+    (support.shipcloud.io/de/) for Datenschutz, DSGVO, Auftragsverarbeitung and AVV returned no
+    privacy or data-processing articles. A web search found no shipcloud DPA or subprocessor list.
+    No signal is recorded because no provider text could be read. This means the pages could not be
+    read. It does not show that shipcloud has no posture.
+  attempts:
+  - {url: https://www.shipcloud.com/datenschutz, http_status: 202, result: sgcaptcha robot challenge (plain and rendered)}
+  - {url: https://www.shipcloud.com/impressum, http_status: 202, result: sgcaptcha robot challenge}
+  - {url: https://shipcloud.io/, http_status: 202, result: sgcaptcha robot challenge}
+  - {url: https://www.shipcloud.io/datenschutz/, http_status: null, result: no response (connection failed)}
+  - {url: https://www.shipcloud.io/agb/, http_status: null, result: no response (connection failed)}
+  - {url: "https://support.shipcloud.io/de/?q=Datenschutz", http_status: 200, result: no privacy/DPA articles}

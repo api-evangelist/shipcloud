@@ -1,0 +1,269 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Carriers API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Carriers across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Carriers
+paths:
+  /carriers:
+    get:
+      description: Returns all carriers for the user associated with the api key
+      responses:
+        '200':
+          description: A list of carriers.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      allOf:
+                      - $ref: '#/components/schemas/carrier_shipping'
+                      - description: key for referencing the carrier within shipcloud
+                    display_name:
+                      type: string
+                      description: name of the carrier you can use to display it in your application
+                    services:
+                      type: array
+                      items:
+                        type: string
+                        description: key for referencing the service within shipcloud
+                        enum:
+                        - standard
+                        - one_day
+                        - one_day_early
+                        - returns
+                        - cargo_international_express
+                        - dhl_europaket
+                        - dhl_prio
+                        - dhl_warenpost
+                        - dpag_warenpost
+                        - dpag_warenpost_signature
+                        - dpag_warenpost_untracked
+                        - gls_express_0800
+                        - gls_express_0900
+                        - gls_express_1000
+                        - gls_express_1200
+                        - ups_express_1200
+                        default: standard
+                    package_types:
+                      type: array
+                      items:
+                        type: string
+                        description: key for referencing the package type within shipcloud
+                        enum:
+                        - parcel
+                        - bulk
+                        - letter
+                        - books
+                        - parcel_letter
+                        default: parcel
+                    additional_services:
+                      type: array
+                      items:
+                        type: string
+                        enum:
+                        - saturday_delivery
+                        - angel_de_delivery_date_time
+                        - advance_notice
+                        - hermes_identservice
+                        - drop_authorization
+                        - dpd_food
+                        - delivery_date
+                        - delivery_note
+                        - delivery_time
+                        - cash_on_delivery
+                        - gls_guaranteed24service
+                        - dhl_gogreen
+                        - dhl_ident_check
+                        - premium_international
+                        - visual_age_check
+                        - dhl_endorsement
+                        - dhl_named_person_only
+                        - dhl_parcel_outlet_routing
+                        - ups_adult_signature
+                        - ups_direct_delivery_only
+                        description: key to identify the additional service
+                  required:
+                  - name
+                  - display_name
+                  - services
+                  - package_types
+                  - additional_services
+              examples:
+                List of carriers:
+                  value:
+                  - name: dhl
+                    display_name: Deutsche Post DHL
+                    services:
+                    - standard
+                    - returns
+                    package_types:
+                    - parcel
+                    - bulk
+                    additional_services:
+                    - advance_notice
+                  - name: dpag
+                    display_name: Deutsche Post
+                    services:
+                    - standard
+                    package_types:
+                    - letter
+                    - parcel_letter
+                    - books
+                    additional_services: []
+                  - name: dpd
+                    display_name: DPD - Dynamic Parcel Distribution
+                    services:
+                    - standard
+                    - returns
+                    - one_day
+                    - one_day_early
+                    package_types:
+                    - parcel
+                    - parcel_letter
+                    additional_services:
+                    - advance_notice
+                    - drop_authorization
+                    - saturday_delivery
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Carriers
+      summary: Get carriers
+      x-summary-source: derived
+      operationId: getCarriers
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  headers:
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  responses:
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  schemas:
+    carrier_shipping:
+      type: string
+      enum:
+      - angel_de
+      - asendia
+      - cargo_international
+      - dhl
+      - dhl_express
+      - dpag
+      - dpd
+      - gls
+      - go
+      - hermes
+      - iloxx
+      - parcel_one
+      - ups
+      description: acronym of the carrier
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

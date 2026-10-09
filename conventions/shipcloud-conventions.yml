@@ -1,0 +1,52 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/concepts/
+style: REST, resource-oriented URLs, JSON bodies (Content-Type application/json) for POST/PATCH/PUT/DELETE; query-string params for GET
+auth:
+  style: HTTP Basic, API key as username, no password
+  ref: authentication/shipcloud-authentication.yml
+idempotency:
+  coverage: none
+  note: No Idempotency-Key header or replay protection is documented or declared in the OpenAPI. The docs warn carrier calls can be slow and recommend a client timeout "of a little more than a minute".
+pagination:
+  style: page-number
+  params: [page, per_page]
+  per_page: "default & max: 100"
+  source: https://developers.shipcloud.io/reference/
+filtering: query parameters on list endpoints (e.g. carrier, created_at_gt, created_at_lt, reference_number, service)
+metadata:
+  supported: true
+  note: Shipments accept a free-form metadata object of key-value pairs that shipcloud stores.
+sanitization: Whitespace trimmed from edges and control characters removed before sending data to carriers.
+request_tracing:
+  header: Affiliate-ID
+  note: Optional client-identifying header requested for support; no request-id response header documented.
+versioning:
+  style: path (/v1/)
+  ref: lifecycle/shipcloud-lifecycle.yml
+errors:
+  envelope: '{"errors": [string]}'
+  ref: errors/shipcloud-problem-types.yml
+rate_limit_signaling:
+  headers: [RateLimit-Limit, RateLimit-Interval, RateLimit-Remaining, RateLimit-Reset]
+  ref: rate-limits/shipcloud-rate-limits.yml
+webhooks:
+  delivery: HTTP POST with thin JSON payload (id, webhook_id, occured_at, type, data.url); fetch the resource via the API
+  retries: "After 15 failed attempts to send you the data, we're giving up and the webhook will be deactivated automatically."
+  security: basic authorization configured per webhook
+reversibility:
+  verdict: verified
+  surfaces:
+  - write: create shipment (POST /shipments)
+    reversal: delete shipment (DELETE /shipments/{id})
+    window: "Prepared shipments ( create_shipping_label is false ) can be deleted at any time ... In case you've created a shipping label you can delete it before the cutoff time of the carrier. Cutoff times differ from carrier to carrier and are some time between 5pm and 8pm."
+    docs: https://developers.shipcloud.io/reference/
+  - write: create webhook (POST /webhooks)
+    reversal: delete webhook (DELETE /webhooks/{id})
+    window: null
+    docs: https://developers.shipcloud.io/reference/
+  - write: create address / pickup request / tracker / order / manifest / shipment quote
+    reversal: none documented
+  note: Operations in the OpenAPI carry no operationIds, so reversal operations are named by method + path.
+dry_run:
+  mode: sandbox key (prices returned as 0,0; sandbox shipments deleted after 2 weeks); shipment_quotes returns a price without creating a shipment.

@@ -1,0 +1,212 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Me API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Me across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Me
+paths:
+  /me:
+    get:
+      description: Getting information about the current user
+      responses:
+        '200':
+          description: Detailed information about the current user that is making the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/current_user'
+              examples:
+                Production user:
+                  $ref: '#/components/examples/production_user'
+                Sandbox user:
+                  $ref: '#/components/examples/sandbox_user'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Me
+      summary: Get me
+      x-summary-source: derived
+      operationId: getMe
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  examples:
+    sandbox_user:
+      value:
+        id: usr-adaa123f
+        email: user@shipcloud.io
+        customer_no: 123af01f
+        environment: sandbox
+        subscription:
+          plan_name: developer
+          plan_display_name: Developer
+          chargeable: false
+    production_user:
+      value:
+        id: usr-adaa123f
+        email: user@shipcloud.io
+        customer_no: 123af01f
+        environment: production
+        subscription:
+          plan_name: professional
+          plan_display_name: Professional
+          chargeable: true
+  headers:
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  responses:
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  schemas:
+    current_user:
+      description: Getting information about the user that is making the request
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique identifier for this user (generated by shipcloud).
+        email:
+          type: string
+          description: The email address associated with this user
+        first_name:
+          type: string
+          description: First name of the user.
+        last_name:
+          type: string
+          description: Last name of the user.
+        customer_no:
+          type: string
+          description: The unique identifier for this customer (generated by shipcloud). Used e.g. in support cases.
+        environment:
+          type: string
+          description: Shows the corresponding environment for the currently used api key.
+          enum:
+          - production
+          - sandbox
+        subscription:
+          type: object
+          properties:
+            plan_name:
+              type: string
+              description: A key to identify the plan the user currently has
+            plan_display_name:
+              type: string
+              description: Name of the plan the user currently has. Can be used for displaying it at the frontend.
+            chargeable:
+              type: boolean
+              description: true if the user has provided a chargeable payment method.
+          required:
+          - plan_name
+          - plan_display_name
+          - chargeable
+      required:
+      - id
+      - email
+      - customer_no
+      - environment
+      - subscription
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

@@ -1,0 +1,194 @@
+name: shipcloud MCP (candidate)
+type: MCPServer
+generated: '2026-10-09'
+method: derived
+source: openapi/shipcloud-openapi.yml
+status: candidate
+description: No official shipcloud-published MCP server was found (web search 2026-10-09; developers.shipcloud.io/llms.txt and /AGENTS.md answered 403). This is a candidate tool list derived 1:1 from the
+  33 operations of the shipcloud v1 OpenAPI. The spec ships no operationIds, so tool bindings use METHOD + path, with proposed operationIds taken from overlays/shipcloud-api-overlay.yaml.
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+api_auth:
+  scheme: HTTP Basic (API key as username)
+  base_url: https://api.shipcloud.io/v1
+third_party_servers:
+- name: Pipedream shipcloud MCP
+  url: https://mcp.pipedream.com/app/shipcloud
+  official: false
+  verified: searched
+- name: Boost.space shipcloud integration (MCP view)
+  url: https://web-2025.boost.space/integrations/shipcloud/?view=mcp
+  official: false
+  verified: searched
+- name: AnythingMCP shipcloud connector
+  url: https://anythingmcp.com/guides/shipcloud-to-mcp
+  official: false
+  verified: searched
+tools:
+- name: shipcloud_list_addresses
+  operation: GET /addresses
+  proposed_operationId: listAddresses
+  description: Getting a list of addresses
+  read_only: true
+- name: shipcloud_create_address
+  operation: POST /addresses
+  proposed_operationId: createAddress
+  description: Creating an address
+  read_only: false
+- name: shipcloud_get_address
+  operation: GET /addresses/{id}
+  proposed_operationId: getAddress
+  description: Returns a single address based on its identifier
+  read_only: true
+- name: shipcloud_list_carriers
+  operation: GET /carriers
+  proposed_operationId: listCarriers
+  description: Returns all carriers for the user associated with the api key
+  read_only: true
+- name: shipcloud_get_default_returns_address
+  operation: GET /default_returns_address
+  proposed_operationId: getDefaultReturnsAddress
+  description: Getting the default returns address
+  read_only: true
+- name: shipcloud_get_default_shipping_address
+  operation: GET /default_shipping_address
+  proposed_operationId: getDefaultShippingAddress
+  description: Getting the default shipping address
+  read_only: true
+- name: shipcloud_get_invoice_address
+  operation: GET /invoice_address
+  proposed_operationId: getInvoiceAddress
+  description: Getting the invoice address
+  read_only: true
+- name: shipcloud_create_manifest
+  operation: POST /manifests
+  proposed_operationId: createManifest
+  description: Create a manifest
+  read_only: false
+- name: shipcloud_get_manifest
+  operation: GET /manifests/{id}
+  proposed_operationId: getManifest
+  description: Getting information about a manifest
+  read_only: true
+- name: shipcloud_get_me
+  operation: GET /me
+  proposed_operationId: getMe
+  description: Getting information about the current user
+  read_only: true
+- name: shipcloud_list_orders
+  operation: GET /orders
+  proposed_operationId: listOrders
+  description: Getting a list of previously created orders
+  read_only: true
+- name: shipcloud_create_order
+  operation: POST /orders
+  proposed_operationId: createOrder
+  description: Create a new order.
+  read_only: false
+- name: shipcloud_get_order
+  operation: GET /orders/{id}
+  proposed_operationId: getOrder
+  description: Getting a previously created order.
+  read_only: true
+- name: shipcloud_search_pickup_dropoff_locations
+  operation: GET /pickup_dropoff_locations
+  proposed_operationId: searchPickupDropoffLocations
+  description: Search pickup dropoff locations by address or geographical coordinates.
+  read_only: true
+- name: shipcloud_list_pickup_requests
+  operation: GET /pickup_requests
+  proposed_operationId: listPickupRequests
+  description: Get all pickup requests for this user
+  read_only: true
+- name: shipcloud_create_pickup_request
+  operation: POST /pickup_requests
+  proposed_operationId: createPickupRequest
+  description: Create a pickup request with a carrier, so they come and get the parcels
+  read_only: false
+- name: shipcloud_get_pickup_request
+  operation: GET /pickup_requests/{id}
+  proposed_operationId: getPickupRequest
+  description: Returns a single pickup request based on the id
+  read_only: true
+- name: shipcloud_create_shipment_quote
+  operation: POST /shipment_quotes
+  proposed_operationId: createShipmentQuote
+  description: Find out how much we will charge you for a specific shipment when using shipcloud carrier contracts.
+  read_only: false
+- name: shipcloud_list_shipments
+  operation: GET /shipments
+  proposed_operationId: listShipments
+  description: Returns a list of shipments
+  read_only: true
+- name: shipcloud_create_shipment
+  operation: POST /shipments
+  proposed_operationId: createShipment
+  description: Create a shipment
+  read_only: false
+- name: shipcloud_get_shipment
+  operation: GET /shipments/{id}
+  proposed_operationId: getShipment
+  description: Returns a single shipment based on the id
+  read_only: true
+- name: shipcloud_update_shipment
+  operation: PUT /shipments/{id}
+  proposed_operationId: updateShipment
+  description: Updates a single shipment based on the id. Unfortunately you can't update the `customs_declaration` attribute at the moment.
+  read_only: false
+- name: shipcloud_delete_shipment
+  operation: DELETE /shipments/{id}
+  proposed_operationId: deleteShipment
+  description: Deletes a single shipment. **Notice:**  Prepared shipments (where `create_shipping_label` is `false`) can be deleted at any time, because no transaction with th
+  read_only: false
+- name: shipcloud_list_shipment_documents
+  operation: GET shipments/{shipment_id}/shipment_documents
+  proposed_operationId: listShipmentDocuments
+  description: Returns a list of shipment documents for a single shipment based on the id (available as of mid-March 2025)
+  read_only: true
+- name: shipcloud_create_shipment_document
+  operation: POST shipments/{shipment_id}/shipment_documents
+  proposed_operationId: createShipmentDocument
+  description: Create a shipment document (available as of mid-March 2025)
+  read_only: false
+- name: shipcloud_get_shipment_document
+  operation: GET shipments/{shipment_id}/shipment_documents/{shipment_document_id}
+  proposed_operationId: getShipmentDocument
+  description: Returns a single shipment document based on the id (available as of mid-March 2025)
+  read_only: true
+- name: shipcloud_list_trackers
+  operation: GET /trackers
+  proposed_operationId: listTrackers
+  description: Get a list of previously created trackers
+  read_only: true
+- name: shipcloud_create_tracker
+  operation: POST /trackers
+  proposed_operationId: createTracker
+  description: Creating a tracker
+  read_only: false
+- name: shipcloud_get_tracker
+  operation: GET /trackers/{id}
+  proposed_operationId: getTracker
+  description: Get a single tracker
+  read_only: true
+- name: shipcloud_list_webhooks
+  operation: GET /webhooks
+  proposed_operationId: listWebhooks
+  description: Get a list of previously created webhooks
+  read_only: true
+- name: shipcloud_create_webhook
+  operation: POST /webhooks
+  proposed_operationId: createWebhook
+  description: Creating a webhook on the shipcloud platform
+  read_only: false
+- name: shipcloud_get_webhook
+  operation: GET /webhooks/{id}
+  proposed_operationId: getWebhook
+  description: Returns a single webhook based on the provided id
+  read_only: true
+- name: shipcloud_delete_webhook
+  operation: DELETE /webhooks/{id}
+  proposed_operationId: deleteWebhook
+  description: Deletes a single webhook identified by its id
+  read_only: false

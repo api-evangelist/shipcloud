@@ -1,0 +1,48 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/API_CHANGELOG.html
+scheme: dated ([YYYYMMDD]); "This changelog does not follow Semantic Versioning"
+current_version: v1
+latest_entry: '2022-06-07'
+note: The newest entry is 2022-06-07; no later entries were published as of 2026-10-09.
+entries:
+- version: '20220607'
+  date: '2022-06-07'
+  breaking: false
+  highlights: [Attribute refundable_until added to orders]
+- version: '20220517'
+  date: '2022-05-17'
+  breaking: false
+  highlights: [API endpoint /orders (create, list, read)]
+- version: '20220426'
+  date: '2022-04-26'
+  breaking: false
+  highlights: [Additional delivery details for DHL tracking events]
+- version: '20220322'
+  date: '2022-03-22'
+  breaking: false
+  highlights: [Webhooks can now be secured using basic auth]
+- version: '20220125'
+  date: '2022-01-25'
+  breaking: false
+  highlights: [Service returns for PARCEL.ONE, Carrier Asendia, API endpoint /manifests (create, read)]
+- version: '20211202'
+  date: '2021-12-02'
+  breaking: false
+  highlights: [Billing options for UPS]
+- version: '20210922'
+  date: '2021-09-22'
+  breaking: false
+  highlights: [Cash on delivery for Hermes, Packstation / Postfiliale addresses via DHL webservice]
+- version: '20210728'
+  date: '2021-07-28'
+  breaking: false
+  highlights: [Hazardous goods additional service for DPD]
+- version: '20210519'
+  date: '2021-05-19'
+  breaking: false
+  highlights: [DHL no neighbor delivery / preferred location / preferred neighbor, GLS DepositService, UPS carbon neutral]
+- version: '20210101'
+  date: '2021-01-01'
+  breaking: true
+  highlights: [Removed - service Warenpost (domestic) deprecated by Deutsche Post]

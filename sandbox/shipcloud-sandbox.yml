@@ -1,0 +1,17 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/concepts/
+docs: https://developers.shipcloud.io/concepts/
+description: "When creating an account at shipcloud you get access for 2 systems. A sandbox and a production system. ... 2 api keys get generated. A sandbox key that you can use for testing our api and a live key, that can be used to create the actual shipping labels."
+mode_selection: by API key (sandbox key vs live key); same base URL https://api.shipcloud.io/v1
+key_prefixes: null
+behaviors:
+- "When using the sandbox key we will always return 0,0 as price."
+- "We're currently deleting sandbox shipments 2 weeks after they've been created."
+signup:
+  plan: developer
+  text: "If you feel like tinkering with our api you can always register for free using our developer plan."
+  url: https://app.shipcloud.io/de/users/sign_up?plan=developer
+webhook_testing: The docs recommend an external request-capture service (e.g. requestbin.com) and testing a webhook through the website sends a sample payload; no event trigger tooling is published.
+test_values: []
+test_values_note: none published

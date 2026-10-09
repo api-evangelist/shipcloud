@@ -1,0 +1,9 @@
+# harvested from https://github.com/shipcloud/shipcloud-developer-portal/blob/bc60ff1dbb31cede3a2b512127f1bc195dcc41c4/.spectral.yml on 2026-10-09 — a Spectral ruleset published in the provider's own GitHub repository (shipcloud/shipcloud-developer-portal); found by GitHub code search, fetched verbatim
+x-method: harvested
+x-stamped: 2026-10-09
+x-source-url: https://github.com/shipcloud/shipcloud-developer-portal/blob/bc60ff1dbb31cede3a2b512127f1bc195dcc41c4/.spectral.yml
+extends: spectral:oas
+rules:
+  openapi-tags: false
+  operation-tags: false
+  operation-operationId: false

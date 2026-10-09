@@ -1,0 +1,24 @@
+name: shipcloud API rate limits
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/concepts/
+limit_count: 0
+note: The docs say requests are limited per user per interval but publish no fixed number; the current limit is signalled on every response via headers. Values like 120 / 60 in the docs are explicitly examples ("e.g."), so no numeric limit is recorded.
+limits:
+- name: per-user request interval
+  scope: per-user
+  limit_text: We are limiting the number of requests a user can send to our API in a given set of time.
+  note: number and interval are per user and returned at runtime in RateLimit-Limit / RateLimit-Interval
+headers:
+- name: RateLimit-Limit
+  description: number the shows the overall limit of requests this user can send (e.g. 120)
+- name: RateLimit-Interval
+  description: number of seconds the interval for this user is long (e.g. 60)
+- name: RateLimit-Remaining
+  description: remaining number of request in the current interval (e.g. 111)
+- name: RateLimit-Reset
+  description: number of seconds that shows when the request rate limit resets (e.g. 42)
+scope: per-user
+scope_text: We are limiting the number of requests a user can send to our API in a given set of time.
+exhaustion_status: null
+exhaustion_note: The docs do not state the status code returned when the limit is exhausted.

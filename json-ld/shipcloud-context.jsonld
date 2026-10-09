@@ -1,0 +1,477 @@
+{
+  "@context": {
+    "@vocab": "https://shipcloud.io/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "shipcloud": "https://shipcloud.io/schema#",
+    "address": "shipcloud:address",
+    "care_of": {
+      "@id": "shipcloud:care_of",
+      "@type": "xsd:string"
+    },
+    "city": {
+      "@id": "shipcloud:city",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "shipcloud:country",
+      "@type": "xsd:string"
+    },
+    "first_name": {
+      "@id": "shipcloud:first_name",
+      "@type": "xsd:string"
+    },
+    "state": {
+      "@id": "shipcloud:state",
+      "@type": "xsd:string"
+    },
+    "street": {
+      "@id": "shipcloud:street",
+      "@type": "xsd:string"
+    },
+    "street_no": {
+      "@id": "shipcloud:street_no",
+      "@type": "xsd:string"
+    },
+    "zip_code": {
+      "@id": "shipcloud:zip_code",
+      "@type": "xsd:string"
+    },
+    "phone": {
+      "@id": "shipcloud:phone",
+      "@type": "xsd:string"
+    },
+    "email": {
+      "@id": "shipcloud:email",
+      "@type": "xsd:string"
+    },
+    "address_with_id_clean": "shipcloud:address_with_id_clean",
+    "id": {
+      "@id": "shipcloud:id",
+      "@type": "xsd:string"
+    },
+    "carrier_pickup": "shipcloud:carrier_pickup",
+    "carrier_shipping": "shipcloud:carrier_shipping",
+    "carrier_tracking_only": "shipcloud:carrier_tracking_only",
+    "current_user": "shipcloud:current_user",
+    "last_name": {
+      "@id": "shipcloud:last_name",
+      "@type": "xsd:string"
+    },
+    "customer_no": {
+      "@id": "shipcloud:customer_no",
+      "@type": "xsd:string"
+    },
+    "environment": {
+      "@id": "shipcloud:environment",
+      "@type": "xsd:string"
+    },
+    "subscription": {
+      "@id": "shipcloud:subscription"
+    },
+    "customs_declaration": "shipcloud:customs_declaration",
+    "contents_type": {
+      "@id": "shipcloud:contents_type",
+      "@type": "xsd:string"
+    },
+    "contents_explanation": {
+      "@id": "shipcloud:contents_explanation",
+      "@type": "xsd:string"
+    },
+    "currency": {
+      "@id": "shipcloud:currency",
+      "@type": "xsd:string"
+    },
+    "additional_fees": {
+      "@id": "shipcloud:additional_fees",
+      "@type": "xsd:decimal"
+    },
+    "drop_off_location": {
+      "@id": "shipcloud:drop_off_location",
+      "@type": "xsd:string"
+    },
+    "exporter_reference": {
+      "@id": "shipcloud:exporter_reference",
+      "@type": "xsd:string"
+    },
+    "importer_reference": {
+      "@id": "shipcloud:importer_reference",
+      "@type": "xsd:string"
+    },
+    "movement_reference_number": {
+      "@id": "shipcloud:movement_reference_number",
+      "@type": "xsd:string"
+    },
+    "posting_date": {
+      "@id": "shipcloud:posting_date",
+      "@type": "xsd:date"
+    },
+    "invoice_number": {
+      "@id": "shipcloud:invoice_number",
+      "@type": "xsd:string"
+    },
+    "total_value_amount": {
+      "@id": "shipcloud:total_value_amount",
+      "@type": "xsd:decimal"
+    },
+    "customs_declaration_items": "shipcloud:customs_declaration_items",
+    "origin_country": {
+      "@id": "shipcloud:origin_country",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "shipcloud:description",
+      "@type": "xsd:string"
+    },
+    "hs_tariff_number": {
+      "@id": "shipcloud:hs_tariff_number",
+      "@type": "xsd:string"
+    },
+    "quantity": {
+      "@id": "shipcloud:quantity",
+      "@type": "xsd:integer"
+    },
+    "value_amount": {
+      "@id": "shipcloud:value_amount",
+      "@type": "xsd:string"
+    },
+    "net_weight": {
+      "@id": "shipcloud:net_weight",
+      "@type": "xsd:decimal"
+    },
+    "gross_weight": {
+      "@id": "shipcloud:gross_weight",
+      "@type": "xsd:decimal"
+    },
+    "label": "shipcloud:label",
+    "format": {
+      "@id": "shipcloud:format",
+      "@type": "xsd:string"
+    },
+    "size": {
+      "@id": "shipcloud:size",
+      "@type": "xsd:string"
+    },
+    "localized_attributes": "shipcloud:localized_attributes",
+    "fallback": {
+      "@id": "shipcloud:fallback",
+      "@type": "xsd:string"
+    },
+    "de": {
+      "@id": "shipcloud:de",
+      "@type": "xsd:string"
+    },
+    "en": {
+      "@id": "shipcloud:en",
+      "@type": "xsd:string"
+    },
+    "manifest": "shipcloud:manifest",
+    "carrier": {
+      "@id": "shipcloud:carrier",
+      "@type": "xsd:string"
+    },
+    "posting_hub_address": {
+      "@id": "shipcloud:posting_hub_address"
+    },
+    "shipments": {
+      "@id": "shipcloud:shipments",
+      "@container": "@list"
+    },
+    "reference_number": {
+      "@id": "shipcloud:reference_number",
+      "@type": "xsd:string"
+    },
+    "order": "shipcloud:order",
+    "placed_at": {
+      "@id": "shipcloud:placed_at",
+      "@type": "xsd:dateTime"
+    },
+    "external_order_id": {
+      "@id": "shipcloud:external_order_id",
+      "@type": "xsd:string"
+    },
+    "external_customer_id": {
+      "@id": "shipcloud:external_customer_id",
+      "@type": "xsd:string"
+    },
+    "total_price": {
+      "@id": "shipcloud:total_price",
+      "@type": "xsd:decimal"
+    },
+    "total_vat": {
+      "@id": "shipcloud:total_vat",
+      "@type": "xsd:decimal"
+    },
+    "refundable_until": {
+      "@id": "shipcloud:refundable_until",
+      "@type": "xsd:dateTime"
+    },
+    "refund_deduction_amount": {
+      "@id": "shipcloud:refund_deduction_amount",
+      "@type": "xsd:decimal"
+    },
+    "total_weight": {
+      "@id": "shipcloud:total_weight",
+      "@type": "xsd:decimal"
+    },
+    "weight_unit": {
+      "@id": "shipcloud:weight_unit",
+      "@type": "xsd:string"
+    },
+    "delivery_address": {
+      "@id": "shipcloud:delivery_address",
+      "@type": "@id"
+    },
+    "order_line_items": {
+      "@id": "shipcloud:order_line_items",
+      "@container": "@list"
+    },
+    "order_line_item": "shipcloud:order_line_item",
+    "sku": {
+      "@id": "shipcloud:sku",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "shipcloud:title",
+      "@type": "@id"
+    },
+    "price": {
+      "@id": "shipcloud:price",
+      "@type": "xsd:decimal"
+    },
+    "vat": {
+      "@id": "shipcloud:vat",
+      "@type": "xsd:decimal"
+    },
+    "gtin": {
+      "@id": "shipcloud:gtin",
+      "@type": "xsd:string"
+    },
+    "weight": {
+      "@id": "shipcloud:weight",
+      "@type": "xsd:decimal"
+    },
+    "external_order_line_item_id": {
+      "@id": "shipcloud:external_order_line_item_id",
+      "@type": "xsd:string"
+    },
+    "item_info": {
+      "@id": "shipcloud:item_info",
+      "@container": "@list"
+    },
+    "gross_price": {
+      "@id": "shipcloud:gross_price",
+      "@type": "xsd:decimal"
+    },
+    "returnability": {
+      "@id": "shipcloud:returnability"
+    },
+    "package_minimal": "shipcloud:package_minimal",
+    "height": {
+      "@id": "shipcloud:height",
+      "@type": "xsd:decimal"
+    },
+    "length": {
+      "@id": "shipcloud:length",
+      "@type": "xsd:decimal"
+    },
+    "width": {
+      "@id": "shipcloud:width",
+      "@type": "xsd:decimal"
+    },
+    "pickup": "shipcloud:pickup",
+    "pickup_time": {
+      "@id": "shipcloud:pickup_time",
+      "@type": "@id"
+    },
+    "pickup_address": {
+      "@id": "shipcloud:pickup_address",
+      "@type": "@id"
+    },
+    "pickup_time_object": "shipcloud:pickup_time_object",
+    "earliest": {
+      "@id": "shipcloud:earliest",
+      "@type": "xsd:dateTime"
+    },
+    "latest": {
+      "@id": "shipcloud:latest",
+      "@type": "xsd:dateTime"
+    },
+    "pickup_request_object": "shipcloud:pickup_request_object",
+    "carrier_pickup_number": {
+      "@id": "shipcloud:carrier_pickup_number",
+      "@type": "xsd:string"
+    },
+    "service": "shipcloud:service",
+    "shipment": "shipcloud:shipment",
+    "to": {
+      "@id": "shipcloud:to"
+    },
+    "from": {
+      "@id": "shipcloud:from"
+    },
+    "cover_address": {
+      "@id": "shipcloud:cover_address"
+    },
+    "notification_email": {
+      "@id": "shipcloud:notification_email",
+      "@type": "xsd:string"
+    },
+    "incoterm": {
+      "@id": "shipcloud:incoterm",
+      "@type": "xsd:string"
+    },
+    "billing": {
+      "@id": "shipcloud:billing"
+    },
+    "additional_services": {
+      "@id": "shipcloud:additional_services",
+      "@container": "@list"
+    },
+    "order_id": {
+      "@id": "shipcloud:order_id",
+      "@type": "xsd:string"
+    },
+    "returned_items": {
+      "@id": "shipcloud:returned_items",
+      "@container": "@list"
+    },
+    "create_shipping_label": {
+      "@id": "shipcloud:create_shipping_label",
+      "@type": "xsd:boolean"
+    },
+    "metadata": {
+      "@id": "shipcloud:metadata"
+    },
+    "shipment_put": "shipcloud:shipment_put",
+    "shipment_document": "shipcloud:shipment_document",
+    "document_type": {
+      "@id": "shipcloud:document_type",
+      "@type": "xsd:string"
+    },
+    "document_format": {
+      "@id": "shipcloud:document_format",
+      "@type": "xsd:string"
+    },
+    "content": {
+      "@id": "shipcloud:content",
+      "@type": "xsd:string"
+    },
+    "shipment_document_response_object": "shipcloud:shipment_document_response_object",
+    "document_url": {
+      "@id": "shipcloud:document_url",
+      "@type": "xsd:string"
+    },
+    "tracker_object": "shipcloud:tracker_object",
+    "carrier_tracking_no": {
+      "@id": "shipcloud:carrier_tracking_no",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "shipcloud:status",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "shipcloud:created_at",
+      "@type": "xsd:dateTime"
+    },
+    "tracking_status_updated_at": {
+      "@id": "shipcloud:tracking_status_updated_at",
+      "@type": "xsd:dateTime"
+    },
+    "last_polling_at": {
+      "@id": "shipcloud:last_polling_at",
+      "@type": "xsd:dateTime"
+    },
+    "next_polling_at": {
+      "@id": "shipcloud:next_polling_at",
+      "@type": "xsd:dateTime"
+    },
+    "shipment_id": {
+      "@id": "shipcloud:shipment_id",
+      "@type": "xsd:string"
+    },
+    "tracking_events": {
+      "@id": "shipcloud:tracking_events",
+      "@container": "@list"
+    },
+    "webhook_event_types": "shipcloud:webhook_event_types",
+    "webhook_object": "shipcloud:webhook_object",
+    "url": {
+      "@id": "shipcloud:url",
+      "@type": "xsd:string"
+    },
+    "event_types": {
+      "@id": "shipcloud:event_types",
+      "@container": "@list"
+    },
+    "security": {
+      "@id": "shipcloud:security"
+    },
+    "pickup_dropoff_location": "shipcloud:pickup_dropoff_location",
+    "carrier_code": {
+      "@id": "shipcloud:carrier_code",
+      "@type": "xsd:string"
+    },
+    "service_point_id": {
+      "@id": "shipcloud:service_point_id",
+      "@type": "xsd:string"
+    },
+    "name1": {
+      "@id": "shipcloud:name1",
+      "@type": "xsd:string"
+    },
+    "street1": {
+      "@id": "shipcloud:street1",
+      "@type": "xsd:string"
+    },
+    "house_number": {
+      "@id": "shipcloud:house_number",
+      "@type": "xsd:string"
+    },
+    "country_code": {
+      "@id": "shipcloud:country_code",
+      "@type": "xsd:string"
+    },
+    "longitude": {
+      "@id": "shipcloud:longitude",
+      "@type": "xsd:string"
+    },
+    "latitude": {
+      "@id": "shipcloud:latitude",
+      "@type": "xsd:string"
+    },
+    "distance": {
+      "@id": "shipcloud:distance",
+      "@type": "xsd:integer"
+    },
+    "distance_unit_of_measure": {
+      "@id": "shipcloud:distance_unit_of_measure",
+      "@type": "xsd:string"
+    },
+    "telephone_number": {
+      "@id": "shipcloud:telephone_number",
+      "@type": "xsd:string"
+    },
+    "pudo_hours": {
+      "@id": "shipcloud:pudo_hours",
+      "@container": "@list"
+    },
+    "pudo_additional_properties": {
+      "@id": "shipcloud:pudo_additional_properties",
+      "@container": "@list"
+    },
+    "pudo_measurements": {
+      "@id": "shipcloud:pudo_measurements",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "shipcloud API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects shipcloud's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-09) from openapi/shipcloud-openapi.yml.",
+  "dcterms:created": "2026-10-09",
+  "dcterms:source": [
+    "openapi/shipcloud-openapi.yml"
+  ]
+}

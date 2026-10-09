@@ -1,0 +1,49 @@
+generated: '2026-10-09'
+method: derived
+generator: derive-webhooks.py
+source:
+- openapi/shipcloud-openapi.yml
+description: 'Event surface derived from the provider''s own OpenAPI: enum webhook_event_types. No AsyncAPI document is published by the provider;
+  this catalog lists the events the contract names.'
+management_operations:
+- GET /webhooks
+- POST /webhooks
+- GET /webhooks/{id}
+- DELETE /webhooks/{id}
+events:
+- event: '*'
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.*
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.status.*
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.status.deleted
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.*
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.awaits_pickup_by_receiver
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.canceled
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.delayed
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.delivered
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.destroyed
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.exception
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.label_created
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.not_delivered
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.notification
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.out_for_delivery
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.picked_up
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.transit
+  declared_in: components/schemas/webhook_event_types
+- event: shipment.tracking.unknown
+  declared_in: components/schemas/webhook_event_types

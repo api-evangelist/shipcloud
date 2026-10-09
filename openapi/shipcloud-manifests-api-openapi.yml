@@ -1,0 +1,275 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Manifests API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Manifests across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Manifests
+paths:
+  /manifests:
+    post:
+      description: Create a manifest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/manifest'
+            examples:
+              Asendia manifest:
+                value:
+                  carrier: asendia
+                  posting_hub_address:
+                    company: Muster-Company
+                    first_name: Max
+                    last_name: Mustermann
+                    street: Musterstraße
+                    street_no: '42'
+                    zip_code: '54321'
+                    city: Musterstadt
+                    country: DE
+                    email: max@mustermann.baz
+                    phone: '+491234567890'
+                  shipments:
+                  - c3c25a8786c89341601b131d6ed7f5d80af8aaef
+                  - 4dfcc1b3a5e764d139b1c9e6492e018928071b4f
+                  reference_number: 12345ABCDE
+      responses:
+        '200':
+          description: A manifest has been successfully created!
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/manifest_response'
+              examples:
+                Manifest response example:
+                  $ref: '#/components/examples/manifest_response_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+      tags:
+      - Manifests
+      summary: Create manifests
+      x-summary-source: derived
+      operationId: postManifests
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+  /manifests/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: The identifier of a previously created manifest
+      schema:
+        type: string
+    get:
+      description: Getting information about a manifest
+      responses:
+        '200':
+          description: Detailed information about a single manifest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/manifest_response'
+              examples:
+                Manifest response example:
+                  $ref: '#/components/examples/manifest_response_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+      tags:
+      - Manifests
+      summary: Get manifests by id
+      x-summary-source: derived
+      operationId: getManifestsById
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  headers:
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  schemas:
+    manifest_response:
+      allOf:
+      - $ref: '#/components/schemas/manifest'
+      - properties:
+          carrier_reference_number:
+            type: string
+            description: Reference used by the carrier to identify the manifest
+          created_at:
+            type: string
+            format: date-time
+            description: timestamp of when the manifest was created
+          documents:
+            type: array
+            items:
+              type: object
+              description: Array of document objects
+              properties:
+                document_url:
+                  type: string
+                  description: URL where you can download the manifest in pdf format
+                identifier:
+                  type: string
+                  description: An identifier that specifies the type of the document being returned
+                  enum:
+                  - manifest_document
+          id:
+            type: string
+            description: identifier of a previously created manifest
+        required:
+        - carrier
+        - carrier_reference_number
+        - created_at
+        - documents
+        - id
+        - posting_hub_address
+        - shipments
+    address:
+      type: object
+      properties:
+        care_of:
+          type:
+          - string
+          - 'null'
+          description: Additional care of field
+        city:
+          type: string
+          description: Name of the city
+        country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        first_name:
+          type:
+          - string
+          - 'null'
+          description: A persons first name
+        state:
+          type:
+          - string
+          - 'null'
+          description: The state the address is in
+        street:
+          type: string
+          description: Name of the street. Can hold the house number
+        street_no:
+          type:
+          - string
+          - 'null'
+          description: House number of the address (when a carrier requires it separately)
+        zip_code:
+          type: string
+          description: Zipcode of the address
+        phone:
+          type: string
+          description: 'Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)'
+        email:
+          type: string
+          description: Email address for this person. Some carrier are using the email address to send notifications
+      required:
+      - street
+      - city
+      - zip_code
+      - country
+    manifest:
+      type: object
+      properties:
+        carrier:
+          type: string
+          description: Carrier for whom the maifest should be created
+        posting_hub_address:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - description: Address of the hub where the shipments will be overturned to the carrier
+        shipments:
+          type: array
+          description: array of shipment IDs that are send using this manifest
+          items: {}
+        reference_number:
+          type: string
+          description: For referencing the manifest at the carrier
+      required:
+      - carrier
+      - posting_hub_address
+      - shipments
+  examples:
+    manifest_response_example:
+      value:
+        id: 3a186c51d4281acbecf5ed38805b1db92a9d668b
+        carrier: asendia
+        carrier_reference_number: '1313252761'
+        posting_hub_address:
+          id: ce76939d-1a32-4185-8467-a5dafbdf99f2
+          company: Muster-Company
+          first_name: Max
+          last_name: Mustermann
+          care_of: null
+          street: Musterstraße
+          street_no: '42'
+          zip_code: '54321'
+          city: Musterstadt
+          state: null
+          country: DE
+          email: max@mustermann.baz
+          phone: '+491234567890'
+        shipments:
+        - c3c25a8786c89341601b131d6ed7f5d80af8aaef
+        - 4dfcc1b3a5e764d139b1c9e6492e018928071b4f
+        reference_number: 12345ABCDE
+        documents:
+        - identifier: manifest_document
+          document_url: https://documents.shipcloud.io/manifests/1234567e-3f98-9876-907f-50de20200c2e/manifest_documents/manifest_document
+        created_at: '2021-05-06T10:43:04Z'
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

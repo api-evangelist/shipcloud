@@ -1,0 +1,16 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/concepts/
+versioning:
+  scheme: path major version (/v1/)
+  current: v1
+  policy: "No value types or fields will be changed or deleted in the same API version ... In case we introduce breaking changes we will adjust the API base path to reflect each new major version. So consecutive releases will be called using /v2/, /v3/ and so on."
+  allowed_non_breaking: [add new fields to an object, add new API endpoints, required fields can become optional, endpoints can become deprecated]
+  changelog_scheme: 'dated entries [YYYYMMDD]; "This changelog does not follow Semantic Versioning"'
+deprecation:
+  policy: 'Within a version "endpoints can become deprecated"; no notice period or Sunset/Deprecation headers documented.'
+  deprecated_operations: []
+  note: No operations in openapi/shipcloud-openapi.yml are marked deprecated.
+status_page: https://status.shipcloud.io/
+sla: null
+changelog: https://developers.shipcloud.io/API_CHANGELOG.html

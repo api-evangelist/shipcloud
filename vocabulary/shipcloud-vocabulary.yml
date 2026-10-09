@@ -1,0 +1,146 @@
+generated: '2026-10-09'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/shipcloud-openapi.yml
+vocabulary:
+  name: shipcloud Domain Vocabulary
+  description: 'Terms declared by shipcloud''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-09'
+  terms:
+  - term: address
+    definition: 'Object declared by the contract with fields: care_of, city, country, first_name, state, street, street_no, zip_code, phone, email.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/address
+  - term: address_with_id_clean
+    definition: 'Object declared by the contract with fields: id, care_of, city, country, first_name, state, street, street_no, zip_code, phone,
+      email.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/address_with_id_clean
+  - term: carrier_pickup
+    definition: acronym of the carrier
+    tags:
+    - Enumeration
+    source: openapi/shipcloud-openapi.yml#/components/schemas/carrier_pickup
+  - term: carrier_shipping
+    definition: acronym of the carrier
+    tags:
+    - Enumeration
+    source: openapi/shipcloud-openapi.yml#/components/schemas/carrier_shipping
+  - term: carrier_tracking_only
+    definition: acronym of the carrier
+    tags:
+    - Enumeration
+    source: openapi/shipcloud-openapi.yml#/components/schemas/carrier_tracking_only
+  - term: current_user
+    definition: Getting information about the user that is making the request
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/current_user
+  - term: customs_declaration
+    definition: declaration of customs related information
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/customs_declaration
+  - term: customs_declaration_items
+    definition: 'Object declared by the contract with fields: origin_country, description, hs_tariff_number, quantity, value_amount, net_weight,
+      gross_weight.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/customs_declaration_items
+  - term: label
+    definition: label specific definitions
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/label
+  - term: localized_attributes
+    definition: 'Object declared by the contract with fields: fallback, de, en.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/localized_attributes
+  - term: manifest
+    definition: 'Object declared by the contract with fields: carrier, posting_hub_address, shipments, reference_number.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/manifest
+  - term: Order
+    definition: An order
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/order
+  - term: Order Line Item
+    definition: 'Object declared by the contract with fields: sku, title, quantity, price, vat, currency, gtin, weight, weight_unit, external_order_line_item_id,
+      item_info, gross_price. (1 more)'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/order_line_item
+  - term: package_minimal
+    definition: defines package attributes
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/package_minimal
+  - term: pickup
+    definition: for some carriers a pickup has to be requested when creating a shipment
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/pickup
+  - term: pickup_time_object
+    definition: defines a time window in which the carrier should pickup shipments
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/pickup_time_object
+  - term: pickup_request_object
+    definition: 'Object declared by the contract with fields: id, carrier, carrier_pickup_number, pickup_time, pickup_address, shipments.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/pickup_request_object
+  - term: service
+    definition: The service that should be used for the shipment.
+    tags:
+    - Enumeration
+    source: openapi/shipcloud-openapi.yml#/components/schemas/service
+  - term: shipment
+    definition: 'Object declared by the contract with fields: carrier, to, from, cover_address, service, reference_number, description, label,
+      notification_email, incoterm, billing, additional_services. (6 more)'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/shipment
+  - term: shipment_put
+    definition: 'Object declared by the contract with fields: carrier, to, from, cover_address, service, reference_number, description, label,
+      notification_email, incoterm, pickup, create_shipping_label. (1 more)'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/shipment_put
+  - term: shipment_document
+    definition: 'Object declared by the contract with fields: document_type, document_format, content.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/shipment_document
+  - term: shipment_document_response_object
+    definition: 'Object declared by the contract with fields: id, document_type, document_format, document_url.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/shipment_document_response_object
+  - term: tracker_object
+    definition: 'Object declared by the contract with fields: carrier_tracking_no, status, created_at, from, tracking_status_updated_at, last_polling_at,
+      next_polling_at, shipment_id, carrier, to, tracking_events.'
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/tracker_object
+  - term: webhook_event_types
+    definition: the event types that a webhook can have
+    tags:
+    - Enumeration
+    source: openapi/shipcloud-openapi.yml#/components/schemas/webhook_event_types
+  - term: webhook_object
+    definition: Webhooks inform your system of events that have happened within the shipcloud platform
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/webhook_object
+  - term: pickup_dropoff_location
+    definition: A single location of a carrier. Includes opening hours, additional properties and (optional) maximum package measurements.
+    tags:
+    - Object
+    source: openapi/shipcloud-openapi.yml#/components/schemas/pickup_dropoff_location

@@ -1,0 +1,787 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Orders API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Orders across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Orders
+paths:
+  /orders:
+    get:
+      description: Getting a list of previously created orders
+      parameters:
+      - name: external_order_id
+        in: query
+        description: Filter orders by their external order id
+        schema:
+          type: string
+      - name: external_customer_id
+        in: query
+        description: Filter orders by their external customer id
+        schema:
+          type: string
+      - name: created_at_gt
+        in: query
+        description: Get orders with a `created_at` date that is bigger then the one provided
+        schema:
+          type: string
+          format: date
+      - name: created_at_lt
+        in: query
+        description: Get orders with a `created_at` date that is smaller then the one provided
+        schema:
+          type: string
+          format: date
+      responses:
+        '200':
+          description: A list of orders
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/order_with_id'
+              example:
+              - id: 67aeb18a-f4ef-4d68-abb4-3aa309c71fa5
+                placed_at: '2022-04-01T14:39:03+02:00'
+                refundable_until: '2022-05-18T12:30:15+01:00'
+                external_order_id: Rechnung-1234
+                external_customer_id: Kunde-1234
+                total_price: 186.85
+                total_vat: 1.23
+                currency: EUR
+                total_weight: 0.9
+                weight_unit: kg
+                delivery_address:
+                  id: 4e56e24f-59f9-4c12-b373-0798279fa91f
+                  company: Company
+                  first_name: Firstname
+                  last_name: Lastname
+                  street: Street
+                  street_no: '42'
+                  zip_code: '54321'
+                  city: City
+                  country: DE
+                order_line_items:
+                - id: 81d28907-ffc5-4868-80e3-24a247fc7798
+                  sku: '11223344'
+                  title:
+                    de: Schuhe
+                    en: Shoes
+                    fallback: Shoes
+                  quantity: 1
+                  price: 10.95
+                  vat: 1.36
+                  currency: EUR
+                  weight: 0.1
+                  weight_unit: kg
+                - id: e68f47d7-49e3-461d-aa80-fd04af70e4d5
+                  sku: '234567'
+                  title:
+                    de: Jacke
+                    en: Jacket
+                    fallback: Jacket
+                  quantity: 1
+                  price: 6.5
+                  vat: 0.36
+                  currency: EUR
+                  weight: 0.2
+                  weight_unit: kg
+              - id: c537be77-7ed1-431a-a69d-93407cb7db8e
+                placed_at: '2022-01-12T13:39:03+01:00'
+                external_order_id: Rechnung-5678
+                external_customer_id: Kunde-1234
+                total_price: 186.85
+                total_vat: 1.23
+                currency: EUR
+                total_weight: 0.9
+                weight_unit: kg
+                delivery_address:
+                  id: 6b2fbc32-4523-4a7a-9506-80ddfc448c49
+                  company: Company
+                  first_name: Firstname
+                  last_name: Lastname
+                  street: Street
+                  street_no: '42'
+                  zip_code: '54321'
+                  city: City
+                  country: DE
+                order_line_items:
+                - id: e880a792-baed-48f4-b079-2477eb17f068
+                  sku: '345678'
+                  title:
+                    de: Schuhe
+                    en: Shoes
+                    fallback: Shoes
+                  quantity: 1
+                  price: 89.95
+                  vat: 14.36
+                  currency: EUR
+                  weight: 0.45
+                  weight_unit: kg
+                - id: 2b3f9da9-8d0b-46f8-be27-76f9203a9836
+                  sku: '234567'
+                  title:
+                    de: Jacke
+                    en: Jacket
+                    fallback: Jacke
+                  quantity: 1
+                  price: 89.95
+                  vat: 14.36
+                  currency: EUR
+                  weight: 0.45
+                  weight_unit: kg
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Orders
+      summary: Get orders
+      x-summary-source: derived
+      operationId: getOrders
+      x-operation-id-source: derived
+    post:
+      description: Create a new order.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/order'
+            examples:
+              Order request example:
+                $ref: '#/components/examples/order_example'
+      responses:
+        '200':
+          description: An order
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/order_with_id'
+              examples:
+                Order response example:
+                  $ref: '#/components/examples/order_with_id_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Orders
+      summary: Create orders
+      x-summary-source: derived
+      operationId: postOrders
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+  /orders/{id}:
+    parameters:
+    - schema:
+        type: string
+      name: id
+      in: path
+      required: true
+    get:
+      description: Getting a previously created order.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/order_with_id'
+              examples:
+                Get order example:
+                  $ref: '#/components/examples/order_with_id_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Orders
+      summary: Get orders by id
+      x-summary-source: derived
+      operationId: getOrdersById
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  responses:
+    '404':
+      description: The api endpoint or ressource you were trying to reach can't be found.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  headers:
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  schemas:
+    order_line_item:
+      type: object
+      description: ''
+      title: Order Line Item
+      properties:
+        sku:
+          type: string
+          minLength: 1
+          description: Stock keeping unit
+        title:
+          $ref: '#/components/schemas/localized_attributes'
+        quantity:
+          type: number
+          description: Quantity of this item in the order
+        price:
+          type: number
+          description: Price the customer has to pay for a single item
+        vat:
+          type: number
+          description: VAT one has to pay for a single item
+        currency:
+          type: string
+          minLength: 1
+          description: Currency the item has to be payed in
+        gtin:
+          type: string
+          maxLength: 14
+          description: Global trade item number (https://www.gs1.org/standards/id-keys/gtin)
+        weight:
+          type: number
+          description: How much a single item is weighing
+        weight_unit:
+          type: string
+          description: Unit used for the weight measurement
+          enum:
+          - kg
+        external_order_line_item_id:
+          type: string
+          description: An external identifier for this order line item
+        item_info:
+          type: array
+          uniqueItems: true
+          minItems: 0
+          description: Information about this variant version of the product. Used to display a (localized) label and value pair to describe an item's property, e.g. a product category.
+          items:
+            type: object
+            properties:
+              name:
+                $ref: '#/components/schemas/localized_attributes'
+              value:
+                $ref: '#/components/schemas/localized_attributes'
+            required:
+            - name
+            - value
+        gross_price:
+          type: number
+          description: Gross price in Euro of an item. Used to calculate the refund amount of a return shipment (a Return Portal Plus feature).
+        returnability:
+          type: object
+          additionalProperties: false
+          properties:
+            returnable:
+              type: boolean
+              description: Indicates if an order line item can be returned (a Return Portal Plus feature).
+            returnable_until:
+              type: string
+              format: date-time
+              example: '2022-05-18T12:30:15+02:00'
+              description: Used to disable returns for an order line item after a specific time.
+            nonreturnable_reason:
+              $ref: '#/components/schemas/localized_attributes'
+      required:
+      - sku
+      - title
+      - quantity
+      - price
+      - vat
+      - currency
+    order:
+      type: object
+      description: An order
+      title: Order
+      properties:
+        placed_at:
+          type: string
+          minLength: 1
+          format: date-time
+          description: Date that shows When the order has been placed
+        external_order_id:
+          type: string
+          description: An external identifier for this order
+        external_customer_id:
+          type: string
+          description: An external identifier for the customer who has placed the order
+        total_price:
+          type: number
+          description: The total amount of the order
+        total_vat:
+          type: number
+          description: The total VAT of the order
+        currency:
+          type: string
+          minLength: 1
+          enum:
+          - EUR
+          - USD
+          - GBP
+          description: Currency that the customer uses for paying the order
+        refundable_until:
+          type: string
+          format: date-time
+          description: Used to disable returns for the whole order after a specific time (a Return Portal Plus feature).
+        refund_deduction_amount:
+          type: number
+          description: Part of the order's return costs the customer has to pay (a Return Portal Plus feature).
+        total_weight:
+          type: number
+          description: Total weight of all items
+        weight_unit:
+          enum:
+          - kg
+          type: string
+          description: The unit associated with the weight. Mandatory when `total_weight` is given
+        delivery_address:
+          $ref: '#/components/schemas/address'
+        order_line_items:
+          type: array
+          description: Array of objects containing the items that have been bought with this order
+          items:
+            $ref: '#/components/schemas/order_line_item'
+      required:
+      - currency
+      - order_line_items
+      - total_price
+      - total_vat
+    address:
+      type: object
+      properties:
+        care_of:
+          type:
+          - string
+          - 'null'
+          description: Additional care of field
+        city:
+          type: string
+          description: Name of the city
+        country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        first_name:
+          type:
+          - string
+          - 'null'
+          description: A persons first name
+        state:
+          type:
+          - string
+          - 'null'
+          description: The state the address is in
+        street:
+          type: string
+          description: Name of the street. Can hold the house number
+        street_no:
+          type:
+          - string
+          - 'null'
+          description: House number of the address (when a carrier requires it separately)
+        zip_code:
+          type: string
+          description: Zipcode of the address
+        phone:
+          type: string
+          description: 'Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)'
+        email:
+          type: string
+          description: Email address for this person. Some carrier are using the email address to send notifications
+      required:
+      - street
+      - city
+      - zip_code
+      - country
+    order_line_item_with_id:
+      allOf:
+      - $ref: '#/components/schemas/order_line_item'
+      - type: object
+        title: Order Line Item (with IDs)
+        properties:
+          id:
+            type: string
+            format: uuid
+            readOnly: true
+            description: identifier of a previously created order line item
+        required:
+        - id
+    order_with_id:
+      allOf:
+      - $ref: '#/components/schemas/order'
+      - type: object
+        properties:
+          id:
+            type: string
+            description: identifier of a previously created order
+            format: uuid
+            readOnly: true
+          delivery_address:
+            $ref: '#/components/schemas/address_with_id_clean'
+          order_line_items:
+            type: array
+            items:
+              $ref: '#/components/schemas/order_line_item_with_id'
+        required:
+        - id
+    localized_attributes:
+      title: localized_attributes
+      type: object
+      additionalProperties: true
+      x-examples:
+        localized_attributes.json:
+          fallback: Color
+          de: Farbe
+          en: Color
+      properties:
+        fallback:
+          type: string
+          minLength: 1
+          description: Dynamic object to contain text in different languages. The `fallback` key has to be specified, and its value must not be empty. All other keys are optional, but if given, they should be valid lowercase `ISO-639-1` codes.
+        de:
+          type: string
+        en:
+          type: string
+      required:
+      - fallback
+    address_with_id_clean:
+      type: object
+      properties:
+        id:
+          type: string
+          description: identifier of a previously created address
+          format: uuid
+          readOnly: true
+        care_of:
+          type: string
+          description: Additional care of field
+        city:
+          type: string
+          description: Name of the city
+        country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        first_name:
+          type: string
+          description: A persons first name
+        state:
+          type: string
+          description: The state the address is in
+        street:
+          type: string
+          description: Name of the street. Can hold the house number
+        street_no:
+          type: string
+          description: House number of the address (when a carrier requires it separately)
+        zip_code:
+          type: string
+          description: Zipcode of the address
+        phone:
+          type: string
+          description: 'Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)'
+        email:
+          type: string
+          description: Email address for this person. Some carrier are using the email address to send notifications
+      required:
+      - id
+      - street
+      - city
+      - zip_code
+      - country
+  examples:
+    order_with_id_example:
+      value:
+        id: feeb6d6a-dd57-4ade-9ef1-8123bed333f8
+        placed_at: '2022-01-12T13:39:03+01:00'
+        refundable_until: '2022-05-18T12:30:15+01:00'
+        external_order_id: 8709500.00.01
+        external_customer_id: '27597435'
+        total_price: 186.85
+        total_vat: 1.23
+        currency: EUR
+        total_weight: 0.9
+        weight_unit: kg
+        delivery_address:
+          id: 868b5b0b-a236-4a67-a531-b1b1d10e3361
+          company: Company
+          first_name: Firstname
+          last_name: Lastname
+          street: Street
+          street_no: Streetno
+          zip_code: '54321'
+          city: City
+          country: DE
+        order_line_items:
+        - id: ceec056e-5320-485f-8786-fb2ad3ed6005
+          sku: '656006'
+          title:
+            de: Item Name
+            en: Item Name
+            fallback: Item Name
+          quantity: 1
+          price: 89.95
+          vat: 14.36
+          currency: EUR
+          weight: 0.45
+          weight_unit: kg
+          item_info:
+          - name:
+              de: Farbe
+              en: Color
+              fallback: Farbe
+            value:
+              de: blue-used
+              en: blue-used
+              fallback: blue-used
+          - name:
+              de: Größe
+              en: Size
+              fallback: Größe
+            value:
+              fallback: '40'
+        - id: 8123c919-f294-4253-ae26-e2ac812a82e4
+          sku: '655999'
+          title:
+            de: Item Name
+            en: Item Name
+            fallback: Item Name
+          quantity: 1
+          price: 89.95
+          vat: 14.36
+          currency: EUR
+          weight: 0.45
+          weight_unit: kg
+          item_info:
+          - name:
+              de: Farbe
+              en: Color
+              fallback: Farbe
+            value:
+              de: dark-denim
+              en: dark-denim
+              fallback: dark-denim
+          - name:
+              de: Größe
+              en: Size
+              fallback: Größe
+            value:
+              fallback: '40'
+    order_example:
+      value:
+        placed_at: '2022-01-12T13:39:03+01:00'
+        refundable_until: '2022-05-18T12:30:15+01:00'
+        external_order_id: 8709500.00.01
+        external_customer_id: '27597435'
+        total_price: 186.85
+        total_vat: 1.23
+        currency: EUR
+        total_weight: 0.9
+        weight_unit: kg
+        delivery_address:
+          company: Company
+          first_name: Firstname
+          last_name: Lastname
+          street: Street
+          street_no: Streetno
+          zip_code: '54321'
+          city: City
+          country: DE
+        order_line_items:
+        - sku: '656006'
+          title:
+            de: Item Name
+            en: Item Name
+            fallback: Item Name
+          quantity: 1
+          price: 89.95
+          vat: 14.36
+          currency: EUR
+          weight: 0.45
+          weight_unit: kg
+          item_info:
+          - name:
+              de: Farbe
+              en: Color
+              fallback: Farbe
+            value:
+              de: blue-used
+              en: blue-used
+              fallback: blue-used
+          - name:
+              de: Größe
+              en: Size
+              fallback: Größe
+            value:
+              fallback: '40'
+        - sku: '655999'
+          title:
+            de: Item Name
+            en: Item Name
+            fallback: Item Name
+          quantity: 1
+          price: 89.95
+          vat: 14.36
+          currency: EUR
+          weight: 0.45
+          weight_unit: kg
+          item_info:
+          - name:
+              de: Farbe
+              en: Color
+              fallback: Farbe
+            value:
+              de: dark-denim
+              en: dark-denim
+              fallback: dark-denim
+          - name:
+              de: Größe
+              en: Size
+              fallback: Größe
+            value:
+              fallback: '40'
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

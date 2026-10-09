@@ -1,0 +1,675 @@
+# shipcloud Help Center
+
+> Einfach integrieren und sofort starten!
+
+## Nederlands
+
+### Starten Sie jetzt mit Shipcloud
+
+- [Kan ik Shipcloud gratis uitproberen?](http://support.shipcloud.io/nl/articles/2644164-kan-ik-shipcloud-gratis-uitproberen.md): Probeer Shipcloud één maand gratis met Go of Grow. Ontdek welke kosten vervallen, wat je voor verzendlabels betaalt en wat er na de proefperiode gebeurt.
+- [Waarom moet ik mijn betaalgegevens invoeren voor het abonnement?](http://support.shipcloud.io/nl/articles/2644890-waarom-moet-ik-mijn-betaalgegevens-invoeren-voor-het-abonnement.md): Ontdek waarom je betaalgegevens nodig zijn voor je Shipcloud-abonnement en hoe facturering, zakelijke tarieven en btw worden verwerkt.
+- [Eenvoudige integratie](http://support.shipcloud.io/nl/articles/3693231-eenvoudige-integratie.md): Eenvoudige verbinding met meer dan 130+ webshop-, ERP-, voorraadbeheersystemen, marktplaatsen, checkout- en fulfillment-systemen.
+- [Accountinstelling met onze onboarding-gids](http://support.shipcloud.io/nl/articles/3030258-accountinstelling-met-onze-onboarding-gids.md): Stel je Shipcloud-account in met de onboarding-gids, activeer je abonnement en configureer verzendadressen, tracking en integraties.
+- [Stap 1: Kies je abonnement en activeer je account](http://support.shipcloud.io/nl/articles/3328043-stap-1-kies-je-abonnement-en-activeer-je-account.md): Registreer je bij Shipcloud, kies het juiste abonnement, activeer je account en voeg je betaalgegevens toe om direct verzendlabels te maken.
+- [Stap 2: Voltooi je accountinstellingen](http://support.shipcloud.io/nl/articles/4356503-stap-2-voltooi-je-accountinstellingen.md): Optimaliseer je Shipcloud-account met een gebrandmerkte trackingpagina, gepersonaliseerde e-mailmeldingen en verzendlabels met je bedrijfslogo.
+- [Hoe kan ik contact opnemen met Shipcloud?](http://support.shipcloud.io/nl/articles/2750967-hoe-kan-ik-contact-opnemen-met-shipcloud.md): Neem eenvoudig contact op met Shipcloud door een e-mail te sturen of een contactformulier in te vullen op onze website.
+
+### Integration & Plug-ins
+
+- [Kan ik mijn API-sleutels voor meer dan één website of shop gebruiken?](http://support.shipcloud.io/nl/articles/2643791-kan-ik-mijn-api-sleutels-voor-meer-dan-een-website-of-shop-gebruiken.md): Hoe maak je zendingen voor verschillende shops en domeinen
+- [Kan ik Shipcloud koppelen aan een marketplace zoals eBay of Amazon?](http://support.shipcloud.io/nl/articles/3619443-kan-ik-shipcloud-koppelen-aan-een-marketplace-zoals-ebay-of-amazon.md)
+- [Is er documentatie voor de Shipcloud API?](http://support.shipcloud.io/nl/articles/3048966-is-er-documentatie-voor-de-shipcloud-api.md)
+- [Waar kan ik informatie vinden over het integreren van Shipcloud in een ruby-gebaseerde webapp?](http://support.shipcloud.io/nl/articles/2643784-waar-kan-ik-informatie-vinden-over-het-integreren-van-shipcloud-in-een-ruby-gebaseerde-webapp.md)
+
+### Shipcloud Abo & Account
+
+- [Welke vervoerders kan ik gebruiken met Shipcloud?](http://support.shipcloud.io/nl/articles/2644896-welke-vervoerders-kan-ik-gebruiken-met-shipcloud.md)
+- [Kan ik later mijn abonnement wijzigen?](http://support.shipcloud.io/nl/articles/2644923-kan-ik-later-mijn-abonnement-wijzigen.md): Wijzig je Shipcloud-abonnement wanneer je wilt. Lees hoe een upgrade of downgrade werkt, wanneer deze ingaat en wat dit betekent voor je facturering.
+- [Heeft het upgraden of downgraden van mijn huidige prijsplan invloed op de opzegtermijn?](http://support.shipcloud.io/nl/articles/2644954-heeft-het-upgraden-of-downgraden-van-mijn-huidige-prijsplan-invloed-op-de-opzegtermijn.md): Lees hoe het upgraden of downgraden van je Shipcloud-abonnement invloed heeft op je contractperiode, facturering en opzegmoment.
+- [Ik ben al geregistreerd, maar ik kan niet inloggen.](http://support.shipcloud.io/nl/articles/2644908-ik-ben-al-geregistreerd-maar-ik-kan-niet-inloggen.md): Zo logt u in op uw Shipcloud-account na registratie
+- [Ik ben mijn wachtwoord vergeten.](http://support.shipcloud.io/nl/articles/2647312-ik-ben-mijn-wachtwoord-vergeten.md): Hoe kan ik een nieuw wachtwoord krijgen?
+- [Kan ik de taal van mijn Shipcloud-account wijzigen?](http://support.shipcloud.io/nl/articles/2644814-kan-ik-de-taal-van-mijn-shipcloud-account-wijzigen.md): Het is mogelijk om de taal van jouw Shipcloud-account te wijzigen. Dit doe je in de linkerbenedenhoek van je scherm.
+- [Hoe wijzig ik mijn klantgegevens?](http://support.shipcloud.io/nl/articles/2644926-hoe-wijzig-ik-mijn-klantgegevens.md): Wijzig eenvoudig je verzendadres en facturatiegegevens in je Shipcloud-account. Voor het aanpassen van je e-mailadres neem je contact op met support.
+- [Mijn account is geblokkeerd, ik kan niet meer inloggen](http://support.shipcloud.io/nl/articles/2644936-mijn-account-is-geblokkeerd-ik-kan-niet-meer-inloggen.md)
+
+### Kosten & Abrechnung
+
+- [Hoe werkt de facturering bij Shipcloud?](http://support.shipcloud.io/nl/articles/8915542-hoe-werkt-de-facturering-bij-shipcloud.md): Lees hoe de facturering bij Shipcloud werkt, wanneer je factuur wordt verstuurd en waar je verzendkosten, transactiekosten en toeslagen vindt.
+- [Wat zijn de kosten voor het gebruik van Shipcloud?](http://support.shipcloud.io/nl/articles/2644824-wat-zijn-de-kosten-voor-het-gebruik-van-shipcloud.md): Ontdek welke kosten bij Shipcloud horen, zoals abonnements- en transactiekosten, verzendlabels en eventuele toeslagen van vervoerders.
+- [Zijn er opstartkosten voor Shipcloud?](http://support.shipcloud.io/nl/articles/2644820-zijn-er-opstartkosten-voor-shipcloud.md): Voor de meeste Shipcloud-integraties en vervoerders betaal je geen opstartkosten. Lees wanneer een eenmalige opstart- of integratievergoeding geldt.
+- [Welke extra kosten kunnen er nog worden gerekend?](http://support.shipcloud.io/nl/articles/2644845-welke-extra-kosten-kunnen-er-nog-worden-gerekend.md): Lees wanneer extra kosten bij Shipcloud kunnen ontstaan, zoals vervoerdertoeslagen en verwerkingskosten bij specifieke facturatie- of verzendsituaties.
+- [Welke betaalmethoden kan ik gebruiken bij Shipcloud?](http://support.shipcloud.io/nl/articles/2644838-welke-betaalmethoden-kan-ik-gebruiken-bij-shipcloud.md): Bekijk welke betaalmethoden Shipcloud ondersteunt, zoals creditcard en PayPal, en lees hoe je betaling op rekening kunt aanvragen.
+- [Wanneer word ik gefactureerd voor mijn verzendetiketten?](http://support.shipcloud.io/nl/articles/2644835-wanneer-word-ik-gefactureerd-voor-mijn-verzendetiketten.md): Lees wanneer Shipcloud verzendlabels in rekening brengt, hoe de facturering werkt en wanneer opgeslagen zendingen kosten met zich meebrengen.
+- [Kan ik eerdere facturen bekijken of downloaden?](http://support.shipcloud.io/nl/articles/2644860-kan-ik-eerdere-facturen-bekijken-of-downloaden.md): Bekijk en download eerdere Shipcloud-facturen in je account. Facturen ouder dan 12 maanden kun je eenvoudig opvragen bij ons supportteam.
+- [Factuuradres wijzigen](http://support.shipcloud.io/nl/articles/2644873-factuuradres-wijzigen.md): Wijzig je factuuradres ieder moment door je aan te melden bij je Shipcloud-account. Ontdek hier alle stappen om het zelf aan te passen.
+- [Hoe kan ik mijn betaalmethode wijzigen?](http://support.shipcloud.io/nl/articles/2644843-hoe-kan-ik-mijn-betaalmethode-wijzigen.md): Ontdek hoe je je betaalmethode kunt wijzigen in je Shipcloud-account. Bij vragen kun je contact opnemen met ons supportteam.
+- [Waarom zijn er extra kosten op mijn factuur?](http://support.shipcloud.io/nl/articles/2644857-waarom-zijn-er-extra-kosten-op-mijn-factuur.md): Ontdek waarom er extra kosten op je Shipcloud-factuur kunnen staan, welke vervoerdertoeslagen gelden en wanneer deze aan jou worden doorberekend.
+- [Hoe en wanneer worden toeslagen berekend?](http://support.shipcloud.io/nl/articles/8915529-hoe-en-wanneer-worden-toeslagen-berekend.md): Lees hoe en wanneer vervoerdertoeslagen worden berekend, hoe je extra kosten voorkomt en waar je nacalculaties in Shipcloud kunt bekijken.
+
+### Shipcloud Funktionen \[SEND | TRACK | RETURN\]
+
+- [Shipcloud Sandbox: testomgeving](http://support.shipcloud.io/nl/articles/4444448-shipcloud-sandbox-testomgeving.md): Test, configureer of wijzig je instellingen terwijl het verzenden doorgaat.
+- [Individuele ontwerpinstellingen in Shipcloud](http://support.shipcloud.io/nl/articles/3505155-individuele-ontwerpinstellingen-in-shipcloud.md): Personaliseer Shipcloud met je contactgegevens, bedrijfslogo en kleuren voor een herkenbare trackingpagina, trackinge-mails en retourportaal.
+- [Hoe kan ik mijn verzendlabels en tracking aanpassen aan het ontwerp van mijn online winkel?](http://support.shipcloud.io/nl/articles/2648284-hoe-kan-ik-mijn-verzendlabels-en-tracking-aanpassen-aan-het-ontwerp-van-mijn-online-winkel.md): Pas je Shipcloud-trackingpagina, statusmails en verzendlabels aan met je logo, kleuren, eigen teksten en meertalige instellingen.
+- [In welk formaat zijn de verzendlabels beschikbaar?](http://support.shipcloud.io/nl/articles/2647372-in-welk-formaat-zijn-de-verzendlabels-beschikbaar.md)
+- [Waarom is er niet genoeg ruimte in de velden “Bedrijf”, “Voornaam” en “Achternaam”?](http://support.shipcloud.io/nl/articles/2647366-waarom-is-er-niet-genoeg-ruimte-in-de-velden-bedrijf-voornaam-en-achternaam.md)
+- [Hoe kan ik verzendlabels annuleren die ik al heb aangemaakt?](http://support.shipcloud.io/nl/articles/2647371-hoe-kan-ik-verzendlabels-annuleren-die-ik-al-heb-aangemaakt.md)
+- [Hoe vraag ik een ophaling aan?](http://support.shipcloud.io/nl/articles/2648106-hoe-vraag-ik-een-ophaling-aan.md): Hoe plan je een eenmalige ophaling voor je standaardpakketten
+- [Hoe vraag ik een ophaling aan voor expreszendingen?](http://support.shipcloud.io/nl/articles/2648109-hoe-vraag-ik-een-ophaling-aan-voor-expreszendingen.md)
+- [Welk adres wordt gebruikt als ophaaladres?](http://support.shipcloud.io/nl/articles/2648115-welk-adres-wordt-gebruikt-als-ophaaladres.md): Is het mogelijk om meerdere ophaaladressen te gebruiken?
+- [Zijn er extra kosten voor afhalingen en ophalingen?](http://support.shipcloud.io/nl/articles/2648120-zijn-er-extra-kosten-voor-afhalingen-en-ophalingen.md): Gratis afhalingen bij verzending via Shipcloud zakelijke tarieven
+- [Kan ik aan het einde van elke dag een lijst van mijn zendingen maken?](http://support.shipcloud.io/nl/articles/2648261-kan-ik-aan-het-einde-van-elke-dag-een-lijst-van-mijn-zendingen-maken.md): Einde-daglijst / Laadlijst
+- [Ik kan geen verzendlabels meer aanmaken en krijg een foutmelding.](http://support.shipcloud.io/nl/articles/2668699-ik-kan-geen-verzendlabels-meer-aanmaken-en-krijg-een-foutmelding.md)
+- [Tips voor het maken van een douaneaangifte \(CN 22/CN23\) met Shipcloud](http://support.shipcloud.io/nl/articles/4500638-tips-voor-het-maken-van-een-douaneaangifte-cn-22-cn23-met-shipcloud.md): Hoe maak je een douaneaangifte voor je belastbare zendingen
+- [Multi-pakket zending met je eigen UPS-contract](http://support.shipcloud.io/nl/articles/9969590-multi-pakket-zending-met-je-eigen-ups-contract.md)
+- [Hoe kunnen de pakketontvangers hun pakketten volgen?](http://support.shipcloud.io/nl/articles/2648265-hoe-kunnen-de-pakketontvangers-hun-pakketten-volgen.md)
+- [Hoe kan ik e-mailmeldingen voor mijn klanten instellen?](http://support.shipcloud.io/nl/articles/2648271-hoe-kan-ik-e-mailmeldingen-voor-mijn-klanten-instellen.md): Stel automatische e-mailmeldingen voor je klanten in Shipcloud in en bepaal de verzendstatussen, het ontwerp, de kleuren en je bedrijfslogo.
+- [Hoe kan ik een pakket volgen?](http://support.shipcloud.io/nl/articles/2648269-hoe-kan-ik-een-pakket-volgen.md)
+- [Hoe helpen webhooks mij automatisch te reageren op Shipcloud-events?](http://support.shipcloud.io/nl/articles/2648286-hoe-helpen-webhooks-mij-automatisch-te-reageren-op-shipcloud-events.md): Gebruik Shipcloud WebHooks om actuele trackinginformatie via pushmeldingen te ontvangen en de verzendstatus direct in je webshop beschikbaar te maken.
+- [Individuele instellingen voor jouw tracking](http://support.shipcloud.io/nl/articles/3505393-individuele-instellingen-voor-jouw-tracking.md): Personaliseer je Shipcloud-trackingpagina en trackinge-mails met eigen teksten en talen voor een herkenbare en passende klantervaring.
+- [Hoe kan ik retourzendingen aanmaken met Shipcloud?](http://support.shipcloud.io/nl/articles/2648291-hoe-kan-ik-retourzendingen-aanmaken-met-shipcloud.md): Retourzendingen aanmaken met Shipcloud
+- [Shipcloud Retourportaal](http://support.shipcloud.io/nl/articles/2679029-shipcloud-retourportaal.md)
+
+### Inkludierte Versanddienstleister für einen schnellen Versandstart
+
+- [DHL: Overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/2658501-dhl-overzicht-van-de-koppeling-met-shipcloud.md): Ontdek welke DHL-verzendmethoden, aanvullende services en labelformaten beschikbaar zijn via Shipcloud-tarieven of je eigen DHL-contract.
+- [DHL: Verzending via Shipcloud zakelijke tarieven](http://support.shipcloud.io/nl/articles/2658527-dhl-verzending-via-shipcloud-zakelijke-tarieven.md): Ontdek DHL-verzending via Shipcloud zakelijke tarieven, inclusief verzendmethoden, extra services, voorwaarden, retouren en mogelijke toeslagen.
+- [DHL: Maximale afmetingen en gewicht, toeslagen en extra kosten](http://support.shipcloud.io/nl/articles/5510491-dhl-maximale-afmetingen-en-gewicht-toeslagen-en-extra-kosten.md): Bekijk de maximale afmetingen en gewichten voor DHL-zendingen via Shipcloud en lees welke toeslagen en extra kosten van toepassing kunnen zijn.
+- [DHL: Beschikbare aanvullende diensten voor verzenden via jouw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2658710-dhl-beschikbare-aanvullende-diensten-voor-verzenden-via-jouw-eigen-vervoerderscontract.md): Ontdek welke aanvullende DHL-services je via Shipcloud met je eigen DHL-contract kunt gebruiken, inclusief vereisten, toepassingen en boekingsopties.
+- [DHL: Zo activeert u de DHL Online Retoure bij verzending via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/3741832-dhl-zo-activeert-u-de-dhl-online-retoure-bij-verzending-via-uw-eigen-vervoerderscontract.md): Activeren van de DHL Online Retoure in het DHL Business Customer Portal
+- [DHL: QR-code retourzending via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/4259941-dhl-qr-code-retourzending-via-uw-eigen-vervoerderscontract.md): Hoe u uw klanten papierloze retourzendingen kunt aanbieden
+- [DHL: Klimaatneutraal verzenden met GoGreen](http://support.shipcloud.io/nl/articles/4998880-dhl-klimaatneutraal-verzenden-met-gogreen.md): Hoe je de aanvullende dienst GoGreen kunt gebruiken met je eigen DHL-contract
+- [DHL: Kleinpaket \(voorheen Warenpost\) en Warenpost International](http://support.shipcloud.io/nl/articles/6307371-dhl-kleinpaket-voorheen-warenpost-en-warenpost-international.md): Snelle, voordelige en flexibele DHL-verzendoptie voor kleine goederen
+- [DHL: Verzenden naar een DHL Packstation](http://support.shipcloud.io/nl/articles/2658716-dhl-verzenden-naar-een-dhl-packstation.md): Hoe je je pakketten naar DHL Packstations kunt versturen
+- [DHL: Verzenden naar een niet-EU-land](http://support.shipcloud.io/nl/articles/2658723-dhl-verzenden-naar-een-niet-eu-land.md): Aanmaken van douanedocumenten \(CN 23\) in Shipcloud
+- [DHL: Zending volgen met uw eigen DHL-contract](http://support.shipcloud.io/nl/articles/11513005-dhl-zending-volgen-met-uw-eigen-dhl-contract.md): Hoe u zendingstracering activeert voor DHL-zendingen via uw eigen contracten.
+- [DHL: Verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2658529-dhl-verzenden-via-je-eigen-vervoerderscontract.md): Koppel je eigen DHL-contract aan Shipcloud en lees alles over toegangsgegevens, facturatie, verzendmethoden en aanvullende DHL-services.
+- [DPD Web Connect en DPD iloxx: Overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/2707797-dpd-web-connect-en-dpd-iloxx-overzicht-van-de-koppeling-met-shipcloud.md): Beschikbare interfaces, verzendmethoden en aanvullende diensten
+- [DPD iloxx: Verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/3142015-dpd-iloxx-verzenden-via-je-eigen-vervoerderscontract.md): Hoe je je eigen DPD \(iloxx\) zakelijke tarieven kunt gebruiken met Shipcloud
+- [DPD Web Connect: Verzenden via Shipcloud zakelijke tarieven](http://support.shipcloud.io/nl/articles/2707835-dpd-web-connect-verzenden-via-shipcloud-zakelijke-tarieven.md): DPD verzendmethoden, aanvullende services en verzendvoorwaarden
+- [DPD Web Connect: Maximale afmetingen en gewicht, toeslagen en extra kosten](http://support.shipcloud.io/nl/articles/5126814-dpd-web-connect-maximale-afmetingen-en-gewicht-toeslagen-en-extra-kosten.md): DPD verzendvoorwaarden en mogelijke toeslagen
+- [DPD Web Connect: Verzenden via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2707858-dpd-web-connect-verzenden-via-uw-eigen-vervoerderscontract.md): Hoe u uw eigen DPD \(Web Connect\) contract opslaat in Shipcloud
+- [DPD Web Connect: Aanvullende diensten bij verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2707865-dpd-web-connect-aanvullende-diensten-bij-verzenden-via-je-eigen-vervoerderscontract.md): Je kunt deze aanvullende diensten gebruiken wanneer je verzendt via je eigen DPD-zakelijke tarieven in combinatie met Shipcloud.
+- [DPD: Verzenden naar een niet-EU-land](http://support.shipcloud.io/nl/articles/2707875-dpd-verzenden-naar-een-niet-eu-land.md)
+- [UPS: alles over de connectie met Shipcloud](http://support.shipcloud.io/nl/articles/2658734-ups-alles-over-de-connectie-met-shipcloud.md): Geïntegreerde UPS verzendmethoden en extra services
+- [UPS: Verzenden via de zakelijke tarieven Shipcloud](http://support.shipcloud.io/nl/articles/2658756-ups-verzenden-via-de-zakelijke-tarieven-shipcloud.md)
+- [UPS: maximale afmetingen en gewicht, toeslagen en aanvullende kosten](http://support.shipcloud.io/nl/articles/5505390-ups-maximale-afmetingen-en-gewicht-toeslagen-en-aanvullende-kosten.md)
+- [UPS: Demandtoeslagen voor het piekseizoen 2026](http://support.shipcloud.io/nl/articles/4533049-ups-demandtoeslagen-voor-het-piekseizoen-2026.md): Tijdelijke demand gerelateerde en seizoensgebonden UPS-toeslagen
+- [UPS: Verzenden met behulp van je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2658761-ups-verzenden-met-behulp-van-je-eigen-vervoerderscontract.md): Hoe sla je je eigen UPS-contract op in Shipcloud?
+- [UPS: Beschikbare extra services voor verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2658776-ups-beschikbare-extra-services-voor-verzenden-via-je-eigen-vervoerderscontract.md): UPS aanvullende diensten die je kunt gebruiken met je eigen contract in verband met Shipcloud
+- [UPS: Alcoholische dranken verzenden met Shipcloud](http://support.shipcloud.io/nl/articles/6171893-ups-alcoholische-dranken-verzenden-met-shipcloud.md): Aandachtspunten bij het verzenden van alcoholische dranken met UPS in samenwerking met Shipcloud
+- [UPS: Zakelijke factuur voor douaneplichtige uitgaande en retourzendingen](http://support.shipcloud.io/nl/articles/2658780-ups-zakelijke-factuur-voor-douaneplichtige-uitgaande-en-retourzendingen.md): Zakelijke factuur voor zendingen naar een niet-EU-land en het retourneren van niet-bezorgbare douaneplichtige pakketten
+- [UPS: Incoterms en UPS Billing Options voor internationaal verzenden](http://support.shipcloud.io/nl/articles/6370931-ups-incoterms-en-ups-billing-options-voor-internationaal-verzenden.md): Je kunt deze incoterms en UPS-factureringsopties gebruiken met Shipcloud
+- [ANGEL: Overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/6619243-angel-overzicht-van-de-koppeling-met-shipcloud.md): Geïntegreerde verzendmethoden en aanvullende services
+- [ANGEL: Verzenden via je eigen vervoerscontract](http://support.shipcloud.io/nl/articles/3211796-angel-verzenden-via-je-eigen-vervoerscontract.md): Hoe je je eigen zakelijke klantvoorwaarden met Shipcloud kunt gebruiken
+- [Asendia: overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/5977752-asendia-overzicht-van-de-koppeling-met-shipcloud.md): Geïntegreerde verzendmethoden en extra services
+- [Asendia: Verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/5978182-asendia-verzenden-via-je-eigen-vervoerderscontract.md): Hoe je je Asendia-account kunt koppelen met Shipcloud
+- [Asendia: Beschikbare extra services voor verzending via je eigen vervoerscontract](http://support.shipcloud.io/nl/articles/5978970-asendia-beschikbare-extra-services-voor-verzending-via-je-eigen-vervoerscontract.md): Je kunt deze extra services gebruiken met je eigen Asendia-contract via Shipcloud
+- [Asendia: Internationale en douaneplichtige verzending naar een niet-EU-land](http://support.shipcloud.io/nl/articles/5979003-asendia-internationale-en-douaneplichtige-verzending-naar-een-niet-eu-land.md): Incoterms en vereenvoudigde douaneaangifte \(CN22/CN23\)
+- [Cargo International: Overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/6620461-cargo-international-overzicht-van-de-koppeling-met-shipcloud.md): Geïntegreerde verzendmethoden en aanvullende diensten
+- [Cargo International: Verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/3206716-cargo-international-verzenden-via-je-eigen-vervoerderscontract.md): Hoe je je eigen Cargo International-zakelijke tarieven met Shipcloud kunt gebruiken
+- [Deutsche Post: Overzicht van de verbinding met Shipcloud](http://support.shipcloud.io/nl/articles/6620592-deutsche-post-overzicht-van-de-verbinding-met-shipcloud.md): Geïntegreerde verzendmethoden en labelformaten
+- [Deutsche Post: Verzending via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2710666-deutsche-post-verzending-via-uw-eigen-vervoerderscontract.md): Hoe u uw eigen zakelijke tarieven van Deutsche Post met Shipcloud kunt gebruiken
+- [Deutsche Post: Verzenden naar een DHL Packstation](http://support.shipcloud.io/nl/articles/2711752-deutsche-post-verzenden-naar-een-dhl-packstation.md)
+- [DHL Express: alles over de connectie met Shipcloud](http://support.shipcloud.io/nl/articles/6620666-dhl-express-alles-over-de-connectie-met-shipcloud.md)
+- [DHL Express: Verzending via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2714412-dhl-express-verzending-via-uw-eigen-vervoerderscontract.md): Hoe je je eigen DHL Express contract voor zakelijke klanten kunt gebruiken met Shipcloud
+- [GLS: Overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/2785587-gls-overzicht-van-de-koppeling-met-shipcloud.md): Geïntegreerde verzendmethoden en extra diensten
+- [GLS: Verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2785647-gls-verzenden-via-je-eigen-vervoerderscontract.md): Hoe je je GLS-contract in Shipcloud kunt opslaan
+- [GLS: Beschikbare extra services voor verzending via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2785689-gls-beschikbare-extra-services-voor-verzending-via-uw-eigen-vervoerderscontract.md): Geïntegreerde extra services voor GLS
+- [GLS: QR-code retour voor verzending via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/5511846-gls-qr-code-retour-voor-verzending-via-je-eigen-vervoerderscontract.md): Hoe je je klanten papierloze retourzendingen kunt aanbieden
+- [GLS: Internationale en douaneplichtige verzending](http://support.shipcloud.io/nl/articles/2785697-gls-internationale-en-douaneplichtige-verzending.md): Incoterms doorgeven aan GLS met Shipcloud
+- [Hermes: Overzicht van de koppeling met Shipcloud](http://support.shipcloud.io/nl/articles/2783530-hermes-overzicht-van-de-koppeling-met-shipcloud.md)
+- [Hermes: Verzenden via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/2785558-hermes-verzenden-via-uw-eigen-vervoerderscontract.md): Hoe u uw eigen Hermes-contract kunt opslaan in Shipcloud
+- [Hermes: Beschikbare extra services voor verzending via uw eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/5598553-hermes-beschikbare-extra-services-voor-verzending-via-uw-eigen-vervoerderscontract.md): U kunt deze Hermes-extra services gebruiken met uw eigen contract in combinatie met Shipcloud
+- [PARCEL.ONE: Verzenden via je eigen vervoerderscontract](http://support.shipcloud.io/nl/articles/3142424-parcel-one-verzenden-via-je-eigen-vervoerderscontract.md): Alles wat je moet weten over het integreren van je PARCEL.ONE-contract in Shipcloud, de beschikbare verzendmethoden en aanvullende services.
+- [PARCEL.ONE: Pakket afgeven](http://support.shipcloud.io/nl/articles/3142439-parcel-one-pakket-afgeven.md): Zo werkt internationaal verzenden met PARCEL.ONE
+
+### Zusätzliche Versanddienstleister auf Anfrage
+
+- [Österreichische Post: Overzicht van de verbinding met Shipcloud](http://support.shipcloud.io/nl/articles/6865554-osterreichische-post-overzicht-van-de-verbinding-met-shipcloud.md): Geïntegreerde verzendmethoden en aanvullende diensten
+
+### Versand über Shipcloud Konditionen
+
+- [Belangrijke informatie over het verzenden via de Shipcloud zakelijke tarieven](http://support.shipcloud.io/nl/articles/5989167-belangrijke-informatie-over-het-verzenden-via-de-shipcloud-zakelijke-tarieven.md): Verzendvoorwaarden en uw voordelen bij verzenden via onze zakelijke tarieven
+- [Kan ik mijn pakketten afgeven bij een pakketshop?](http://support.shipcloud.io/nl/articles/2648123-kan-ik-mijn-pakketten-afgeven-bij-een-pakketshop.md): Hoe je je pakketten kunt versturen naar pakketshops en postpunten bij verzending via Shipcloud zakelijke tarieven.
+- [Verzenden via Shipcloud zakelijke tarieven: zijn regelmatige ophalingen mogelijk?](http://support.shipcloud.io/nl/articles/5778857-verzenden-via-shipcloud-zakelijke-tarieven-zijn-regelmatige-ophalingen-mogelijk.md): Vereisten voor het instellen van een reguliere DPD-ophaling via Shipcloud-tarieven.
+- [Verzenden via Shipcloud zakelijke tarieven: wie is de contractpartner voor zendingen?](http://support.shipcloud.io/nl/articles/2647320-verzenden-via-shipcloud-zakelijke-tarieven-wie-is-de-contractpartner-voor-zendingen.md): Shipcloud als jouw verzendserviceprovider en ondervervoerder
+- [Verzending via Shipcloud zakelijke tarieven: zijn de pakketten nationaal en internationaal verzekerd?](http://support.shipcloud.io/nl/articles/2647375-verzending-via-shipcloud-zakelijke-tarieven-zijn-de-pakketten-nationaal-en-internationaal-verzekerd.md): Transportverzekering en aansprakelijkheidslimieten bij verzenden via Shipcloud zakelijke tarieven
+- [Verzenden via Shipcloud zakelijke tarieven: wat zijn de maximale afmetingen en gewichtsbeperkingen?](http://support.shipcloud.io/nl/articles/2647339-verzenden-via-shipcloud-zakelijke-tarieven-wat-zijn-de-maximale-afmetingen-en-gewichtsbeperkingen.md): Maximale pakketafmetingen en gewicht bij verzenden via Shipcloud zakelijke tarieven
+- [Kan ik gevaarlijke goederen verzenden via Shipcloud?](http://support.shipcloud.io/nl/articles/3692594-kan-ik-gevaarlijke-goederen-verzenden-via-shipcloud.md)
+- [Verzending via Shipcloud-zakelijke tarieven: douanekosten en facturatie bij verzending naar een niet-EU-land](http://support.shipcloud.io/nl/articles/5759450-verzending-via-shipcloud-zakelijke-tarieven-douanekosten-en-facturatie-bij-verzending-naar-een-niet-eu-land.md): Douane-afhandeling en factuurverzending
+- [Hoe kan ik verzendlabels die ik al heb aangemaakt annuleren?](http://support.shipcloud.io/nl/articles/2652008-hoe-kan-ik-verzendlabels-die-ik-al-heb-aangemaakt-annuleren.md): Alle relevante informatie over het annuleren van verzendlabels
+- [Verzending via Shipcloud-zakelijke tarieven: waar vind ik een prijslijst voor verzendlabels?](http://support.shipcloud.io/nl/articles/2644226-verzending-via-shipcloud-zakelijke-tarieven-waar-vind-ik-een-prijslijst-voor-verzendlabels.md): Bekijk de actuele Shipcloud-tarieven voor DHL, DPD en UPS in je account en bereken eenvoudig je verzendkosten op basis van je zending.
+- [Verzenden via Shipcloud-zakelijke tarieven: hoe vind ik de prijzen voor de verzendlabels?](http://support.shipcloud.io/nl/articles/2647355-verzenden-via-shipcloud-zakelijke-tarieven-hoe-vind-ik-de-prijzen-voor-de-verzendlabels.md): Bekijk eenvoudig de Shipcloud-verzendtarieven voor DHL, DPD en UPS via de prijscheck in je account of vraag prijsinformatie op via de API.
+- [Verzenden via Shipcloud zakelijke tarieven: hoe berekenen vervoerders de verzendkosten en wanneer wordt het volumegewicht gebruikt?](http://support.shipcloud.io/nl/articles/2647324-verzenden-via-shipcloud-zakelijke-tarieven-hoe-berekenen-vervoerders-de-verzendkosten-en-wanneer-wordt-het-volumegewicht-gebruikt.md): Ontdek hoe vervoerders verzendkosten berekenen, welke factoren de pakketprijs bepalen en wanneer volumegewicht als berekeningsgrondslag wordt gebruikt.
+
+### Probleme beim Versand 
+
+- [Wie kan ik contacteren als een pakket kwijt is? \(Onderzoek\)](http://support.shipcloud.io/nl/articles/2648297-wie-kan-ik-contacteren-als-een-pakket-kwijt-is-onderzoek.md): Hoe start ik een klacht over de transittijd of een onderzoek bij een zoekgeraakt pakket bij verzending via Shipcloud zakelijke tarieven
+- [Verzenden via Shipcloud zakelijke tarieven: met wie neem ik contact op als mijn pakket beschadigd is?](http://support.shipcloud.io/nl/articles/6064090-verzenden-via-shipcloud-zakelijke-tarieven-met-wie-neem-ik-contact-op-als-mijn-pakket-beschadigd-is.md): Schadeclaim: hoe meld ik schade?
+- [Ik krijg een authenticatiefout bij UPS](http://support.shipcloud.io/nl/articles/12629437-ik-krijg-een-authenticatiefout-bij-ups.md): Verzenden via eigen UPS-tarieven
+
+### Versand-FAQs
+
+- [Kan ik mijn eigen vervoerderscontract gebruiken met Shipcloud?](http://support.shipcloud.io/nl/articles/2644903-kan-ik-mijn-eigen-vervoerderscontract-gebruiken-met-shipcloud.md): Hoe te verzenden met Shipcloud via uw eigen zakelijke klantcontract en verzendtarieven
+- [Naar welke landen kan ik verzenden?](http://support.shipcloud.io/nl/articles/2648225-naar-welke-landen-kan-ik-verzenden.md): Beschikbare bestemmingslanden bij verzenden via Shipcloud
+- [Uit welke landen kan ik Shipcloud gebruiken?](http://support.shipcloud.io/nl/articles/3191054-uit-welke-landen-kan-ik-shipcloud-gebruiken.md): Verzenden vanuit het buitenland
+- [Waar kan ik een overzicht vinden van de \(extra\) services die door Shipcloud zijn geïntegreerd?](http://support.shipcloud.io/nl/articles/2644234-waar-kan-ik-een-overzicht-vinden-van-de-extra-services-die-door-shipcloud-zijn-geintegreerd.md): Hoe kunt u achterhalen welke verzendmethoden en extra services Shipcloud ondersteunt?
+- [Kan ik een aanvullende verzekering afsluiten voor mijn pakketten?](http://support.shipcloud.io/nl/articles/2647409-kan-ik-een-aanvullende-verzekering-afsluiten-voor-mijn-pakketten.md): Hoe kunt u uw pakket hoger laten verzekeren?
+- [Waar moet ik rekening mee houden met betrekking tot douane?](http://support.shipcloud.io/nl/articles/2648252-waar-moet-ik-rekening-mee-houden-met-betrekking-tot-douane.md): Maak uw douanedocumenten aan met Shipcloud
+- [Hoe regel ik een nieuwe afhaling bij UPS?](http://support.shipcloud.io/nl/articles/9526249-hoe-regel-ik-een-nieuwe-afhaling-bij-ups.md): Stap-voor-stap handleiding voor het regelen van een nieuwe afhaling bij UPS
+
+## English
+
+### Latest news from Shipcloud
+
+- [Brexit: What online retailers need to know when shipping to the United Kingdom](http://support.shipcloud.io/en/articles/5063021-brexit-what-online-retailers-need-to-know-when-shipping-to-the-united-kingdom.md)
+- [Shipping times for your Christmas packages 2025](http://support.shipcloud.io/en/articles/3512485-shipping-times-for-your-christmas-packages-2025.md): Find out here the shipping deadlines for DHL, DPD, UPS, GLS & Hermes
+- [New regulations for shipping to non-EU countries with DHL](http://support.shipcloud.io/en/articles/4670492-new-regulations-for-shipping-to-non-eu-countries-with-dhl.md): Prepare DHL customs documents electronically with Shipcloud to ensure compliant international shipping and avoid delays or returns for non-EU destinations.
+
+### Get started with Shipcloud
+
+- [Can I try Shipcloud for free?](http://support.shipcloud.io/en/articles/2644164-can-i-try-shipcloud-for-free.md): Test Shipcloud free for one month with no monthly or transaction fees, then continue seamlessly with the subscription plan that fits your shipping needs.
+- [Why do I need to enter my payment details for the subscription?](http://support.shipcloud.io/en/articles/2644890-why-do-i-need-to-enter-my-payment-details-for-the-subscription.md): Payment details are required to activate your Shipcloud subscription, manage monthly billing, and create shipping labels using Shipcloud business rates.
+- [Easy integration](http://support.shipcloud.io/en/articles/3693231-easy-integration.md): Simple connection to to 130+ shop, ERP, inventory management, marketplace, checkout and fulfillment systems
+- [Account setup with our onboarding guide](http://support.shipcloud.io/en/articles/3030258-account-setup-with-our-onboarding-guide.md): Setup your account and follow the Shipcloud onboarding guide to quickly set up shipping, tracking, API integration, and live labels.
+- [Step 1: Choose your subscription and activate your account](http://support.shipcloud.io/en/articles/3328043-step-1-choose-your-subscription-and-activate-your-account.md): Choose your Shipcloud subscription, activate your account with billing and payment details, and start creating live shipping labels instantly.
+- [Step 2: Complete your account settings](http://support.shipcloud.io/en/articles/4356503-step-2-complete-your-account-settings.md): Customise your Shipcloud tracking page, emails, and shipping labels with your logo, colors, and branding for a seamless customer experience.
+- [How can I contact Shipcloud?](http://support.shipcloud.io/en/articles/2750967-how-can-i-contact-shipcloud.md): Contact Shipcloud easily via email or the help button in your account to get fast support for questions, setup, or shipping issues.
+
+### Integration & Plug-ins
+
+- [How can I connect Shipcloud with my shop system / backend?](http://support.shipcloud.io/en/articles/2643782-how-can-i-connect-shipcloud-with-my-shop-system-backend.md): Learn how to connect Shipcloud to your shop system, ERP or backend using plug-ins, integrations or the Shipcloud API.
+- [Can I use my API keys for more than one website or shop?](http://support.shipcloud.io/en/articles/2643791-can-i-use-my-api-keys-for-more-than-one-website-or-shop.md): Use a single Shipcloud API key across multiple shops or websites and organise shipments with reference numbers for easier tracking.
+- [Can I connect Shipcloud with a marketplace like eBay or Amazon?](http://support.shipcloud.io/en/articles/3619443-can-i-connect-shipcloud-with-a-marketplace-like-ebay-or-amazon.md): Connect Shipcloud to eBay or Amazon through supported partner integrations and manage shipping directly from your existing systems.
+- [Is there any documentation for the Shipcloud API?](http://support.shipcloud.io/en/articles/3048966-is-there-any-documentation-for-the-shipcloud-api.md): Find Shipcloud API documentation in the Developer Portal and contact technical support for integration or development questions.
+- [Where can I register as a developer?](http://support.shipcloud.io/en/articles/2644183-where-can-i-register-as-a-developer.md): Register as a Shipcloud developer, test the API for free in the sandbox and find everything you need in our Developer Portal.
+- [Where can I find information about integrating Shipcloud into a ruby based webapp?](http://support.shipcloud.io/en/articles/2643784-where-can-i-find-information-about-integrating-shipcloud-into-a-ruby-based-webapp.md): Integrate Shipcloud into Ruby applications using the official Ruby gem and access support through GitHub or the Shipcloud developer team.
+- [Is there a plug-in for my shop or a library for my programming language?](http://support.shipcloud.io/en/articles/2643771-is-there-a-plug-in-for-my-shop-or-a-library-for-my-programming-language.md): Explore Shipcloud integrations, plug-ins and developer libraries for shop systems, ERPs, marketplaces and custom applications.
+- [1. Configure the Shipcloud Module for Gambio](http://support.shipcloud.io/en/articles/6287049-1-configure-the-shipcloud-module-for-gambio.md): How to connect Shipcloud with Gambio
+- [2. Create a Shipping Label in Gambio](http://support.shipcloud.io/en/articles/6287707-2-create-a-shipping-label-in-gambio.md): How to generate shipping labels in Gambio using Shipcloud
+- [1. Configure the Shipcloud app for Shopify](http://support.shipcloud.io/en/articles/5802831-1-configure-the-shipcloud-app-for-shopify.md): Connect Shipcloud to Shopify, configure shipping settings, automate label creation and manage pickups, customs and returns from one app.
+- [2. Create a shipping label in Shopify](http://support.shipcloud.io/en/articles/5814981-2-create-a-shipping-label-in-shopify.md): Create single or bulk shipping labels in Shopify with Shipcloud, manage customs, returns, notifications and carrier services in one workflow.
+- [1. Configure the Shipcloud connector for Shopware 5](http://support.shipcloud.io/en/articles/5738149-1-configure-the-shipcloud-connector-for-shopware-5.md): Connect Shipcloud to Shopware 5, configure shipping, tracking, customs, pickups and carrier settings to create labels directly from your store.
+- [2. Create a shipping label in Shopware 5](http://support.shipcloud.io/en/articles/5785319-2-create-a-shipping-label-in-shopware-5.md): Create Shopware 5 shipping labels individually or in bulk, edit shipment details, request pickups and print labels with the Shipcloud connector.
+- [3. Settings for the creation of customs documents in Shopware 5](http://support.shipcloud.io/en/articles/5789514-3-settings-for-the-creation-of-customs-documents-in-shopware-5.md): Customs declaration with Shipcloud connector for Shopware 5
+- [1. Configure the Shipcloud Connector for Shopware 6](http://support.shipcloud.io/en/articles/6423204-1-configure-the-shipcloud-connector-for-shopware-6.md): Connect Shipcloud to Shopware 6, configure shipping, package templates, customs and fulfilment settings to create labels from your store.
+- [2. Create shipping labels in Shopware 6](http://support.shipcloud.io/en/articles/6432594-2-create-shipping-labels-in-shopware-6.md): Create Shopware 6 shipping labels individually or in bulk, add customs declarations, select carrier services and manage shipments with Shipcloud.
+- [3. Settings for the creation of customs documents in Shopware 6](http://support.shipcloud.io/en/articles/6435345-3-settings-for-the-creation-of-customs-documents-in-shopware-6.md): Learn how to add HS codes and country of origin to Shopware 6 products for accurate customs declarations with the Shipcloud connector.
+- [1. Configure your Shipcloud plug-in for WooCommerce \[Version 1.0\]](http://support.shipcloud.io/en/articles/4835142-1-configure-your-shipcloud-plug-in-for-woocommerce-version-1-0.md): How to connect Shipcloud with WooCommerce
+- [2. Shipping Setup in WooCommerce \[Version 1.0\]](http://support.shipcloud.io/en/articles/5081599-2-shipping-setup-in-woocommerce-version-1-0.md): Shipping zones and package templates
+- [3. Create a Shipping Label in WooCommerce \[Version 1.0\]](http://support.shipcloud.io/en/articles/4840774-3-create-a-shipping-label-in-woocommerce-version-1-0.md): How to create shipping labels in WooCommerce
+- [1. Configure your Shipcloud plugin for WooCommerce \[version 2.0\]](http://support.shipcloud.io/en/articles/6104090-1-configure-your-shipcloud-plugin-for-woocommerce-version-2-0.md): Connect Shipcloud to WooCommerce, configure shipping, tracking, customs, checkout settings and create shipping labels directly from your shop.
+- [2. Shipping settings in WooCommerce](http://support.shipcloud.io/en/articles/6120748-2-shipping-settings-in-woocommerce.md): Set up WooCommerce shipping zones and parcel templates to streamline shipping and create labels faster with the Shipcloud plugin.
+- [3. Create a shipping label in WooCommerce \[version 2.0\]](http://support.shipcloud.io/en/articles/6120656-3-create-a-shipping-label-in-woocommerce-version-2-0.md): Create WooCommerce shipping labels individually or in bulk, add customs declarations, calculate shipping costs and request pickups with Shipcloud.
+
+### Shipcloud Subscription & Account
+
+- [How long is the contract or notice period?](http://support.shipcloud.io/en/articles/2644952-how-long-is-the-contract-or-notice-period.md): Cancellation period for standard Shipcloud subscriptions
+- [Which carriers can I use?](http://support.shipcloud.io/en/articles/2644896-which-carriers-can-i-use.md): Discover which carriers are available with Shipcloud, including DHL, DPD, UPS and additional carriers you can connect with your own contract.
+- [Can I change my subscription later?](http://support.shipcloud.io/en/articles/2644923-can-i-change-my-subscription-later.md): Upgrade or downgrade your Shipcloud subscription anytime and choose the pricing plan that best fits your shipping volume and business needs.
+- [If I upgrade/downgrade my current pricing plan will it affect the notice period?](http://support.shipcloud.io/en/articles/2644954-if-i-upgrade-downgrade-my-current-pricing-plan-will-it-affect-the-notice-period.md): Changing your Shipcloud pricing plan starts a new monthly billing period immediately and may affect your cancellation notice period.
+- [I’ve already registered but I can’t sign in.](http://support.shipcloud.io/en/articles/2644908-i-ve-already-registered-but-i-can-t-sign-in.md): Can't sign in to Shipcloud? Learn how to activate your account, resend the confirmation email or recover your password.
+- [I’ve forgotten my password.](http://support.shipcloud.io/en/articles/2647312-i-ve-forgotten-my-password.md): Forgot your Shipcloud password? Reset it in a few steps and regain access to your account using your registered email address.
+- [Can I change the language of my Shipcloud account?](http://support.shipcloud.io/en/articles/2644814-can-i-change-the-language-of-my-shipcloud-account.md): Change the language of your Shipcloud account easily from German to English, Dutch or Spanish.
+- [How do I change my customer details?](http://support.shipcloud.io/en/articles/2644926-how-do-i-change-my-customer-details.md): Update your Shipcloud customer details, shipping addresses, and billing information easily in your account settings at any time.
+- [My account has been blocked, I can’t sign in anymore.](http://support.shipcloud.io/en/articles/2644936-my-account-has-been-blocked-i-can-t-sign-in-anymore.md): Is your Shipcloud account blocked? Contact our support team to restore access or reset your password if you've forgotten it.
+
+### Costs & Billing
+
+- [How does billing work with Shipcloud?](http://support.shipcloud.io/en/articles/8915542-how-does-billing-work-with-shipcloud.md): Learn how Shipcloud billing works, where to find invoices, how shipping fees and surcharges are charged, and how to download billing reports.
+- [What are the charges for using Shipcloud?](http://support.shipcloud.io/en/articles/2644824-what-are-the-charges-for-using-shipcloud.md): Shipcloud costs include subscription and transaction fees, plus shipping label charges based on carrier, parcel size, weight, and destination.
+- [Is there a set-up fee for Shipcloud?](http://support.shipcloud.io/en/articles/2644820-is-there-a-set-up-fee-for-shipcloud.md): Most Shipcloud integrations and carriers have no setup fee, so you can start shipping quickly with your chosen subscription and carriers.
+- [What other costs may be incurred?](http://support.shipcloud.io/en/articles/2644845-what-other-costs-may-be-incurred.md): Learn about possible additional Shipcloud costs, including carrier surcharges, customs handling fees, and extra processing charges.
+- [Which payment methods can I use with Shipcloud?](http://support.shipcloud.io/en/articles/2644838-which-payment-methods-can-i-use-with-shipcloud.md): Shipcloud supports credit card and PayPal payments for all new customers, with invoice payment options available upon request.
+- [When will I be billed for my shipping labels?](http://support.shipcloud.io/en/articles/2644835-when-will-i-be-billed-for-my-shipping-labels.md): Shipping labels are billed when booked in Shipcloud or created via API, with charges usually invoiced at the end of the monthly billing period.
+- [Can I review or download past invoices?](http://support.shipcloud.io/en/articles/2644860-can-i-review-or-download-past-invoices.md): View and download past Shipcloud invoices anytime in your account, or request older invoices directly from the support team.
+- [How do I change my billing address?](http://support.shipcloud.io/en/articles/2644873-how-do-i-change-my-billing-address.md): Update your Shipcloud billing address anytime in your account settings under “Billing” with just a few clicks.
+- [How can I change my payment method?](http://support.shipcloud.io/en/articles/2644843-how-can-i-change-my-payment-method.md): Change your Shipcloud payment method anytime in the Billing section and choose between credit card, PayPal, or request invoicing options.
+- [Why are there additional charges on my bill?](http://support.shipcloud.io/en/articles/2644857-why-are-there-additional-charges-on-my-bill.md): Additional charges may apply for oversized shipments, incorrect package details, address corrections, or carrier handling surcharges.
+- [How and when are surcharges calculated?](http://support.shipcloud.io/en/articles/8915529-how-and-when-are-surcharges-calculated.md): Learn how Shipcloud and carriers calculate shipping surcharges, when extra fees apply, and where to review recalculations in your account.
+
+### Shipcloud Features \[SEND | TRACK | RETURN\]
+
+- [Shipcloud Sandbox: test environment](http://support.shipcloud.io/en/articles/4444448-shipcloud-sandbox-test-environment.md): Learn the differences between Shipcloud live and sandbox mode, test shipping features safely and switch environments with ease.
+- [Individual design settings in Shipcloud](http://support.shipcloud.io/en/articles/3505155-individual-design-settings-in-shipcloud.md): Customise your Shipcloud tracking page, emails, returns portal, and shipping labels with your branding, colors, contact details, and logo.
+- [How can I customise my shipping labels and tracking to suit my online store design?](http://support.shipcloud.io/en/articles/2648284-how-can-i-customise-my-shipping-labels-and-tracking-to-suit-my-online-store-design.md): Customise your Shipcloud shipping labels, tracking page, and emails with your logo, brand colors, personalised texts, and multilingual support.
+- [Where can I add my shipping address?](http://support.shipcloud.io/en/articles/2697681-where-can-i-add-my-shipping-address.md): Add your shipping and return addresses in your Shipcloud account or directly in your plug-in or integration settings for seamless label creation.
+- [In which format are the shipping labels available?](http://support.shipcloud.io/en/articles/2647372-in-which-format-are-the-shipping-labels-available.md): Learn which shipping label formats are available in Shipcloud, how to configure DIN A5 or DIN A6 labels, and print them correctly.
+- [Why isn’t there enough space in the "Company", "First Name" and "Last Name" fields?](http://support.shipcloud.io/en/articles/2647366-why-isn-t-there-enough-space-in-the-company-first-name-and-last-name-fields.md): Learn why name fields have character limits, carrier-specific restrictions and how to use the "care of" field for extra information.
+- [How can I cancel shipping labels I've already created?](http://support.shipcloud.io/en/articles/2647371-how-can-i-cancel-shipping-labels-i-ve-already-created.md): Learn how to cancel Shipcloud shipping labels, applicable deadlines for each carrier and the differences between Shipcloud and own carrier contracts.
+- [How do I request a pickup?](http://support.shipcloud.io/en/articles/2648106-how-do-i-request-a-pickup.md): Learn how to request parcel pickups with Shipcloud, which carriers support them, and when to schedule collections for your shipments.
+- [How do I request a pickup for express shipments?](http://support.shipcloud.io/en/articles/2648109-how-do-i-request-a-pickup-for-express-shipments.md): Find out how to request pickups for express shipments with DHL Express, UPS and DPD, and learn about available collection options.
+- [Which address will be used as the pickup address?](http://support.shipcloud.io/en/articles/2648115-which-address-will-be-used-as-the-pickup-address.md): Learn which address is used for parcel pickups when booking via the Shipcloud account, plug-ins, integrations or API requests.
+- [Are there additional charges for pickups and collections?](http://support.shipcloud.io/en/articles/2648120-are-there-additional-charges-for-pickups-and-collections.md): Find out whether parcel pickups incur additional costs when shipping via Shipcloud rates or your own carrier contracts.
+- [Can I create a list of my shipments at the end of each day?](http://support.shipcloud.io/en/articles/2648261-can-i-create-a-list-of-my-shipments-at-the-end-of-each-day.md): Create and print a daily shipment list in Shipcloud, including tracking data, parcel details and proof of handover for pickups.
+- [I can no longer create shipping labels and receive an error message.](http://support.shipcloud.io/en/articles/2668699-i-can-no-longer-create-shipping-labels-and-receive-an-error-message.md)
+- [Tips for creating a customs declaration \(CN 22/CN23\) with Shipcloud](http://support.shipcloud.io/en/articles/4500638-tips-for-creating-a-customs-declaration-cn-22-cn23-with-shipcloud.md): Learn how to create customs declarations \(CN22/CN23\) in Shipcloud, which documents are required and what to consider for dutiable shipments.
+- [Multi-package shipment with your own UPS contract](http://support.shipcloud.io/en/articles/9969590-multi-package-shipment-with-your-own-ups-contract.md): Learn how to book UPS multi-package shipments via the Shipcloud API, manage tracking, and simplify shipping multiple parcels.
+- [How can the parcel receivers track their parcels?](http://support.shipcloud.io/en/articles/2648265-how-can-the-parcel-receivers-track-their-parcels.md): Automatically notify customers about shipment updates by email and enable parcel tracking through carrier tracking numbers and websites.
+- [How can I configure email notifications for my customers?](http://support.shipcloud.io/en/articles/2648271-how-can-i-configure-email-notifications-for-my-customers.md): Configure automated customer email notifications in Shipcloud and customise tracking emails and pages to match your online store branding.
+- [How can I track a parcel?](http://support.shipcloud.io/en/articles/2648269-how-can-i-track-a-parcel.md): Track your parcels using the carrier tracking number or Shipcloud shipment ID and receive automatic email updates on shipment status.
+- [Can I filter my sent shipments by delivery status?](http://support.shipcloud.io/en/articles/2648256-can-i-filter-my-sent-shipments-by-delivery-status.md): Filter shipments in the Shipcloud webUI by delivery status, destination ZIP code, shipping service or delivery issues for faster tracking.
+- [How do webhooks help me respond automatically to Shipcloud events?](http://support.shipcloud.io/en/articles/2648286-how-do-webhooks-help-me-respond-automatically-to-shipcloud-events.md): Use Shipcloud webhooks to receive real-time shipping updates, automate workflows, and display live tracking information in your online store.
+- [Individual settings for your tracking](http://support.shipcloud.io/en/articles/3505393-individual-settings-for-your-tracking.md): Customise Shipcloud tracking pages and emails with multilingual texts, branded designs, and personalised customer communication settings.
+- [How can I create returns with Shipcloud?](http://support.shipcloud.io/en/articles/2648291-how-can-i-create-returns-with-shipcloud.md): Create return labels via the Shipcloud API, account, return portal or return solution, with support for multiple carriers and countries.
+- [Shipcloud Return Portal](http://support.shipcloud.io/en/articles/2679029-shipcloud-return-portal.md)
+- [Helpful tips for setting up the return portal](http://support.shipcloud.io/en/articles/2679063-helpful-tips-for-setting-up-the-return-portal.md): ESet up and customise your Shipcloud return portal, choose carriers, define return addresses and create a branded returns experience.
+
+### Included carriers for a quick shipping start
+
+- [DHL: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/2658501-dhl-overview-of-the-connection-with-shipcloud.md): Ship with DHL via Shipcloud using integrated national and international services, tracking, returns, customs support, and flexible label formats.
+- [DHL: Shipping via Shipcloud business rates](http://support.shipcloud.io/en/articles/2658527-dhl-shipping-via-shipcloud-business-rates.md): Use DHL via Shipcloud business rates for national and international shipping with tracking, returns, customs support, and integrated DHL services.
+- [DHL: Maximum dimensions and weight, surcharges and additional fees](http://support.shipcloud.io/en/articles/5510491-dhl-maximum-dimensions-and-weight-surcharges-and-additional-fees.md): Find DHL package dimensions, weight limits, seasonal surcharges, and additional shipping fees for Shipcloud business rates in one overview.
+- [DHL: Peak season surcharges 2026](http://support.shipcloud.io/en/articles/6868109-dhl-peak-season-surcharges-2026.md): Learn when DHL peak season surcharges apply, why they are charged during high-volume periods, and how Shipcloud bills these additional fees.
+- [DHL: Available additional services for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2658710-dhl-available-additional-services-for-shipping-via-your-own-carrier-contract.md): Use integrated DHL additional services in Shipcloud, including age checks, COD, preferred delivery options, insurance, tracking, and climate-neutral shipping.
+- [DHL: How to activate the DHL online return when shipping via your own carrier contract](http://support.shipcloud.io/en/articles/3741832-dhl-how-to-activate-the-dhl-online-return-when-shipping-via-your-own-carrier-contract.md): Set up DHL Online Return in Shipcloud by activating API Retoure, configuring your DHL user permissions, and connecting your return credentials.
+- [DHL: QR code return for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/4259941-dhl-qr-code-return-for-shipping-via-your-own-carrier-contract.md): Offer paperless DHL QR code returns through Shipcloud, allowing customers to return parcels easily without a printer using your DHL contract.
+- [DHL: Climate neutral shipping with GoGreen](http://support.shipcloud.io/en/articles/4998880-dhl-climate-neutral-shipping-with-gogreen.md): Use DHL GoGreen with Shipcloud to offer climate-neutral shipping by offsetting transport emissions through certified climate protection projects.
+- [DHL: Kleinpaket \(formerly Warenpost\) and Warenpost International](http://support.shipcloud.io/en/articles/6307371-dhl-kleinpaket-formerly-warenpost-and-warenpost-international.md): Learn how to ship DHL Kleinpaket and Warenpost International with Shipcloud, including dimensions, tracking, customs, and contract requirements.
+- [DHL: Shipping to a DHL Packstation](http://support.shipcloud.io/en/articles/2658716-dhl-shipping-to-a-dhl-packstation.md): Learn how to correctly address DHL Packstation shipments in Shipcloud to ensure successful delivery and avoid routing issues.
+- [DHL: Shipping to a non-EU country](http://support.shipcloud.io/en/articles/2658723-dhl-shipping-to-a-non-eu-country.md): Create customs declarations and shipping labels with Shipcloud for international shipments, ensuring all required export documents are included.
+- [DHL: Shipment tracking with your own DHL contract](http://support.shipcloud.io/en/articles/11513005-dhl-shipment-tracking-with-your-own-dhl-contract.md): Set up a DHL GKP system user for shipment tracking and connect it to Shipcloud to ensure uninterrupted DHL tracking services.
+- [DHL: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2658529-dhl-shipping-via-your-own-carrier-contract.md): Integrate your own DHL contract in Shipcloud to ship with your negotiated DHL rates, services, tracking, returns, and international options.
+- [DPD Web Connect and DPD iloxx: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/2707797-dpd-web-connect-and-dpd-iloxx-overview-of-the-connection-with-shipcloud.md): Ship with DPD via Shipcloud using business rates or your own DPD contract, with access to integrated shipping methods, tracking, pickups, and returns.
+- [DPD iloxx: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/3142015-dpd-iloxx-shipping-via-your-own-carrier-contract.md): Connect your DPD iloxx account to Shipcloud and ship with your own DPD rates, billing terms, and EU-wide delivery services.
+- [DPD Web Connect: Shipping via Shipcloud business rates](http://support.shipcloud.io/en/articles/2707835-dpd-web-connect-shipping-via-shipcloud-business-rates.md): Use DPD via Shipcloud business rates for domestic and EU shipping with integrated tracking, pickups, returns, and delivery notifications.
+- [DPD Web Connect: Maximum dimensions and weight, surcharges and additional fees](http://support.shipcloud.io/en/articles/5126814-dpd-web-connect-maximum-dimensions-and-weight-surcharges-and-additional-fees.md): Find DPD parcel size and weight limits, plus a complete overview of surcharges, additional fees, and shipping restrictions when using Shipcloud.
+- [DPD Web Connect: Peak season surcharges 2026](http://support.shipcloud.io/en/articles/6611659-dpd-web-connect-peak-season-surcharges-2026.md): Learn about DPD peak season surcharges, when they apply, and how additional holiday shipping costs are billed through Shipcloud.
+- [DPD Web Connect: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2707858-dpd-web-connect-shipping-via-your-own-carrier-contract.md): Connect your DPD Web Connect contract to Shipcloud and ship with your own rates, services, returns, pickups, and tracking.
+- [DPD Web Connect: Additional services when shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2707865-dpd-web-connect-additional-services-when-shipping-via-your-own-carrier-contract.md): Use DPD additional services with your own contract, including Predict, Deposit Okay, Food, LQ shipping, PARCELLetter, and Saturday delivery.
+- [DPD: Shipping to a non-EU country](http://support.shipcloud.io/en/articles/2707875-dpd-shipping-to-a-non-eu-country.md): Learn what to consider when shipping with DPD to non-EU countries, including customs documents, clearance responsibilities, and requirements.
+- [UPS: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/2658734-ups-overview-of-the-connection-with-shipcloud.md): Explore UPS shipping services and additional options in Shipcloud, including express delivery, returns, pickups, tracking, and Access Points.
+- [UPS: Shipping via Shipcloud business rates](http://support.shipcloud.io/en/articles/2658756-ups-shipping-via-shipcloud-business-rates.md): Learn about UPS shipping services, package limits, liability, returns, pickups, and possible surcharges when using Shipcloud business rates.
+- [UPS: Maximum dimensions and weight, surcharges and additional fees](http://support.shipcloud.io/en/articles/5505390-ups-maximum-dimensions-and-weight-surcharges-and-additional-fees.md): Check UPS package size and weight limits, peak season surcharges, and additional shipping fees when using Shipcloud business rates.
+- [UPS: Demand Surcharges for the Peak Season 2026](http://support.shipcloud.io/en/articles/4533049-ups-demand-surcharges-for-the-peak-season-2026.md): Learn about UPS Demand Surcharges, peak season fees, large package charges, additional handling costs, and when these surcharges apply.
+- [UPS: Shipping by using your own carrier contract](http://support.shipcloud.io/en/articles/2658761-ups-shipping-by-using-your-own-carrier-contract.md): Learn how to connect your own UPS contract to Shipcloud, manage billing, access shipping services, and use UPS features worldwide.
+- [UPS: Available additional services for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2658776-ups-available-additional-services-for-shipping-via-your-own-carrier-contract.md): Discover UPS additional services in Shipcloud, including signature options, carbon-neutral shipping, COD, insurance, and Access Point notifications.
+- [UPS: Alcoholic beverages shipping with Shipcloud](http://support.shipcloud.io/en/articles/6171893-ups-alcoholic-beverages-shipping-with-shipcloud.md): Learn how to ship alcoholic beverages with UPS through Shipcloud, including contract requirements, packaging rules, and UK shipping regulations.
+- [UPS: Commercial invoice for dutiable outbound and return shipments](http://support.shipcloud.io/en/articles/2658780-ups-commercial-invoice-for-dutiable-outbound-and-return-shipments.md): Learn how to create, upload, and manage UPS commercial invoices in Shipcloud for customs clearance and international shipping.
+- [UPS: Incoterms and UPS Billing Options for international shipping](http://support.shipcloud.io/en/articles/6370931-ups-incoterms-and-ups-billing-options-for-international-shipping.md): Learn how to use UPS Incoterms and Billing Options in Shipcloud to manage shipping costs, customs duties, and international delivery terms.
+- [ANGEL: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/6619243-angel-overview-of-the-connection-with-shipcloud.md): Ship ANGEL Same Day parcels from Germany via your own ANGEL contract with Shipcloud, including tracking, My Time delivery, and label options.
+- [ANGEL: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/3211796-angel-shipping-via-your-own-carrier-contract.md): Learn how to connect your ANGEL contract to Shipcloud, configure access credentials, and ship with your own ANGEL business rates.
+- [Asendia: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/5977752-asendia-overview-of-the-connection-with-shipcloud.md): Learn about Asendia shipping with Shipcloud, including cross-border parcel services, tracking options, customs declarations, and label formats.
+- [Asendia: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/5978182-asendia-shipping-via-your-own-carrier-contract.md): Learn how to integrate your Asendia contract with Shipcloud, configure access data, manage manifests, and ship worldwide at your own rates.
+- [Asendia: Available additional services for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/5978970-asendia-available-additional-services-for-shipping-via-your-own-carrier-contract.md): Discover Asendia additional services in Shipcloud, including milestone tracking, personal delivery, and mailbox delivery for selected e-PAQ services.
+- [Asendia: International and dutiable shipping to a non-EU country](http://support.shipcloud.io/en/articles/5979003-asendia-international-and-dutiable-shipping-to-a-non-eu-country.md): Learn how to handle international Asendia shipments with Shipcloud, including incoterms, customs declarations, and dutiable shipping requirements.
+- [Cargo International: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/6620461-cargo-international-overview-of-the-connection-with-shipcloud.md): Ship worldwide with Cargo International via your own contract in Shipcloud, including freight services, tracking, COD, insurance, and pickups.
+- [Cargo International: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/3206716-cargo-international-shipping-via-your-own-carrier-contract.md): Learn how to connect your Cargo International account to Shipcloud, manage pickups, and ship with your own freight forwarding rates.
+- [Deutsche Post: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/6620592-deutsche-post-overview-of-the-connection-with-shipcloud.md): Ship Deutsche Post letters, books, and merchandise with your own contract via Shipcloud, including supported formats and label options.
+- [Deutsche Post: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2710666-deutsche-post-shipping-via-your-own-carrier-contract.md): Learn how to connect your Deutsche Post Portokasse account to Shipcloud and ship letters, books, and merchandise using your own rates.
+- [Deutsche Post: Shipping to a DHL Packstation](http://support.shipcloud.io/en/articles/2711752-deutsche-post-shipping-to-a-dhl-packstation.md): Learn how to correctly address DHL Packstation shipments, including customer number, Packstation ID, and postal code requirements.
+- [DHL Express: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/6620666-dhl-express-overview-of-the-connection-with-shipcloud.md): Ship worldwide with DHL Express via your own contract in Shipcloud, including Express, Express 12:00, Economy Select, tracking, and Saturday delivery.
+- [DHL Express: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2714412-dhl-express-shipping-via-your-own-carrier-contract.md): Connect your DHL Express contract to Shipcloud and ship worldwide with Express services, tracking, Saturday delivery, and paperless customs.
+- [GLS: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/2785587-gls-overview-of-the-connection-with-shipcloud.md): Connect your GLS contract to Shipcloud and access worldwide shipping, Express services, returns, tracking, incoterms, and GLS add-ons.
+- [GLS: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2785647-gls-shipping-via-your-own-carrier-contract.md): Connect your GLS contract to Shipcloud and manage worldwide shipping, returns, customs settings, and GLS services in one place.
+- [GLS: Available additional services for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2785689-gls-available-additional-services-for-shipping-via-your-own-carrier-contract.md): Use GLS additional services with your own contract via Shipcloud, including CashService, FlexDelivery, Saturday delivery, and parcel shops.
+- [GLS: QR code return for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/5511846-gls-qr-code-return-for-shipping-via-your-own-carrier-contract.md): Offer paperless GLS returns with QR codes via Shipcloud. Customers can return parcels without a printer using the Return Portal or API.
+- [GLS: International and dutiable shipping](http://support.shipcloud.io/en/articles/2785697-gls-international-and-dutiable-shipping.md): Learn how to use GLS incoterms with Shipcloud, manage cross-border shipments, and handle customs requirements for non-EU deliveries.
+- [Hermes: Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/2783530-hermes-overview-of-the-connection-with-shipcloud.md): Connect your Hermes contract to Shipcloud and access EU-wide shipping, returns, bulky goods, tracking, pickups, and additional services.
+- [Hermes: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/2785558-hermes-shipping-via-your-own-carrier-contract.md): Connect your Hermes contract to Shipcloud, authenticate via HSI, ship across the EU, and offer returns with labels or QR codes.
+- [Hermes: Available additional services for shipping via your own carrier contract](http://support.shipcloud.io/en/articles/5598553-hermes-available-additional-services-for-shipping-via-your-own-carrier-contract.md): Use Hermes additional services with your own contract via Shipcloud, including COD, delivery notifications, and identity verification.
+- [PARCEL.ONE: Shipping via your own carrier contract](http://support.shipcloud.io/en/articles/3142424-parcel-one-shipping-via-your-own-carrier-contract.md): Integrate your PARCEL.ONE contract with Shipcloud and access parcel, letter and return shipping, tracking, and simplified customs declarations.
+- [PARCEL.ONE: Parcel drop-off](http://support.shipcloud.io/en/articles/3142439-parcel-one-parcel-drop-off.md): Learn how to drop off PARCEL.ONE shipments, consolidate parcels for efficient cross-border shipping, and benefit from seamless tracking.
+
+### Additional carriers on request 
+
+- [Österreichischen Post \(Post AT\): Overview of the connection with Shipcloud](http://support.shipcloud.io/en/articles/6865554-osterreichischen-post-post-at-overview-of-the-connection-with-shipcloud.md): Discover Österreichische Post \(Post AT\) shipping services, additional features, label formats, and activation requirements with Shipcloud.
+
+### Shipping via Shipcloud business rates
+
+- [Things to know about your shipping via Shipcloud business rates](http://support.shipcloud.io/en/articles/5989167-things-to-know-about-your-shipping-via-shipcloud-business-rates.md): Learn everything about shipping via Shipcloud business rates, including carriers, returns, customs, billing, surcharges and key conditions.
+- [Can I drop off my packages at a parcel shop?](http://support.shipcloud.io/en/articles/2648123-can-i-drop-off-my-packages-at-a-parcel-shop.md): Find out where to drop off DHL, DPD and UPS shipments created via Shipcloud business rates and review parcel shop size and weight limits.
+- [Shipping via Shipcloud business rates: are regular pickups possible?](http://support.shipcloud.io/en/articles/5778857-shipping-via-shipcloud-business-rates-are-regular-pickups-possible.md): Learn how to arrange a regular DPD pickup via Shipcloud rates, including minimum volume requirements, setup process and costs.
+- [Shipping via Shipcloud business rates: who is the contract partner for shipments?](http://support.shipcloud.io/en/articles/2647320-shipping-via-shipcloud-business-rates-who-is-the-contract-partner-for-shipments.md): Shipcloud as your Shipping Service Provider and subcarrier
+- [Shipping via Shipcloud business rates: are the parcels insured nationally and internationally?](http://support.shipcloud.io/en/articles/2647375-shipping-via-shipcloud-business-rates-are-the-parcels-insured-nationally-and-internationally.md): Transport insurance and liability limits when shipping via Shipcloud business rates
+- [Shipping via Shipcloud business rates: what are the maximum dimensions and weight restrictions?](http://support.shipcloud.io/en/articles/2647339-shipping-via-shipcloud-business-rates-what-are-the-maximum-dimensions-and-weight-restrictions.md): Maximum package measurements and weight when shipping via Shipcloud business rates
+- [Can I ship dangerous goods via Shipcloud?](http://support.shipcloud.io/en/articles/3692594-can-i-ship-dangerous-goods-via-shipcloud.md)
+- [Shipping via Shipcloud business rates: customs charges and billing when shipping to a non-EU country](http://support.shipcloud.io/en/articles/5759450-shipping-via-shipcloud-business-rates-customs-charges-and-billing-when-shipping-to-a-non-eu-country.md): Customs clearance and invoice dispatch
+- [How can I cancel shipping labels I've already created?](http://support.shipcloud.io/en/articles/2652008-how-can-i-cancel-shipping-labels-i-ve-already-created.md): All relevant information about how to cancel shipping labels
+- [Shipping via Shipcloud business rates: Where can I find a price list for shipping labels?](http://support.shipcloud.io/en/articles/2644226-shipping-via-shipcloud-business-rates-where-can-i-find-a-price-list-for-shipping-labels.md): View current Shipcloud shipping rates for DHL, DPD, and UPS directly in your account after free registration and compare prices instantly.
+- [Shipping via Shipcloud business rates: How do I find the prices for the shipping labels?](http://support.shipcloud.io/en/articles/2647355-shipping-via-shipcloud-business-rates-how-do-i-find-the-prices-for-the-shipping-labels.md): Check Shipcloud shipping rates for DHL, DPD, and UPS directly in your account, during label creation, or via API request.
+- [Shipping via Shipcloud business rates: How do carriers calculate shipping costs and when is the volumetric weight used?](http://support.shipcloud.io/en/articles/2647324-shipping-via-shipcloud-business-rates-how-do-carriers-calculate-shipping-costs-and-when-is-the-volumetric-weight-used.md): Learn how carriers like DHL, DPD, and UPS calculate shipping costs, including package dimensions, actual weight, and volumetric weight.
+
+### Shipping problems 
+
+- [Who can I contact if a parcel is lost? \(Investigation\)](http://support.shipcloud.io/en/articles/2648297-who-can-i-contact-if-a-parcel-is-lost-investigation.md): Learn how to report lost, delayed or missing parcels shipped via Shipcloud rates, including investigations, required documents and timelines.
+- [Shipping via Shipcloud business rates: who should I contact if my parcel has been damaged?](http://support.shipcloud.io/en/articles/6064090-shipping-via-shipcloud-business-rates-who-should-i-contact-if-my-parcel-has-been-damaged.md): Learn how to report damaged parcels shipped via Shipcloud rates, including deadlines, required documents and carrier-specific steps.
+- [I’m receiving an authentication error with UPS](http://support.shipcloud.io/en/articles/12629437-i-m-receiving-an-authentication-error-with-ups.md): Re-authenticate your UPS account in Shipcloud to renew an expired token and restore shipping label creation with your own UPS contract.
+
+### Shipping FAQs
+
+- [Can I use my shipping carrier contract with Shipcloud?](http://support.shipcloud.io/en/articles/2644903-can-i-use-my-shipping-carrier-contract-with-shipcloud.md): Learn how to connect your own carrier contracts to Shipcloud and ship using your negotiated rates, services and shipping conditions.
+- [Which countries can I ship to?](http://support.shipcloud.io/en/articles/2648225-which-countries-can-i-ship-to.md): Find out which countries you can ship to with Shipcloud and what to consider when sending parcels outside the European Union \(EU\).
+- [From which countries can I use Shipcloud?](http://support.shipcloud.io/en/articles/3191054-from-which-countries-can-i-use-shipcloud.md): Learn how to use Shipcloud for shipping outside Germany and discover which carriers are available by country with your own contract.
+- [Where can I find an overview of the \(additional\) services integrated by Shipcloud?](http://support.shipcloud.io/en/articles/2644234-where-can-i-find-an-overview-of-the-additional-services-integrated-by-shipcloud.md): Find an overview of all shipping methods, additional services and carrier integrations available through Shipcloud.
+- [Can I book an additional insurance for my parcels?](http://support.shipcloud.io/en/articles/2647409-can-i-book-an-additional-insurance-for-my-parcels.md): Learn when additional parcel insurance is available, which carriers support it, and how to book declared value coverage via Shipcloud.
+- [What do I have to keep in mind regarding customs?](http://support.shipcloud.io/en/articles/2648252-what-do-i-have-to-keep-in-mind-regarding-customs.md): Learn which customs documents are required for dutiable shipments and how to create customs declarations and invoices with Shipcloud.
+- [How to arrange a new pick up with UPS?](http://support.shipcloud.io/en/articles/9526249-how-to-arrange-a-new-pick-up-with-ups.md): Learn how to schedule a new UPS pickup, track collection status, and ensure successful parcel collection after a missed UPS pickup.
+
+## Deutsch
+
+### Aktuelle News von Shipcloud 
+
+- [Brexit: Was Sie beim Versand in das Vereinigte Königreich als Online-Händler wissen müssen](http://support.shipcloud.io/de/articles/5063021-brexit-was-sie-beim-versand-in-das-vereinigte-konigreich-als-online-handler-wissen-mussen.md)
+- [Einlieferungsfristen 2025 für Ihre Weihnachtspakete](http://support.shipcloud.io/de/articles/3512485-einlieferungsfristen-2025-fur-ihre-weihnachtspakete.md): Lieferfristen 2025 für die Zustellung bis Weihnachten mit DHL, DPD, UPS, GLS & Hermes
+- [Neue Bestimmungen für den internationalen Versand in Drittländer mit DHL](http://support.shipcloud.io/de/articles/4670492-neue-bestimmungen-fur-den-internationalen-versand-in-drittlander-mit-dhl.md): Übergabe der zollrelevanten Informationen wird Pflicht
+
+### Starten Sie jetzt mit Shipcloud
+
+- [Kann ich Shipcloud kostenlos testen?](http://support.shipcloud.io/de/articles/2644164-kann-ich-shipcloud-kostenlos-testen.md): Gibt es auch ein Abrechnungsmodell ohne monatliche Nutzungsgebühr?
+- [Warum muss ich meine Zahlungsdaten bei der Aktivierung des Abonnements angeben?](http://support.shipcloud.io/de/articles/2644890-warum-muss-ich-meine-zahlungsdaten-bei-der-aktivierung-des-abonnements-angeben.md)
+- [Einfache Integration](http://support.shipcloud.io/de/articles/3693231-einfache-integration.md): Schnelle Anbindung an 130 Shop-, ERP-, WaWi-, Marktplatz-, Kassen- und Fulfillment-Systemen
+- [Account-Einrichtung mit unserem Onboarding-Leitfaden](http://support.shipcloud.io/de/articles/3030258-account-einrichtung-mit-unserem-onboarding-leitfaden.md): So können Sie Ihren Shipcloud Account schnell und einfach einrichten
+- [1. Schritt: Abo wählen und Account aktivieren](http://support.shipcloud.io/de/articles/3328043-1-schritt-abo-wahlen-und-account-aktivieren.md): Hier erfahren Sie, wie Sie sich erfolgreich bei Shipcloud registrieren und anschließend Ihren Account aktivieren.
+- [2. Schritt: Vervollständigen Sie Ihre Account-Einstellungen](http://support.shipcloud.io/de/articles/4356503-2-schritt-vervollstandigen-sie-ihre-account-einstellungen.md): 2. Schritt: Account-Einstellungen \(Inhalte: Design, Benachrichtigung, API-Key, Label Formate, auf die Artikel für Design und Retourenportal verweisen + Videos von Leonie\)
+- [Wie kann ich Shipcloud kontaktieren?](http://support.shipcloud.io/de/articles/2750967-wie-kann-ich-shipcloud-kontaktieren.md): Sie haben Fragen? Wir sind gerne für Sie da.
+
+### Integration & Plug-ins
+
+- [Wie kann ich Shipcloud an mein eigenes Shop-, ERP- oder Warenwirtschaftssystem anbinden?](http://support.shipcloud.io/de/articles/2643782-wie-kann-ich-shipcloud-an-mein-eigenes-shop-erp-oder-warenwirtschaftssystem-anbinden.md)
+- [Kann ich meine API Keys für mehr als eine Website bzw. einen Shop verwenden?](http://support.shipcloud.io/de/articles/2643791-kann-ich-meine-api-keys-fur-mehr-als-eine-website-bzw-einen-shop-verwenden.md): So können Sie Sendungen für unterschiedliche Shops bzw. Domains erstellen
+- [Kann ich Shipcloud auch mit einem Marktplatz wie eBay oder Amazon verbinden?](http://support.shipcloud.io/de/articles/3619443-kann-ich-shipcloud-auch-mit-einem-marktplatz-wie-ebay-oder-amazon-verbinden.md)
+- [Ich habe eine technische Frage zur Integration der Shipcloud API](http://support.shipcloud.io/de/articles/3048966-ich-habe-eine-technische-frage-zur-integration-der-shipcloud-api.md)
+- [Wo kann ich mich als Entwickler registrieren?](http://support.shipcloud.io/de/articles/2644183-wo-kann-ich-mich-als-entwickler-registrieren.md)
+- [Wo finde ich Informationen zur Integration in eine Ruby-basierte Webanwendung?](http://support.shipcloud.io/de/articles/2643784-wo-finde-ich-informationen-zur-integration-in-eine-ruby-basierte-webanwendung.md)
+- [Gibt es ein Plug-in für meinen Shop oder eine Bibliothek für meine Programmiersprache?](http://support.shipcloud.io/de/articles/2643771-gibt-es-ein-plug-in-fur-meinen-shop-oder-eine-bibliothek-fur-meine-programmiersprache.md): So erhalten Sie einen Überblick über die angebundenen Shop-, ERP- und Warenwirtschaftssysteme
+- [1. Konfigurieren Sie das Shipcloud Modul für Gambio](http://support.shipcloud.io/de/articles/6287049-1-konfigurieren-sie-das-shipcloud-modul-fur-gambio.md): So verbinden Sie Shipcloud mit Gambio
+- [2. Erstellen Sie eine Versandmarke in Gambio](http://support.shipcloud.io/de/articles/6287707-2-erstellen-sie-eine-versandmarke-in-gambio.md): So erzeugen Sie mit Shipcloud Versandlabels in Gambio
+- [1. Konfigurieren Sie die Shipcloud App für Shopify](http://support.shipcloud.io/de/articles/5802831-1-konfigurieren-sie-die-shipcloud-app-fur-shopify.md): So verbinden Sie Shipcloud mit Shopify
+- [2. Erstellen Sie eine Versandmarke in Shopify](http://support.shipcloud.io/de/articles/5814981-2-erstellen-sie-eine-versandmarke-in-shopify.md): So erzeugen Sie mit shipcloud Versandlabels in Shopify
+- [1. Konfigurieren Sie den Shipcloud Connector für Shopware 5](http://support.shipcloud.io/de/articles/5738149-1-konfigurieren-sie-den-shipcloud-connector-fur-shopware-5.md): So verbinden Sie Shipcloud mit Shopware 5
+- [2. Erstellen Sie eine Versandmarke in Shopware 5](http://support.shipcloud.io/de/articles/5785319-2-erstellen-sie-eine-versandmarke-in-shopware-5.md): So erzeugen Sie mit Shipcloud Versandlabels in Shopware 5
+- [3. Einstellungen für die Erstellung von Zolldokumenten in Shopware 5](http://support.shipcloud.io/de/articles/5789514-3-einstellungen-fur-die-erstellung-von-zolldokumenten-in-shopware-5.md): Zollinhaltserklärung mit dem Shipcloud Connector für Shopware 5
+- [1. Konfigurieren Sie den Shipcloud Connector für Shopware 6](http://support.shipcloud.io/de/articles/6423204-1-konfigurieren-sie-den-shipcloud-connector-fur-shopware-6.md): So verbinden Sie Shipcloud mit Shopware 6
+- [2. Erstellen Sie eine Versandmarke in Shopware 6](http://support.shipcloud.io/de/articles/6432594-2-erstellen-sie-eine-versandmarke-in-shopware-6.md): So erzeugen Sie mit Shipcloud Versandlabels in Shopware 6
+- [3. Einstellungen für die Erstellung von Zolldokumenten in Shopware 6](http://support.shipcloud.io/de/articles/6435345-3-einstellungen-fur-die-erstellung-von-zolldokumenten-in-shopware-6.md): Zollinhaltserklärung mit dem Shipcloud Connector für Shopware 6
+- [1. Konfigurieren Sie Ihr Shipcloud Plug-in für WooCommerce \[Version 1.0\]](http://support.shipcloud.io/de/articles/4835142-1-konfigurieren-sie-ihr-shipcloud-plug-in-fur-woocommerce-version-1-0.md): So verbinden Sie Shipcloud mit WooCommerce
+- [2. Versandeinrichtung in WooCommerce \[Version 1.0\]](http://support.shipcloud.io/de/articles/5081599-2-versandeinrichtung-in-woocommerce-version-1-0.md): Versandzonen und Paketvorlagen
+- [3. Erstellen Sie eine Versandmarke in WooCommerce \[Version 1.0\]](http://support.shipcloud.io/de/articles/4840774-3-erstellen-sie-eine-versandmarke-in-woocommerce-version-1-0.md): So erstellen Sie Versandmarken in WooCommerce
+- [1. Konfigurieren Sie Ihr Shipcloud Plug-in für WooCommerce \[Version 2.0\]](http://support.shipcloud.io/de/articles/6104090-1-konfigurieren-sie-ihr-shipcloud-plug-in-fur-woocommerce-version-2-0.md): So verbinden Sie Shipcloud mit WooCommerce
+- [2. Versandeinstellungen in WooCommerce \[Version 2.0\]](http://support.shipcloud.io/de/articles/6120748-2-versandeinstellungen-in-woocommerce-version-2-0.md): Versandzonen und Paketvorlagen
+- [3. Erstellen Sie eine Versandmarke in WooCommerce \[Version 2.0\]](http://support.shipcloud.io/de/articles/6120656-3-erstellen-sie-eine-versandmarke-in-woocommerce-version-2-0.md): So buchen Sie mit Shipcloud Versandlabels in WooCommerce
+
+### Shipcloud Abo & Account
+
+- [Wie lang ist die Vertragslaufzeit?](http://support.shipcloud.io/de/articles/2644952-wie-lang-ist-die-vertragslaufzeit.md): Kündigungsfrist für Standard Shipcloud Abonnements
+- [Welche Versanddienstleister stehen mir zur Verfügung?](http://support.shipcloud.io/de/articles/2644896-welche-versanddienstleister-stehen-mir-zur-verfugung.md)
+- [Kann ich mein Abonnement zu einem späteren Zeitpunkt ändern?](http://support.shipcloud.io/de/articles/2644923-kann-ich-mein-abonnement-zu-einem-spateren-zeitpunkt-andern.md): So können Sie Ihren Shipcloud Account hoch- oder runterstufen \(Up-/Downgrade\)
+- [Wie verändert sich die Kündigungsfrist bei einem Upgrade/Downgrade?](http://support.shipcloud.io/de/articles/2644954-wie-verandert-sich-die-kundigungsfrist-bei-einem-upgrade-downgrade.md)
+- [Ich habe mich registriert, kann mich aber nicht einloggen.](http://support.shipcloud.io/de/articles/2644908-ich-habe-mich-registriert-kann-mich-aber-nicht-einloggen.md): So können Sie sich nach der Registrierung in Ihrem Shipcloud Account anmelden
+- [Ich habe mein Passwort vergessen. Wie kann ich ein neues erstellen?](http://support.shipcloud.io/de/articles/2647312-ich-habe-mein-passwort-vergessen-wie-kann-ich-ein-neues-erstellen.md)
+- [Kann die Sprache des Shipcloud Accounts auch umgestellt werden?](http://support.shipcloud.io/de/articles/2644814-kann-die-sprache-des-shipcloud-accounts-auch-umgestellt-werden.md)
+- [Wie kann ich meine Kundendaten ändern?](http://support.shipcloud.io/de/articles/2644926-wie-kann-ich-meine-kundendaten-andern.md)
+- [Mein Account wurde gesperrt, ich kann mich nicht mehr anmelden.](http://support.shipcloud.io/de/articles/2644936-mein-account-wurde-gesperrt-ich-kann-mich-nicht-mehr-anmelden.md)
+
+### Kosten & Abrechnung
+
+- [Welche Gebühren und Kosten fallen bei der Nutzung von Shipcloud an?](http://support.shipcloud.io/de/articles/2644824-welche-gebuhren-und-kosten-fallen-bei-der-nutzung-von-shipcloud-an.md)
+- [Gibt es eine Einrichtungsgebühr bei Shipcloud?](http://support.shipcloud.io/de/articles/2644820-gibt-es-eine-einrichtungsgebuhr-bei-shipcloud.md): So finden Sie heraus, welche Set-up-Kosten bei der Shipcloud Anbindung entstehen.
+- [Welche weiteren Kosten können anfallen?](http://support.shipcloud.io/de/articles/2644845-welche-weiteren-kosten-konnen-anfallen.md): Shipcloud Gebührentabelle
+- [Welche Zahlungsarten bietet Shipcloud an?](http://support.shipcloud.io/de/articles/2644838-welche-zahlungsarten-bietet-shipcloud-an.md): Diese Zahlungsmethoden sind verfügbar
+- [Wann werden die von mir erstellten Versandmarken abgerechnet?](http://support.shipcloud.io/de/articles/2644835-wann-werden-die-von-mir-erstellten-versandmarken-abgerechnet.md): So erstellen Sie kostenpflichtige Paketmarken oder bereiten Versandlabels zunächst vor
+- [Kann ich meine bisherigen Rechnungen noch einmal einsehen/herunterladen?](http://support.shipcloud.io/de/articles/2644860-kann-ich-meine-bisherigen-rechnungen-noch-einmal-einsehen-herunterladen.md)
+- [Wie kann ich meine Rechnungsadresse ändern?](http://support.shipcloud.io/de/articles/2644873-wie-kann-ich-meine-rechnungsadresse-andern.md)
+- [Wie kann ich meine Zahlungsdaten ändern?](http://support.shipcloud.io/de/articles/2644843-wie-kann-ich-meine-zahlungsdaten-andern.md)
+- [Mir wurden mit meiner Rechnung zusätzliche Kosten berechnet. Woher kommen diese?](http://support.shipcloud.io/de/articles/2644857-mir-wurden-mit-meiner-rechnung-zusatzliche-kosten-berechnet-woher-kommen-diese.md)
+- [Wie und wann werden Zuschläge berechnet?](http://support.shipcloud.io/de/articles/8915529-wie-und-wann-werden-zuschlage-berechnet.md)
+
+### Shipcloud Funktionen \[SEND | TRACK | RETURN\]
+
+- [Shipcloud Sandbox: Testumgebung](http://support.shipcloud.io/de/articles/4444448-shipcloud-sandbox-testumgebung.md): Testen, konfigurieren oder ändern Sie Ihre Einstellungen während der Versand weiterläuft.
+- [Individuelle Design-Einstellungen in Shipcloud](http://support.shipcloud.io/de/articles/3505155-individuelle-design-einstellungen-in-shipcloud.md): Retourenportal, Tracking-Seite und Tracking-E-Mails im eigenen Design
+- [Versandmarken und Sendungsverfolgung im eigenen Design](http://support.shipcloud.io/de/articles/2648284-versandmarken-und-sendungsverfolgung-im-eigenen-design.md)
+- [Wo hinterlege ich meine Versandadresse?](http://support.shipcloud.io/de/articles/2697681-wo-hinterlege-ich-meine-versandadresse.md)
+- [In welchem Format stehen die Versandmarken zur Verfügung?](http://support.shipcloud.io/de/articles/2647372-in-welchem-format-stehen-die-versandmarken-zur-verfugung.md): Welche Druckeinstellungen können Sie empfehlen?
+- [Die Zeichenlängen der Felder Firma, Vorname und Nachname reichen nicht aus/sind zu kurz.](http://support.shipcloud.io/de/articles/2647366-die-zeichenlangen-der-felder-firma-vorname-und-nachname-reichen-nicht-aus-sind-zu-kurz.md)
+- [Wie kann ich bereits erzeugte Versandmarken stornieren bzw. löschen?](http://support.shipcloud.io/de/articles/2647371-wie-kann-ich-bereits-erzeugte-versandmarken-stornieren-bzw-loschen.md)
+- [Wie beauftrage ich eine Abholung?](http://support.shipcloud.io/de/articles/2648106-wie-beauftrage-ich-eine-abholung.md): So beauftragen Sie eine einmalige Abholung für Ihre Standard-Pakete
+- [Wie beauftrage ich eine Abholung für Express-Sendungen?](http://support.shipcloud.io/de/articles/2648109-wie-beauftrage-ich-eine-abholung-fur-express-sendungen.md)
+- [Welche Adresse wird als Abholadresse genutzt?](http://support.shipcloud.io/de/articles/2648115-welche-adresse-wird-als-abholadresse-genutzt.md): Sind abweichende Abholadressen möglich?
+- [Fallen zusätzliche Kosten für die Abholung meiner Pakete an?](http://support.shipcloud.io/de/articles/2648120-fallen-zusatzliche-kosten-fur-die-abholung-meiner-pakete-an.md): Kostenfreie Abholungen beim Versand über Shipcloud Konditionen
+- [Wie erstelle ich eine Lade- bzw. eine Tagesabschlussliste?](http://support.shipcloud.io/de/articles/2648261-wie-erstelle-ich-eine-lade-bzw-eine-tagesabschlussliste.md)
+- [Ich kann keine Versandmarken mehr erstellen und erhalte eine Fehlermeldung.](http://support.shipcloud.io/de/articles/2668699-ich-kann-keine-versandmarken-mehr-erstellen-und-erhalte-eine-fehlermeldung.md)
+- [Tipps zur Erstellung einer Zollinhaltserklärung \(CN23/CN22\) mit Shipcloud](http://support.shipcloud.io/de/articles/4500638-tipps-zur-erstellung-einer-zollinhaltserklarung-cn23-cn22-mit-shipcloud.md): So erstellen Sie eine Zolldeklaration für Ihre zollpflichtigen Sendungen
+- [Mehrpaketsendung mit eigenem UPS-Vertrag](http://support.shipcloud.io/de/articles/9969590-mehrpaketsendung-mit-eigenem-ups-vertrag.md)
+- [Wie kann der Paketempfänger sein Paket verfolgen / tracken?](http://support.shipcloud.io/de/articles/2648265-wie-kann-der-paketempfanger-sein-paket-verfolgen-tracken.md)
+- [Wie kann ich die E-Mail-Benachrichtigungen für meine Kunden konfigurieren?](http://support.shipcloud.io/de/articles/2648271-wie-kann-ich-die-e-mail-benachrichtigungen-fur-meine-kunden-konfigurieren.md)
+- [Wie kann ich mein Paket verfolgen / tracken?](http://support.shipcloud.io/de/articles/2648269-wie-kann-ich-mein-paket-verfolgen-tracken.md)
+- [Kann ich meine verschickten Pakete je nach Status filtern?](http://support.shipcloud.io/de/articles/2648256-kann-ich-meine-verschickten-pakete-je-nach-status-filtern.md)
+- [Sendungsinformationen via WebHooks](http://support.shipcloud.io/de/articles/2648286-sendungsinformationen-via-webhooks.md)
+- [Individuelle Einstellungen für Ihre Sendungsverfolgung](http://support.shipcloud.io/de/articles/3505393-individuelle-einstellungen-fur-ihre-sendungsverfolgung.md): Mehrsprachige Tracking-Seiten und Benachrichtigungen
+- [Wie kann ich mit Shipcloud Retouren erstellen?](http://support.shipcloud.io/de/articles/2648291-wie-kann-ich-mit-shipcloud-retouren-erstellen.md): So erstellen Sie Rücksendungen mit Shipcloud
+- [Shipcloud Retourenportal](http://support.shipcloud.io/de/articles/2679029-shipcloud-retourenportal.md): Funktionen und Verfügbarkeit
+- [Hilfreiche Tipps zur Einrichtung des Retourenportals](http://support.shipcloud.io/de/articles/2679063-hilfreiche-tipps-zur-einrichtung-des-retourenportals.md): Einfaches Retourenmanagement für DHL, DPD und UPS
+
+### Inkludierte Versanddienstleister für einen schnellen Versandstart
+
+- [DHL: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/2658501-dhl-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+- [DHL: Versand über Shipcloud Konditionen](http://support.shipcloud.io/de/articles/2658527-dhl-versand-uber-shipcloud-konditionen.md): DHL Services und Versandbedingungen über Shipcloud Konditionen
+- [DHL: Maximalmaße und -gewicht, Zuschläge und zusätzliche Gebühre](http://support.shipcloud.io/de/articles/5510491-dhl-maximalmasse-und-gewicht-zuschlage-und-zusatzliche-gebuhre.md): DHL Versandbedingungen und mögliche zusätzliche Kosten
+- [DHL: Peak Season-Zuschläge 2026](http://support.shipcloud.io/de/articles/6868109-dhl-peak-season-zuschlage-2026.md): DHL Peak Season-Zuschläge in der Weihnachtszeit
+- [DHL: Verfügbare Zusatzservices beim Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2658710-dhl-verfugbare-zusatzservices-beim-versand-mit-eigenem-vertrag.md): Diese DHL Zusatzservices können Sie mit eigenem Vertrag in Verbindung mit Shipcloud nutzen
+- [DHL: Aktivierung der DHL Online Retoure für den Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/3741832-dhl-aktivierung-der-dhl-online-retoure-fur-den-versand-mit-eigenem-vertrag.md): So aktivieren Sie die DHL Online Retoure im DHL Geschäftskundenportal
+- [DHL: QR-Code Retoure für den Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/4259941-dhl-qr-code-retoure-fur-den-versand-mit-eigenem-vertrag.md): So können Sie Ihren Kunden eine papierlose Retoure anbieten
+- [DHL: Klimaneutraler Versand mit GoGreen](http://support.shipcloud.io/de/articles/4998880-dhl-klimaneutraler-versand-mit-gogreen.md): So können Sie DHL GoGreen mit Ihrem eigenen DHL Vertrag nutzen
+- [DHL: Kleinpaket \(ehem. Warenpost National\) und Warenpost International](http://support.shipcloud.io/de/articles/6307371-dhl-kleinpaket-ehem-warenpost-national-und-warenpost-international.md): Schnelle, günstige und flexible DHL Versandmethode für kleine Waren
+- [DHL: Versand an eine Packstation](http://support.shipcloud.io/de/articles/2658716-dhl-versand-an-eine-packstation.md): So versenden Sie Ihre Pakete an DHL Packstationen
+- [DHL: Versand in ein Nicht-EU-Land](http://support.shipcloud.io/de/articles/2658723-dhl-versand-in-ein-nicht-eu-land.md): Zolldokumente erstellen mit Shipcloud
+- [DHL: Sendungsverfolgung mit eigenem DHL-Vertrag bei Shipcloud](http://support.shipcloud.io/de/articles/11513005-dhl-sendungsverfolgung-mit-eigenem-dhl-vertrag-bei-shipcloud.md): So aktivieren Sie die Sendungsverfolgung für DHL Sendungen über Ihre eigenen Verträge.
+- [DHL: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2658529-dhl-versand-mit-eigenem-vertrag.md): So hinterlegen Sie Ihren eigenen DHL Vertrag in Shipcloud
+- [DPD Web Connect und DPD iloxx: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/2707797-dpd-web-connect-und-dpd-iloxx-uberblick-uber-die-anbindung-mit-shipcloud.md): Verfügbare Schnittstellen, Versandarten und Zusatzservices
+- [DPD iloxx: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/3142015-dpd-iloxx-versand-mit-eigenem-vertrag.md): So können Sie mit Shipcloud Ihren eigenen DPD \(iloxx\) Vertrag nutzen
+- [DPD Web Connect: Versand über Shipcloud Konditionen](http://support.shipcloud.io/de/articles/2707835-dpd-web-connect-versand-uber-shipcloud-konditionen.md): DPD Versandarten, Zusatzservices und Versandbedingungen
+- [DPD Web Connect: Maximalmaße und -gewicht, Zuschläge und zusätzliche Gebühren](http://support.shipcloud.io/de/articles/5126814-dpd-web-connect-maximalmasse-und-gewicht-zuschlage-und-zusatzliche-gebuhren.md): DPD Versandbedingungen und mögliche zusätzliche Kosten
+- [DPD Web Connect: Peak Season-Zuschläge 2026](http://support.shipcloud.io/de/articles/6611659-dpd-web-connect-peak-season-zuschlage-2026.md): DPD Peak Season-Zuschläge in der Vorweihnachtszeit
+- [DPD Web Connect: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2707858-dpd-web-connect-versand-mit-eigenem-vertrag.md): So hinterlegen Sie Ihren DPD \(Web Connect\) Vertrag in Shipcloud
+- [DPD Web Connect: Verfügbare Zusatzservices beim Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2707865-dpd-web-connect-verfugbare-zusatzservices-beim-versand-mit-eigenem-vertrag.md): Diese DPD Zusatzservices können Sie mit eigenem Vertrag in Verbindung mit Shipcloud nutzen
+- [DPD: Versand in ein Nicht-EU-Land](http://support.shipcloud.io/de/articles/2707875-dpd-versand-in-ein-nicht-eu-land.md)
+- [UPS: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/2658734-ups-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte UPS Versandarten und Zusatzservices
+- [UPS: Versand über Shipcloud Konditionen](http://support.shipcloud.io/de/articles/2658756-ups-versand-uber-shipcloud-konditionen.md): UPS Services und Versandbedingungen über Shipcloud Konditionen
+- [UPS: Maximalmaße und -gewicht, Zuschläge und zusätzliche Gebühren](http://support.shipcloud.io/de/articles/5505390-ups-maximalmasse-und-gewicht-zuschlage-und-zusatzliche-gebuhren.md): UPS Versandbedingungen und mögliche zusätzliche Kosten
+- [UPS: Demand-Zuschläge für die Peak Season 2026](http://support.shipcloud.io/de/articles/4533049-ups-demand-zuschlage-fur-die-peak-season-2026.md): Temporäre nachfragebedingte und saisonale UPS Zuschläge
+- [UPS: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2658761-ups-versand-mit-eigenem-vertrag.md): So hinterlegen Sie Ihren eigenen UPS Vertrag in shipcloud
+- [UPS: Verfügbare Zusatzservices beim Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2658776-ups-verfugbare-zusatzservices-beim-versand-mit-eigenem-vertrag.md): Diese Zusatzleistungen können Sie mit eigenem Vertrag mit Shipcloud nutzen
+- [UPS: Alkoholversand mit Shipcloud](http://support.shipcloud.io/de/articles/6171893-ups-alkoholversand-mit-shipcloud.md): Das müssen Sie beim Versand von Alkoholika mit UPS in Verbindung mit Shipcloud beachten
+- [UPS: Handelsrechnung für zollpflichtige Hin- und Rücksendungen](http://support.shipcloud.io/de/articles/2658780-ups-handelsrechnung-fur-zollpflichtige-hin-und-rucksendungen.md): Handelsrechnung für den Versand in ein Nicht-EU-Land und die Rückführung unzustellbarer, zollpflichtiger Sendungen
+- [UPS: Incoterms und UPS Billing Options für den internationalen Versand](http://support.shipcloud.io/de/articles/6370931-ups-incoterms-und-ups-billing-options-fur-den-internationalen-versand.md): Diese Incoterms und Billing Options können Sie mit Shipcloud an UPS übergeben
+- [ANGEL: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/6619243-angel-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+- [ANGEL: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/3211796-angel-versand-mit-eigenem-vertrag.md): So können Sie mit shipcloud Ihre eigenen Geschäftskundenkonditionen nutzen
+- [Asendia: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/5977752-asendia-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+- [Asendia: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/5978182-asendia-versand-mit-eigenem-vertrag.md): So hinterlegen Sie Ihren Asendia Vertrag bei Shipcloud
+- [Asendia: Verfügbare Zusatzservices für den Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/5978970-asendia-verfugbare-zusatzservices-fur-den-versand-mit-eigenem-vertrag.md): Diese Zusatzleistungen können Sie mit eigenem Asendia Vertrag mit Shipcloud nutzen
+- [Asendia: Internationaler und zollpflichtiger Versand in ein Nicht-EU-Land](http://support.shipcloud.io/de/articles/5979003-asendia-internationaler-und-zollpflichtiger-versand-in-ein-nicht-eu-land.md): Incoterms und Zollinhaltserklärung \(CN22/CN23\) mit Shipcloud
+- [Cargo International: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/6620461-cargo-international-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+- [Cargo International: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/3206716-cargo-international-versand-mit-eigenem-vertrag.md): So können Sie mit Shipcloud Ihre eigenen Cargo International Geschäftskonditionen nutzen
+- [Deutsche Post: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/6620592-deutsche-post-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Labelformate
+- [Deutsche Post: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2710666-deutsche-post-versand-mit-eigenem-vertrag.md): So können Sie Ihre eigenen Geschäftskundenkonditionen mit Shipcloud nutzen
+- [Deutsche Post: Versand an eine Packstation](http://support.shipcloud.io/de/articles/2711752-deutsche-post-versand-an-eine-packstation.md)
+- [DHL Express: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/6620666-dhl-express-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+- [DHL Express: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2714412-dhl-express-versand-mit-eigenem-vertrag.md): So können Sie Ihre eigenen DHL Express Geschäftskundenkonditionen mit Shipcloud nutzen
+- [GLS: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/2785587-gls-uberblick-uber-die-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+- [GLS: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2785647-gls-versand-mit-eigenem-vertrag.md): So hinterlegen Sie Ihren GLS Vertrag in Shipcloud
+- [GLS: Verfügbare Zusatzservices für den Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2785689-gls-verfugbare-zusatzservices-fur-den-versand-mit-eigenem-vertrag.md): Integrierte Zusatzleistungen für GLS
+- [GLS: QR-Code Retoure für den Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/5511846-gls-qr-code-retoure-fur-den-versand-mit-eigenem-vertrag.md): So können Sie Ihren Kunden eine papierlose Retoure anbieten
+- [GLS: Internationaler und zollpflichtiger Versand](http://support.shipcloud.io/de/articles/2785697-gls-internationaler-und-zollpflichtiger-versand.md): Übergabe von Incoterms an GLS mit Shipcloud
+- [Hermes: Überblick über die Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/2783530-hermes-uberblick-uber-die-anbindung-mit-shipcloud.md)
+- [Hermes: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/2785558-hermes-versand-mit-eigenem-vertrag.md): So hinterlegen Sie Ihren Hermes Vertrag bei Shipcloud
+- [Hermes: Verfügbare Zusatzservices für den Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/5598553-hermes-verfugbare-zusatzservices-fur-den-versand-mit-eigenem-vertrag.md): Diese Hermes Zusatzservices können Sie mit eigenem Vertrag in Verbindung mit Shipcloud nutzen
+- [PARCEL.ONE: Versand mit eigenem Vertrag](http://support.shipcloud.io/de/articles/3142424-parcel-one-versand-mit-eigenem-vertrag.md): Alles rund um die Hinterlegung Ihres PARCEL.ONE Vertrages in Shipcloud und die integrierten Versandarten und Zusatzleistungen.
+- [PARCEL.ONE: Einlieferung Ihrer Pakete](http://support.shipcloud.io/de/articles/3142439-parcel-one-einlieferung-ihrer-pakete.md): So funktioniert der Cross-Border Versand mit PARCEL.ONE
+
+### Zusätzliche Versanddienstleister auf Anfrage
+
+- [Österreichische Post \(Post AT\): Überblick über Anbindung mit Shipcloud](http://support.shipcloud.io/de/articles/6865554-osterreichische-post-post-at-uberblick-uber-anbindung-mit-shipcloud.md): Integrierte Versandarten und Zusatzservices
+
+### Versand über Shipcloud Konditionen
+
+- [Wissenswertes rund um Ihren Versand über Shipcloud Konditionen](http://support.shipcloud.io/de/articles/5989167-wissenswertes-rund-um-ihren-versand-uber-shipcloud-konditionen.md): Versandbedingungen und Ihre Vorteile beim Versand über unsere Geschäftskundenkonditionen
+- [Kann ich meine Pakete auch in einem Paketshop abgeben?](http://support.shipcloud.io/de/articles/2648123-kann-ich-meine-pakete-auch-in-einem-paketshop-abgeben.md): So liefern Sie Ihre Pakete beim Versand über Shipcloud Konditionen in Paketshops und Postfilialen ein
+- [Sind Regelabholungen möglich?](http://support.shipcloud.io/de/articles/5778857-sind-regelabholungen-moglich.md): Bedingungen für die Einrichtung einer DPD Regelabholung über Shipcloud Konditionen
+- [Wer ist der Vertragspartner bei der Lieferung?](http://support.shipcloud.io/de/articles/2647320-wer-ist-der-vertragspartner-bei-der-lieferung.md): Shipcloud als Unterfrachtführer bei Ihrem Versand über Shipcloud Konditionen
+- [Sind die Pakete national und international versichert?](http://support.shipcloud.io/de/articles/2647375-sind-die-pakete-national-und-international-versichert.md): Transportversicherung und Haftungsgrenzen beim Versand über Shipcloud Konditionen
+- [Welche maximalen Paketmaße und Gewichtsbeschränkungen habe ich zu beachten?](http://support.shipcloud.io/de/articles/2647339-welche-maximalen-paketmasse-und-gewichtsbeschrankungen-habe-ich-zu-beachten.md): Maximalmaße und -gewichte beim Versand über Shipcloud Konditionen
+- [Kann ich Gefahrgut via Shipcloud versenden?](http://support.shipcloud.io/de/articles/3692594-kann-ich-gefahrgut-via-shipcloud-versenden.md)
+- [Zollkosten und Abrechnung beim Versand in ein Nicht-EU-Land](http://support.shipcloud.io/de/articles/5759450-zollkosten-und-abrechnung-beim-versand-in-ein-nicht-eu-land.md): Zollabrechnung und Rechnungsversand beim Versand über Shipcloud Konditionen
+- [Wie kann ich bereits erstellte Versandlabel stornieren?](http://support.shipcloud.io/de/articles/2652008-wie-kann-ich-bereits-erstellte-versandlabel-stornieren.md): Alle wichtigen Informationen rund um die Stornierung von Versandlabels
+- [Wo finde ich eine Preisliste für die Versandmarken?](http://support.shipcloud.io/de/articles/2644226-wo-finde-ich-eine-preisliste-fur-die-versandmarken.md): Versandraten für DHL, DPD und UPS über die Preisauskunft im Shipcloud-Account
+- [Wie lassen sich die Preise für Versandmarken ermitteln?](http://support.shipcloud.io/de/articles/2647355-wie-lassen-sich-die-preise-fur-versandmarken-ermitteln.md): Versandmarkenpreise im Shipcloud Account
+- [Wie berechnen sich die Kosten der Versanddienstleister und wann wird das Volumengewicht herangezogen?](http://support.shipcloud.io/de/articles/2647324-wie-berechnen-sich-die-kosten-der-versanddienstleister-und-wann-wird-das-volumengewicht-herangezogen.md): Berechnungsgrundlagen für Versandkosten und Frachtraten
+
+### Probleme beim Versand 
+
+- [An wen muss ich mich wenden, wenn mein Paket nicht auffindbar ist?](http://support.shipcloud.io/de/articles/2648297-an-wen-muss-ich-mich-wenden-wenn-mein-paket-nicht-auffindbar-ist.md): So starten Sie eine Laufzeitbeschwerde oder Nachforschung nach einem fehlenden Paket beim Versand über Shipcloud Konditionen
+- [An wen muss ich mich wenden, wenn mein Paket beschädigt wurde?](http://support.shipcloud.io/de/articles/6064090-an-wen-muss-ich-mich-wenden-wenn-mein-paket-beschadigt-wurde.md): Schadensanzeige: So melden Sie einen Schaden beim Versand über Shipcloud Konditionen
+- [Ich erhalte einen Authentifizierungsfehler mit UPS](http://support.shipcloud.io/de/articles/12629437-ich-erhalte-einen-authentifizierungsfehler-mit-ups.md): Versand über eigene UPS Konditionen
+
+### Versand-FAQs
+
+- [Kann ich meinen Versanddienstleistervertrag mit Shipcloud nutzen?](http://support.shipcloud.io/de/articles/2644903-kann-ich-meinen-versanddienstleistervertrag-mit-shipcloud-nutzen.md): So versenden Sie mit Shipcloud über Ihre eigenen Geschäftskundenkonditionen
+- [In welche Länder kann ich versenden?](http://support.shipcloud.io/de/articles/2648225-in-welche-lander-kann-ich-versenden.md): Verfügbare Empfangsländer beim Versand über Shipcloud
+- [Aus welchen Ländern kann ich Shipcloud nutzen?](http://support.shipcloud.io/de/articles/3191054-aus-welchen-landern-kann-ich-shipcloud-nutzen.md): Versand aus dem Ausland
+- [Wo finde ich eine Übersicht über die von Shipcloud integrierten \(Zusatz-\) Services?](http://support.shipcloud.io/de/articles/2644234-wo-finde-ich-eine-ubersicht-uber-die-von-shipcloud-integrierten-zusatz-services.md): So finden Sie heraus, welche Versandmethoden und Zusatzservices Shipcloud unterstützt
+- [Kann ich meine Pakete auch höherversichern?](http://support.shipcloud.io/de/articles/2647409-kann-ich-meine-pakete-auch-hoherversichern.md): So buchen Sie eine Höherversicherung für Ihre Pakete
+- [Was habe ich beim Thema Zoll zu beachten?](http://support.shipcloud.io/de/articles/2648252-was-habe-ich-beim-thema-zoll-zu-beachten.md): Erstellen Sie Ihre Zolldokumente mit Shipcloud
+- [Wie beauftrage ich eine erneute Abholung mit UPS?](http://support.shipcloud.io/de/articles/9526249-wie-beauftrage-ich-eine-erneute-abholung-mit-ups.md): Schritt-für-Schritt Anleitung für die Beauftragung einer Abholung von UPS
+
+## Español
+
+### Starten Sie jetzt mit Shipcloud
+
+- [Configuración de la cuenta con nuestra guía de incorporación](http://support.shipcloud.io/es/articles/3030258-configuracion-de-la-cuenta-con-nuestra-guia-de-incorporacion.md): Cómo configurar su cuenta Shipcloud de forma rápida y sencilla
+- [Paso 1: Elige tu suscripción y activa tu cuenta](http://support.shipcloud.io/es/articles/3328043-paso-1-elige-tu-suscripcion-y-activa-tu-cuenta.md)
+
+### Shipcloud Abo & Account
+
+- [¿Qué transportistas puedo utilizar?](http://support.shipcloud.io/es/articles/2644896-que-transportistas-puedo-utilizar.md)
+- [¿Puedo cambiar mi suscripción más adelante?](http://support.shipcloud.io/es/articles/2644923-puedo-cambiar-mi-suscripcion-mas-adelante.md): Cómo actualizar o reducir tu cuenta de Shipcloud
+- [Si actualizo o reduzco mi plan de precios actual, ¿afectará al período de preaviso?](http://support.shipcloud.io/es/articles/2644954-si-actualizo-o-reduzco-mi-plan-de-precios-actual-afectara-al-periodo-de-preaviso.md)
+- [Ya me registré, pero no puedo iniciar sesión](http://support.shipcloud.io/es/articles/2644908-ya-me-registre-pero-no-puedo-iniciar-sesion.md)
+- [He olvidado mi contraseña](http://support.shipcloud.io/es/articles/2647312-he-olvidado-mi-contrasena.md)
+- [¿Puedo cambiar el idioma de mi cuenta Shipcloud?](http://support.shipcloud.io/es/articles/2644814-puedo-cambiar-el-idioma-de-mi-cuenta-shipcloud.md)
+- [¿Cómo puedo cambiar mis datos de cliente?](http://support.shipcloud.io/es/articles/2644926-como-puedo-cambiar-mis-datos-de-cliente.md)
+- [Mi cuenta ha sido bloqueada, ya no puedo iniciar sesión.](http://support.shipcloud.io/es/articles/2644936-mi-cuenta-ha-sido-bloqueada-ya-no-puedo-iniciar-sesion.md)
+
+### Kosten & Abrechnung
+
+- [¿Cuáles son los costes por usar Shipcloud?](http://support.shipcloud.io/es/articles/2644824-cuales-son-los-costes-por-usar-shipcloud.md)
+- [¿Hay una tarifa de configuración en Shipcloud?](http://support.shipcloud.io/es/articles/2644820-hay-una-tarifa-de-configuracion-en-shipcloud.md)
+- [¿Qué otros costes pueden surgir?](http://support.shipcloud.io/es/articles/2644845-que-otros-costes-pueden-surgir.md)
+- [¿Qué métodos de pago puedo utilizar con Shipcloud?](http://support.shipcloud.io/es/articles/2644838-que-metodos-de-pago-puedo-utilizar-con-shipcloud.md): Opciones de pago disponibles
+- [¿Cuándo se me facturarán las etiquetas de envío?](http://support.shipcloud.io/es/articles/2644835-cuando-se-me-facturaran-las-etiquetas-de-envio.md): Cómo crear etiquetas de paquetes con cargo o preparar primero las etiquetas de envío
+- [¿Puedo revisar o descargar facturas anteriores?](http://support.shipcloud.io/es/articles/2644860-puedo-revisar-o-descargar-facturas-anteriores.md)
+- [¿Cómo cambio mi dirección de facturación?](http://support.shipcloud.io/es/articles/2644873-como-cambio-mi-direccion-de-facturacion.md)
+- [¿Cómo puedo cambiar mi método de pago?](http://support.shipcloud.io/es/articles/2644843-como-puedo-cambiar-mi-metodo-de-pago.md)
+- [¿Por qué aparecen cargos adicionales en mi factura?](http://support.shipcloud.io/es/articles/2644857-por-que-aparecen-cargos-adicionales-en-mi-factura.md)
+- [¿Cómo y cuándo se calculan los recargos?](http://support.shipcloud.io/es/articles/8915529-como-y-cuando-se-calculan-los-recargos.md)
+
+### Shipcloud Funktionen \[SEND | TRACK | RETURN\]
+
+- [Shipcloud Sandbox: entorno de pruebas](http://support.shipcloud.io/es/articles/4444448-shipcloud-sandbox-entorno-de-pruebas.md): Prueba, configura o modifica tus ajustes mientras el envío en producción continúa funcionando.
+- [Configuración de diseño individual en Shipcloud](http://support.shipcloud.io/es/articles/3505155-configuracion-de-diseno-individual-en-shipcloud.md): Portal de devoluciones, página de seguimiento y correos electrónicos de seguimiento con tu propio diseño
+- [¿Cómo puedo personalizar mis etiquetas de envío y el seguimiento para que se ajusten al diseño de mi tienda online?](http://support.shipcloud.io/es/articles/2648284-como-puedo-personalizar-mis-etiquetas-de-envio-y-el-seguimiento-para-que-se-ajusten-al-diseno-de-mi-tienda-online.md)
+- [¿Dónde puedo agregar mi dirección de envío?](http://support.shipcloud.io/es/articles/2697681-donde-puedo-agregar-mi-direccion-de-envio.md)
+- [¿En qué formato están disponibles las etiquetas de envío?](http://support.shipcloud.io/es/articles/2647372-en-que-formato-estan-disponibles-las-etiquetas-de-envio.md)
+- [¿Por qué no hay suficiente espacio en los campos de "Empresa", "Nombre" y "Apellido"?](http://support.shipcloud.io/es/articles/2647366-por-que-no-hay-suficiente-espacio-en-los-campos-de-empresa-nombre-y-apellido.md)
+- [¿Cómo puedo cancelar etiquetas de envío que ya he creado?](http://support.shipcloud.io/es/articles/2647371-como-puedo-cancelar-etiquetas-de-envio-que-ya-he-creado.md)
+- [How do I request a pickup?](http://support.shipcloud.io/es/articles/2648106-how-do-i-request-a-pickup.md)
+- [¿Cómo solicito una recogida para envíos exprés?](http://support.shipcloud.io/es/articles/2648109-como-solicito-una-recogida-para-envios-expres.md)
+- [¿Qué dirección se utilizará como dirección de recogida?](http://support.shipcloud.io/es/articles/2648115-que-direccion-se-utilizara-como-direccion-de-recogida.md): ¿Es posible tener varias direcciones de recogida?
+- [¿Hay cargos adicionales por recogidas y recolecciones?](http://support.shipcloud.io/es/articles/2648120-hay-cargos-adicionales-por-recogidas-y-recolecciones.md)
+- [¿Puedo crear una lista de mis envíos al final de cada día?](http://support.shipcloud.io/es/articles/2648261-puedo-crear-una-lista-de-mis-envios-al-final-de-cada-dia.md)
+- [Ya no puedo crear etiquetas de envío y recibo un mensaje de error.](http://support.shipcloud.io/es/articles/2668699-ya-no-puedo-crear-etiquetas-de-envio-y-recibo-un-mensaje-de-error.md)
+- [Consejos para crear una declaración de aduanas \(CN22/CN23\) con Shipcloud](http://support.shipcloud.io/es/articles/4500638-consejos-para-crear-una-declaracion-de-aduanas-cn22-cn23-con-shipcloud.md): Cómo crear una declaración de aduanas para tus envíos sujetos a impuestos
+- [Envío multipaquete con su propio contrato UPS](http://support.shipcloud.io/es/articles/9969590-envio-multipaquete-con-su-propio-contrato-ups.md)
+- [¿Cómo pueden los destinatarios de paquetes rastrear sus envíos?](http://support.shipcloud.io/es/articles/2648265-como-pueden-los-destinatarios-de-paquetes-rastrear-sus-envios.md)
+- [¿Cómo puedo configurar las notificaciones por correo electrónico para mis clientes?](http://support.shipcloud.io/es/articles/2648271-como-puedo-configurar-las-notificaciones-por-correo-electronico-para-mis-clientes.md)
+- [¿Cómo puedo rastrear un paquete?](http://support.shipcloud.io/es/articles/2648269-como-puedo-rastrear-un-paquete.md)
+- [¿Cómo te ayudan los webhooks a responder automáticamente a los eventos de Shipcloud?](http://support.shipcloud.io/es/articles/2648286-como-te-ayudan-los-webhooks-a-responder-automaticamente-a-los-eventos-de-shipcloud.md)
+- [Ajustes individuales para tu seguimiento](http://support.shipcloud.io/es/articles/3505393-ajustes-individuales-para-tu-seguimiento.md): Páginas de seguimiento y correos electrónicos de seguimiento multilingües
+- [¿Cómo puedo crear devoluciones con Shipcloud?](http://support.shipcloud.io/es/articles/2648291-como-puedo-crear-devoluciones-con-shipcloud.md)
+- [Portal de Devoluciones de Shipcloud](http://support.shipcloud.io/es/articles/2679029-portal-de-devoluciones-de-shipcloud.md)
+
+### Inkludierte Versanddienstleister für einen schnellen Versandstart
+
+- [DHL: Resumen de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/2658501-dhl-resumen-de-la-conexion-con-shipcloud.md)
+- [DHL: Envío a través de tarifas comerciales de Shipcloud](http://support.shipcloud.io/es/articles/2658527-dhl-envio-a-traves-de-tarifas-comerciales-de-shipcloud.md)
+- [DHL: Dimensiones y peso máximos, recargos y tarifas adicionales](http://support.shipcloud.io/es/articles/5510491-dhl-dimensiones-y-peso-maximos-recargos-y-tarifas-adicionales.md)
+- [DHL: Servicios adicionales disponibles para envíos con tu propio contrato de transportista](http://support.shipcloud.io/es/articles/2658710-dhl-servicios-adicionales-disponibles-para-envios-con-tu-propio-contrato-de-transportista.md)
+- [DHL: Cómo activar la devolución online de DHL al enviar con tu propio contrato de transportista](http://support.shipcloud.io/es/articles/3741832-dhl-como-activar-la-devolucion-online-de-dhl-al-enviar-con-tu-propio-contrato-de-transportista.md)
+- [DHL: Devolución con código QR para envíos mediante tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/4259941-dhl-devolucion-con-codigo-qr-para-envios-mediante-tu-propio-contrato-con-el-transportista.md)
+- [DHL: Envío climáticamente neutro con GoGreen](http://support.shipcloud.io/es/articles/4998880-dhl-envio-climaticamente-neutro-con-gogreen.md): Cómo puedes utilizar el servicio adicional GoGreen con tu propio contrato DHL
+- [DHL: Kleinpaket \(anteriormente Warenpost\) y Warenpost International](http://support.shipcloud.io/es/articles/6307371-dhl-kleinpaket-anteriormente-warenpost-y-warenpost-international.md)
+- [DHL: Envíos a una Packstation de DHL](http://support.shipcloud.io/es/articles/2658716-dhl-envios-a-una-packstation-de-dhl.md)
+- [DHL: Envío a un país fuera de la UE](http://support.shipcloud.io/es/articles/2658723-dhl-envio-a-un-pais-fuera-de-la-ue.md)
+- [DHL: Seguimiento de envíos con tu propio contrato DHL](http://support.shipcloud.io/es/articles/11513005-dhl-seguimiento-de-envios-con-tu-propio-contrato-dhl.md): Cómo activar el seguimiento de envíos para DHL utilizando tus propios contratos.
+- [DHL: Envíos mediante tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/2658529-dhl-envios-mediante-tu-propio-contrato-con-el-transportista.md)
+- [DPD iloxx: Envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/3142015-dpd-iloxx-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Cómo utilizar tus tarifas comerciales de DPD \(iloxx\) con Shipcloud
+- [DPD Web Connect: Envíos con tarifas comerciales de Shipcloud](http://support.shipcloud.io/es/articles/2707835-dpd-web-connect-envios-con-tarifas-comerciales-de-shipcloud.md): Métodos de envío de DPD, servicios adicionales y condiciones de envío
+- [DPD Web Connect: Dimensiones y peso máximos, recargos y tarifas adicionales](http://support.shipcloud.io/es/articles/5126814-dpd-web-connect-dimensiones-y-peso-maximos-recargos-y-tarifas-adicionales.md): Condiciones de envío de DPD y posibles recargos
+- [DPD Web Connect: Envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/2707858-dpd-web-connect-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Cómo almacenar tu contrato de DPD \(Web Connect\) en Shipcloud
+- [DPD: Envíos a un país fuera de la UE](http://support.shipcloud.io/es/articles/2707875-dpd-envios-a-un-pais-fuera-de-la-ue.md)
+- [UPS: Visión general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/2658734-ups-vision-general-de-la-conexion-con-shipcloud.md): Métodos de envío UPS integrados y servicios adicionales
+- [UPS: Envíos a través de las tarifas comerciales de Shipcloud](http://support.shipcloud.io/es/articles/2658756-ups-envios-a-traves-de-las-tarifas-comerciales-de-shipcloud.md): Servicios de UPS y condiciones de envío mediante las tarifas comerciales de Shipcloud
+- [UPS: Envío utilizando tu propio contrato de transportista](http://support.shipcloud.io/es/articles/2658761-ups-envio-utilizando-tu-propio-contrato-de-transportista.md)
+- [UPS: Servicios adicionales disponibles para el envío a través de su propio contrato de transportista](http://support.shipcloud.io/es/articles/2658776-ups-servicios-adicionales-disponibles-para-el-envio-a-traves-de-su-propio-contrato-de-transportista.md): Servicios adicionales de UPS que puedes usar con tu propio contrato en relación con Shipcloud
+- [UPS: Envío de bebidas alcohólicas con Shipcloud](http://support.shipcloud.io/es/articles/6171893-ups-envio-de-bebidas-alcoholicas-con-shipcloud.md): Cosas a considerar al enviar bebidas alcohólicas con UPS en relación con Shipcloud
+- [UPS: Factura comercial para envíos de salida gravables y devoluciones](http://support.shipcloud.io/es/articles/2658780-ups-factura-comercial-para-envios-de-salida-gravables-y-devoluciones.md): Factura comercial para envíos a un país fuera de la UE y la devolución de paquetes gravables no entregables
+- [UPS: Incoterms y opciones de facturación de UPS para envíos internacionales](http://support.shipcloud.io/es/articles/6370931-ups-incoterms-y-opciones-de-facturacion-de-ups-para-envios-internacionales.md): Puedes utilizar estos Incoterms y opciones de facturación de UPS con Shipcloud
+- [ANGEL: Descripción general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/6619243-angel-descripcion-general-de-la-conexion-con-shipcloud.md): Métodos de envío integrados y servicios adicionales
+- [ANGEL: Envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/3211796-angel-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Cómo usar tus propias condiciones de cliente empresarial con Shipcloud
+- [Asendia: Descripción general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/5977752-asendia-descripcion-general-de-la-conexion-con-shipcloud.md): Métodos de envío integrados y servicios adicionales
+- [Asendia: Envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/5978182-asendia-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Cómo conectar tu cuenta Asendia con Shipcloud
+- [Asendia: Servicios adicionales disponibles para envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/5978970-asendia-servicios-adicionales-disponibles-para-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Puedes usar estos servicios adicionales con tu propio contrato Asendia a través de Shipcloud.
+- [Asendia: Envíos internacionales y sujetos a arancel a un país fuera de la UE](http://support.shipcloud.io/es/articles/5979003-asendia-envios-internacionales-y-sujetos-a-arancel-a-un-pais-fuera-de-la-ue.md): Incoterms y declaración aduanera simplificada \(CN22/CN23\)
+- [Cargo International: Descripción general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/6620461-cargo-international-descripcion-general-de-la-conexion-con-shipcloud.md): Métodos de envío integrados y servicios adicionales
+- [Cargo International: Envíos mediante tu propio contrato de transportista](http://support.shipcloud.io/es/articles/3206716-cargo-international-envios-mediante-tu-propio-contrato-de-transportista.md)
+- [Deutsche Post: Descripción general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/6620592-deutsche-post-descripcion-general-de-la-conexion-con-shipcloud.md): Métodos de envío integrados y formatos de etiquetas
+- [Deutsche Post: Envíos mediante tu propio contrato de transportista](http://support.shipcloud.io/es/articles/2710666-deutsche-post-envios-mediante-tu-propio-contrato-de-transportista.md): Cómo usar tus tarifas comerciales de Deutsche Post con Shipcloud
+- [Deutsche Post: Envíos a una DHL Packstation](http://support.shipcloud.io/es/articles/2711752-deutsche-post-envios-a-una-dhl-packstation.md)
+- [DHL Express: Visión general de la conexión con Shipcloud.](http://support.shipcloud.io/es/articles/6620666-dhl-express-vision-general-de-la-conexion-con-shipcloud.md)
+- [DHL Express: Envío a través de tu propio contrato de transporte](http://support.shipcloud.io/es/articles/2714412-dhl-express-envio-a-traves-de-tu-propio-contrato-de-transporte.md): Cómo utilizar su propio contrato de cliente comercial de DHL Express con Shipcloud
+- [GLS: Descripción general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/2785587-gls-descripcion-general-de-la-conexion-con-shipcloud.md): Métodos de envío integrados y servicios adicionales
+- [GLS: Envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/2785647-gls-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Cómo almacenar tu contrato GLS en Shipcloud
+- [GLS: Servicios adicionales disponibles para envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/2785689-gls-servicios-adicionales-disponibles-para-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Servicios adicionales integrados para GLS
+- [GLS: Devolución con código QR para envíos con tu propio contrato de transportista](http://support.shipcloud.io/es/articles/5511846-gls-devolucion-con-codigo-qr-para-envios-con-tu-propio-contrato-de-transportista.md): Cómo puedes ofrecer devoluciones sin papel a tus clientes
+- [GLS: Envíos internacionales y con derechos de aduana](http://support.shipcloud.io/es/articles/2785697-gls-envios-internacionales-y-con-derechos-de-aduana.md): Transferencia de incoterms a GLS con Shipcloud
+- [Hermes: Descripción general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/2783530-hermes-descripcion-general-de-la-conexion-con-shipcloud.md)
+- [Hermes: Envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/2785558-hermes-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md): Cómo almacenar tu propio contrato de Hermes en Shipcloud
+- [Hermes: Servicios adicionales disponibles para envíos a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/5598553-hermes-servicios-adicionales-disponibles-para-envios-a-traves-de-tu-propio-contrato-con-el-transportista.md)
+- [PARCEL.ONE: Envío a través de tu propio contrato con el transportista](http://support.shipcloud.io/es/articles/3142424-parcel-one-envio-a-traves-de-tu-propio-contrato-con-el-transportista.md)
+- [PARCEL.ONE: Entrega de paquetes](http://support.shipcloud.io/es/articles/3142439-parcel-one-entrega-de-paquetes.md): Así es como funciona el envío transfronterizo con PARCEL.ONE
+
+### Zusätzliche Versanddienstleister auf Anfrage
+
+- [Österreichische Post: Visión general de la conexión con Shipcloud](http://support.shipcloud.io/es/articles/6865554-osterreichische-post-vision-general-de-la-conexion-con-shipcloud.md)
+
+### Versand über Shipcloud Konditionen
+
+- [Cosas que debes saber sobre tus envíos a través de las tarifas empresariales de Shipcloud](http://support.shipcloud.io/es/articles/5989167-cosas-que-debes-saber-sobre-tus-envios-a-traves-de-las-tarifas-empresariales-de-shipcloud.md): Condiciones de envío y tus ventajas al enviar mediante nuestras tarifas empresariales
+- [¿Puedo dejar mis paquetes en un punto de recogida?](http://support.shipcloud.io/es/articles/2648123-puedo-dejar-mis-paquetes-en-un-punto-de-recogida.md)
+- [Envío con tarifas comerciales de Shipcloud: ¿es posible programar recogidas regulares?](http://support.shipcloud.io/es/articles/5778857-envio-con-tarifas-comerciales-de-shipcloud-es-posible-programar-recogidas-regulares.md)
+- [Envío con tarifas comerciales de Shipcloud: ¿quién es el socio contractual para los envíos?](http://support.shipcloud.io/es/articles/2647320-envio-con-tarifas-comerciales-de-shipcloud-quien-es-el-socio-contractual-para-los-envios.md)
+- [Envío con tarifas comerciales de Shipcloud: ¿los paquetes están asegurados a nivel nacional e internacional?](http://support.shipcloud.io/es/articles/2647375-envio-con-tarifas-comerciales-de-shipcloud-los-paquetes-estan-asegurados-a-nivel-nacional-e-internacional.md)
+- [Envíos con las tarifas empresariales de Shipcloud: ¿cuáles son las dimensiones y peso máximos permitidos?](http://support.shipcloud.io/es/articles/2647339-envios-con-las-tarifas-empresariales-de-shipcloud-cuales-son-las-dimensiones-y-peso-maximos-permitidos.md)
+- [¿Puedo enviar mercancías peligrosas a través de Shipcloud?](http://support.shipcloud.io/es/articles/3692594-puedo-enviar-mercancias-peligrosas-a-traves-de-shipcloud.md)
+- [Envío con tarifas empresariales de Shipcloud: cargos aduaneros y facturación al enviar a un país fuera de la UE](http://support.shipcloud.io/es/articles/5759450-envio-con-tarifas-empresariales-de-shipcloud-cargos-aduaneros-y-facturacion-al-enviar-a-un-pais-fuera-de-la-ue.md)
+- [Envíos a través de las tarifas comerciales de Shipcloud: ¿dónde puedo encontrar una lista de precios para las etiquetas de envío?](http://support.shipcloud.io/es/articles/2644226-envios-a-traves-de-las-tarifas-comerciales-de-shipcloud-donde-puedo-encontrar-una-lista-de-precios-para-las-etiquetas-de-envio.md)
+- [Envíos a través de las tarifas comerciales de Shipcloud: ¿cómo puedo encontrar los precios de las etiquetas de envío?](http://support.shipcloud.io/es/articles/2647355-envios-a-traves-de-las-tarifas-comerciales-de-shipcloud-como-puedo-encontrar-los-precios-de-las-etiquetas-de-envio.md)
+- [Envío a través de las tarifas comerciales de Shipcloud: ¿cómo calculan los transportistas los costes de envío y cuándo se utiliza el peso volumétrico?](http://support.shipcloud.io/es/articles/2647324-envio-a-traves-de-las-tarifas-comerciales-de-shipcloud-como-calculan-los-transportistas-los-costes-de-envio-y-cuando-se-utiliza-el-peso-volumetrico.md)
+
+### Probleme beim Versand 
+
+- [¿Con quién puedo contactar si se pierde un paquete? \(Investigación\)](http://support.shipcloud.io/es/articles/2648297-con-quien-puedo-contactar-si-se-pierde-un-paquete-investigacion.md)
+- [Envíos con tarifas empresariales de Shipcloud: ¿a quién debo contactar si mi paquete ha sufrido daños?](http://support.shipcloud.io/es/articles/6064090-envios-con-tarifas-empresariales-de-shipcloud-a-quien-debo-contactar-si-mi-paquete-ha-sufrido-danos.md)
+- [Estoy recibiendo un error de autenticación con UPS](http://support.shipcloud.io/es/articles/12629437-estoy-recibiendo-un-error-de-autenticacion-con-ups.md): Envíos usando tus propias tarifas de UPS
+
+### Versand-FAQs
+
+- [¿Puedo usar mi contrato de transportista con Shipcloud?](http://support.shipcloud.io/es/articles/2644903-puedo-usar-mi-contrato-de-transportista-con-shipcloud.md)
+- [¿A qué países puedo enviar?](http://support.shipcloud.io/es/articles/2648225-a-que-paises-puedo-enviar.md): Países de destino disponibles al enviar a través de Shipcloud
+- [¿Desde qué países puedo usar Shipcloud?](http://support.shipcloud.io/es/articles/3191054-desde-que-paises-puedo-usar-shipcloud.md): Envíos desde el extranjero
+- [¿Dónde puedo encontrar una visión general de los servicios \(adicionales\) integrados por Shipcloud?](http://support.shipcloud.io/es/articles/2644234-donde-puedo-encontrar-una-vision-general-de-los-servicios-adicionales-integrados-por-shipcloud.md): Cómo saber qué métodos de envío y servicios adicionales admite Shipcloud
+- [¿Puedo contratar un seguro adicional para mis paquetes?](http://support.shipcloud.io/es/articles/2647409-puedo-contratar-un-seguro-adicional-para-mis-paquetes.md)
+- [¿Qué debo tener en cuenta respecto a la aduana?](http://support.shipcloud.io/es/articles/2648252-que-debo-tener-en-cuenta-respecto-a-la-aduana.md): Crea tus documentos aduaneros con Shipcloud
+- [¿Cómo programar una nueva recogida con UPS?](http://support.shipcloud.io/es/articles/9526249-como-programar-una-nueva-recogida-con-ups.md): Guía paso a paso para programar una nueva recogida con UPS

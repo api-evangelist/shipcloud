@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/shipcloud/main/json-schema/shipcloud-pickup-dropoff-location-schema.json",
+  "title": "pickup_dropoff_location",
+  "description": "A single location of a carrier. Includes opening hours, additional properties and (optional) maximum package measurements.",
+  "x-generated": "2026-10-09",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/shipcloud-openapi.yml#/components/schemas/pickup_dropoff_location",
+  "type": "object",
+  "properties": {
+    "carrier_code": {
+      "type": "string"
+    },
+    "service_point_id": {
+      "type": "string"
+    },
+    "name1": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zip_code": {
+      "type": "string"
+    },
+    "street1": {
+      "type": "string"
+    },
+    "house_number": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "distance": {
+      "type": "integer",
+      "description": "Distance in the unit of measure defined in distance_unit_of_measure"
+    },
+    "distance_unit_of_measure": {
+      "type": "string"
+    },
+    "telephone_number": {
+      "type": "string"
+    },
+    "pudo_hours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7,
+            "description": "Days are numbered from 1 to 7 (Monday to Sunday)."
+          },
+          "time_from": {
+            "type": "string"
+          },
+          "time_until": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pudo_additional_properties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "sub_type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pudo_measurements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "unit_of_measure": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

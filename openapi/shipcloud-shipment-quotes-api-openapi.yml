@@ -1,0 +1,431 @@
+openapi: 3.2.0
+info:
+  title: Shipcloud Shipment Quotes API
+  version: '1.0'
+  contact:
+    name: Developer Support
+    email: developers@shipcloud.io
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
+  description: 'Operations tagged Shipment Quotes across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.shipcloud.io/v1
+security:
+- basic_auth: []
+tags:
+- name: Shipment Quotes
+paths:
+  /shipment_quotes:
+    post:
+      description: Find out how much we will charge you for a specific shipment when using shipcloud carrier contracts.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                carrier:
+                  $ref: '#/components/schemas/carrier_shipping'
+                service:
+                  $ref: '#/components/schemas/service'
+                to:
+                  oneOf:
+                  - allOf:
+                    - $ref: '#/components/schemas/address'
+                    - description: the receivers address
+                  - type: object
+                    properties:
+                      id:
+                        type: string
+                        description: id of a receivers address
+                    required:
+                    - id
+                from:
+                  oneOf:
+                  - allOf:
+                    - $ref: '#/components/schemas/address'
+                    - description: the senders address
+                  - type: object
+                    properties:
+                      id:
+                        type: string
+                        description: id of a senders address
+                    required:
+                    - id
+                packages:
+                  type: array
+                  description: array of minimal packages
+                  items:
+                    $ref: '#/components/schemas/package_minimal'
+              required:
+              - carrier
+              - service
+              - to
+              - package
+            examples:
+              Shipment quote request:
+                $ref: '#/components/examples/shipment_quote_request_example'
+              Shipment quote request with multiple packages:
+                $ref: '#/components/examples/shipment_quote_request_with_multiple_packages_example'
+              Shipment quote request using address IDs:
+                $ref: '#/components/examples/shipment_quote_with_address_id_request_example'
+      responses:
+        '200':
+          description: Shipment quote for a single shipment
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  shipment_quote:
+                    type: object
+                    properties:
+                      price:
+                        type: number
+                        description: Price that shipcloud is going to charge you (exl. VAT)
+                    required:
+                    - price
+                required:
+                - shipment_quote
+              examples:
+                Shipment quote response:
+                  $ref: '#/components/examples/shipment_quote_response_example'
+          headers:
+            RateLimit-Limit:
+              $ref: '#/components/headers/RateLimit-Limit'
+            RateLimit-Interval:
+              $ref: '#/components/headers/RateLimit-Interval'
+            RateLimit-Remaining:
+              $ref: '#/components/headers/RateLimit-Remaining'
+            RateLimit-Reset:
+              $ref: '#/components/headers/RateLimit-Reset'
+            X-Request-ID:
+              $ref: '#/components/headers/shicloud-Request-ID'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '402':
+          $ref: '#/components/responses/402'
+        '403':
+          $ref: '#/components/responses/403'
+        '422':
+          $ref: '#/components/responses/422'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Shipment Quotes
+      summary: Create shipment quotes
+      x-summary-source: derived
+      operationId: postShipmentQuotes
+      x-operation-id-source: derived
+    servers:
+    - url: https://api.shipcloud.io/v1
+components:
+  headers:
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+  responses:
+    '422':
+      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '400':
+      description: Your request was not correct. Please see the response body for more detailed information.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  description: Strings that describe, what has gone wrong. We're tunnelling error responses from the carriers. When this is the case, we try to prefix an error with 'The carrier {xyz} returned the following error:'
+                  type: string
+          examples:
+            Single error:
+              value:
+                errors:
+                - simple error message
+            Multiple errors:
+              value:
+                errors:
+                - simple error message
+                - another error message
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  examples:
+    shipment_quote_request_with_multiple_packages_example:
+      value:
+        carrier: ups
+        service: standard
+        to:
+          street: Beispielstrasse
+          street_no: '42'
+          zip_code: '22100'
+          city: Hamburg
+          country: DE
+        from:
+          street: Musterstrasse
+          street_no: '23'
+          zip_code: '20148'
+          city: Hamburg
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+          type: parcel
+        - weight: 3
+          length: 30
+          width: 30
+          height: 30
+          type: parcel
+    shipment_quote_response_example:
+      value:
+        shipment_quote:
+          price: 42.12
+    shipment_quote_request_example:
+      value:
+        carrier: dhl
+        service: standard
+        to:
+          street: Beispielstrasse
+          street_no: '42'
+          zip_code: '22100'
+          city: Hamburg
+          country: DE
+        from:
+          street: Musterstrasse
+          street_no: '23'
+          zip_code: '20148'
+          city: Hamburg
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+    shipment_quote_with_address_id_request_example:
+      value:
+        carrier: dhl
+        service: standard
+        to:
+          id: 522a7cb1-d6c8-418c-ac26-011127ab5bbe
+        from:
+          street: Musterstrasse
+          street_no: '23'
+          zip_code: '20148'
+          city: Hamburg
+          country: DE
+        packages:
+        - weight: 1.5
+          length: 20
+          width: 20
+          height: 20
+  schemas:
+    address:
+      type: object
+      properties:
+        care_of:
+          type:
+          - string
+          - 'null'
+          description: Additional care of field
+        city:
+          type: string
+          description: Name of the city
+        country:
+          type: string
+          description: Country as uppercase ISO 3166-1 alpha-2 code
+        first_name:
+          type:
+          - string
+          - 'null'
+          description: A persons first name
+        state:
+          type:
+          - string
+          - 'null'
+          description: The state the address is in
+        street:
+          type: string
+          description: Name of the street. Can hold the house number
+        street_no:
+          type:
+          - string
+          - 'null'
+          description: House number of the address (when a carrier requires it separately)
+        zip_code:
+          type: string
+          description: Zipcode of the address
+        phone:
+          type: string
+          description: 'Telephone number (mandatory when using UPS and the following terms apply: service is `one_day` or `one_day_early` or ship to country is different than ship from country)'
+        email:
+          type: string
+          description: Email address for this person. Some carrier are using the email address to send notifications
+      required:
+      - street
+      - city
+      - zip_code
+      - country
+    carrier_shipping:
+      type: string
+      enum:
+      - angel_de
+      - asendia
+      - cargo_international
+      - dhl
+      - dhl_express
+      - dpag
+      - dpd
+      - gls
+      - go
+      - hermes
+      - iloxx
+      - parcel_one
+      - ups
+      description: acronym of the carrier
+    package_minimal:
+      type: object
+      properties:
+        height:
+          type: number
+          description: Height of the parcel in cm
+        length:
+          type: number
+          description: Length of the parcel in cm
+        weight:
+          type: number
+          description: Weight of the parcel in kg
+        width:
+          type: number
+          description: Width of the parcel in cm
+      required:
+      - width
+      - height
+      - length
+      - weight
+      description: defines package attributes
+    service:
+      type: string
+      enum:
+      - standard
+      - one_day
+      - one_day_early
+      - returns
+      - asendia_epaq_standard_economy
+      - asendia_epaq_standard_priority
+      - cargo_international_express
+      - dhl_europaket
+      - dhl_prio
+      - dhl_warenpost
+      - dpag_warenpost
+      - dpag_warenpost_signature
+      - dpag_warenpost_untracked
+      - gls_express_0800
+      - gls_express_0900
+      - gls_express_1000
+      - gls_express_1200
+      - ups_express_1200
+      default: standard
+      description: The service that should be used for the shipment.
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find more info at the shipcloud developer portal
+  url: https://developers.shipcloud.io
+x-refined-from:
+- shipcloud_v1_oai3.json
+- shipcloud-openapi.yml

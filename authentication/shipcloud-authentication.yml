@@ -1,0 +1,27 @@
+generated: '2026-10-09'
+method: searched
+source: https://developers.shipcloud.io/concepts/
+docs: https://developers.shipcloud.io/concepts/
+summary:
+  types:
+  - http
+schemes:
+- name: basic_auth
+  type: http
+  scheme: basic
+  description: "Authentication to our API has to be done via HTTP Basic Auth . You'll have to provide your API key as the basic auth username. You don't have to provide a password. Be advised: The API key has to be Base64 encoded."
+  credential: API key as Basic auth username, empty password
+  key_types:
+  - sandbox
+  - live
+  transport: "all API requests must be made using HTTPS"
+  sources:
+  - openapi/shipcloud-openapi.yml
+  - https://developers.shipcloud.io/concepts/
+optional_headers:
+- name: Affiliate-ID
+  note: "To make things easier for our support team we'd kindly ask you to send a custom header with every request you're making ... The headers key is Affiliate-ID ."
+  source: https://developers.shipcloud.io/integrations/
+webhook_auth:
+  note: Webhook receivers can be secured with basic authorization (username and optional password supplied when creating the webhook); added 2022-03-22 per the API changelog.
+  source: https://developers.shipcloud.io/concepts/
