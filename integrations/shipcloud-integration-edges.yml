@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/shipcloud/integrations
+- https://n8n.io/integrations/shipcloud/
+- https://composio.dev/toolkits/shipcloud
+- https://monid.ai/tools/shipcloud
+checked:
+- https://composio.dev/toolkits/shipcloud
+- https://monid.ai/tools/shipcloud
+- https://n8n.io/integrations/shipcloud/
+- https://zapier.com/apps/shipcloud/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
