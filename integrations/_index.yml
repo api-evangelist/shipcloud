@@ -18,7 +18,25 @@
     value: dhl
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
+  status: not-a-workflow
+  arazzo: null
+- slug: shipcloud-dpd
+  label: dpd
+  partner: dpd-group
+  partner_name: dpd
+  type: contract
+  channel: provider-built
+  evidence: https://github.com/api-evangelist/shipcloud/blob/main/openapi/shipcloud-carriers-api-openapi.yml
+  source: edge
+  relationship: carrier-coverage
+  contract_reference:
+    repo: shipcloud
+    spec_file: shipcloud-carriers-api-openapi.yml
+    value: dpd
+    property: components.schemas.carrier_shipping
+    detected_by: detect-carrier-edges.py
+    detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null
 - slug: shipcloud-gls
@@ -36,7 +54,7 @@
     value: gls
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null
 - slug: shipcloud-ups
@@ -54,6 +72,6 @@
     value: ups
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null

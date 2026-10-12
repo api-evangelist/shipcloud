@@ -22,14 +22,31 @@ edges:
   relationship: carrier-coverage
   evidence: https://github.com/api-evangelist/shipcloud/blob/main/openapi/shipcloud-carriers-api-openapi.yml
   detected_by: detect-carrier-edges.py
-  first_seen: '2026-10-12'
+  first_seen: '2026-10-13'
   contract_reference:
     repo: shipcloud
     spec_file: shipcloud-carriers-api-openapi.yml
     value: dhl
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
+- partner_name: dpd
+  partner: dpd-group
+  partner_match: alias
+  channel: provider-built
+  direction: provider-built
+  type: contract
+  relationship: carrier-coverage
+  evidence: https://github.com/api-evangelist/shipcloud/blob/main/openapi/shipcloud-carriers-api-openapi.yml
+  detected_by: detect-carrier-edges.py
+  first_seen: '2026-10-13'
+  contract_reference:
+    repo: shipcloud
+    spec_file: shipcloud-carriers-api-openapi.yml
+    value: dpd
+    property: components.schemas.carrier_shipping
+    detected_by: detect-carrier-edges.py
+    detected: '2026-10-13'
 - partner_name: gls
   partner: gls-group
   partner_match: alias
@@ -39,14 +56,14 @@ edges:
   relationship: carrier-coverage
   evidence: https://github.com/api-evangelist/shipcloud/blob/main/openapi/shipcloud-carriers-api-openapi.yml
   detected_by: detect-carrier-edges.py
-  first_seen: '2026-10-12'
+  first_seen: '2026-10-13'
   contract_reference:
     repo: shipcloud
     spec_file: shipcloud-carriers-api-openapi.yml
     value: gls
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
 - partner_name: ups
   partner: ups
   partner_match: alias
@@ -56,12 +73,12 @@ edges:
   relationship: carrier-coverage
   evidence: https://github.com/api-evangelist/shipcloud/blob/main/openapi/shipcloud-carriers-api-openapi.yml
   detected_by: detect-carrier-edges.py
-  first_seen: '2026-10-12'
+  first_seen: '2026-10-13'
   contract_reference:
     repo: shipcloud
     spec_file: shipcloud-carriers-api-openapi.yml
     value: ups
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
 templates: []
