@@ -19,7 +19,7 @@
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
     detected: '2026-10-12'
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: shipcloud-gls
   label: gls
@@ -37,7 +37,7 @@
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
     detected: '2026-10-12'
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: shipcloud-ups
   label: ups
@@ -55,5 +55,5 @@
     property: components.schemas.carrier_shipping
     detected_by: detect-carrier-edges.py
     detected: '2026-10-12'
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
