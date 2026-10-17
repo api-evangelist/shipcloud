@@ -1,12 +1,12 @@
 openapi: 3.2.0
 info:
-  title: Shipcloud Invoice Address API
-  version: '1.0'
+  title: shipcloud.io Invoice Address API
+  description: Everything about the shipcloud api
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
   contact:
     name: Developer Support
     email: developers@shipcloud.io
-  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
-  description: 'Operations tagged Invoice Address across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+  version: '1.0'
 servers:
 - url: https://api.shipcloud.io/v1
 security:
@@ -52,30 +52,7 @@ paths:
       x-summary-source: derived
       operationId: getInvoiceAddress
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
 components:
-  headers:
-    shicloud-Request-ID:
-      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
-      schema:
-        type: string
-    RateLimit-Interval:
-      description: The number of seconds the interval for this user is long (e.g. 60)
-      schema:
-        type: integer
-    RateLimit-Reset:
-      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
-      schema:
-        type: integer
-    RateLimit-Remaining:
-      description: Remaining number of request in the current interval (e.g. 111)
-      schema:
-        type: integer
-    RateLimit-Limit:
-      description: A number that shows the overall limit of requests this user can send (e.g. 120)
-      schema:
-        type: integer
   examples:
     address_with_id_example:
       value:
@@ -93,8 +70,8 @@ components:
         email: max@mustermann.baz
         phone: '+491234567890'
   responses:
-    '402':
-      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
       headers:
         RateLimit-Limit:
           $ref: '#/components/headers/RateLimit-Limit'
@@ -119,8 +96,8 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
-    '500':
-      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
       headers:
         RateLimit-Limit:
           $ref: '#/components/headers/RateLimit-Limit'
@@ -208,6 +185,27 @@ components:
       - city
       - zip_code
       - country
+  headers:
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
   securitySchemes:
     basic_auth:
       type: http
@@ -215,6 +213,3 @@ components:
 externalDocs:
   description: Find more info at the shipcloud developer portal
   url: https://developers.shipcloud.io
-x-refined-from:
-- shipcloud_v1_oai3.json
-- shipcloud-openapi.yml

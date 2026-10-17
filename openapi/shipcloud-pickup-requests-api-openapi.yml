@@ -1,12 +1,12 @@
 openapi: 3.2.0
 info:
-  title: Shipcloud Pickup Requests API
-  version: '1.0'
+  title: shipcloud.io Pickup Requests API
+  description: Everything about the shipcloud api
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
   contact:
     name: Developer Support
     email: developers@shipcloud.io
-  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
-  description: 'Operations tagged Pickup Requests across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+  version: '1.0'
 servers:
 - url: https://api.shipcloud.io/v1
 security:
@@ -126,8 +126,6 @@ paths:
       x-summary-source: derived
       operationId: postPickupRequests
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
   /pickup_requests/{id}:
     parameters:
     - name: id
@@ -175,62 +173,8 @@ paths:
       x-summary-source: derived
       operationId: getPickupRequestsById
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
 components:
   responses:
-    '404':
-      description: The api endpoint or ressource you were trying to reach can't be found.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
-    '422':
-      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
-    '401':
-      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
-    '403':
-      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
     '500':
       description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
       headers:
@@ -277,6 +221,32 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
+    '404':
+      description: The api endpoint or ressource you were trying to reach can't be found.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
     '402':
       description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
       headers:
@@ -290,7 +260,56 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
+    '422':
+      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
   schemas:
+    carrier_pickup:
+      type: string
+      enum:
+      - dpd
+      - hermes
+      - ups
+      description: acronym of the carrier
+    address_with_id:
+      allOf:
+      - $ref: '#/components/schemas/address'
+      - type: object
+        properties:
+          id:
+            type: string
+            description: identifier of a previously created address
+        required:
+        - id
+        - first_name
+        - last_name
+        - company
+        - care_of
+        - state
+        - street_no
     pickup:
       type: object
       description: for some carriers a pickup has to be requested when creating a shipment
@@ -299,52 +318,6 @@ components:
           $ref: '#/components/schemas/pickup_time_object'
         pickup_address:
           $ref: '#/components/schemas/address_with_id'
-    pickup_time_object:
-      type: object
-      properties:
-        earliest:
-          type: string
-          format: date-time
-          description: Earliest pickup date and time
-        latest:
-          type: string
-          format: date-time
-          description: Latest pickup date and time
-      description: defines a time window in which the carrier should pickup shipments
-      required:
-      - earliest
-      - latest
-    pickup_request_object:
-      type: object
-      properties:
-        id:
-          type: string
-          description: shipcloud identifier for this pickup request
-        carrier:
-          allOf:
-          - $ref: '#/components/schemas/carrier_pickup'
-          - description: carrier used for this pickup request
-        carrier_pickup_number:
-          type: string
-          description: Identifier that the carrier uses for this pickup request
-        pickup_time:
-          $ref: '#/components/schemas/pickup_time_object'
-        pickup_address:
-          $ref: '#/components/schemas/address_with_id'
-        shipments:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-                description: id of the shipment included in this pickup request
-          required:
-          - id
-      required:
-      - id
-      - carrier
-      - pickup_time
     address:
       type: object
       properties:
@@ -391,38 +364,53 @@ components:
       - city
       - zip_code
       - country
-    carrier_pickup:
-      type: string
-      enum:
-      - dpd
-      - hermes
-      - ups
-      description: acronym of the carrier
-    address_with_id:
-      allOf:
-      - $ref: '#/components/schemas/address'
-      - type: object
-        properties:
-          id:
-            type: string
-            description: identifier of a previously created address
-        required:
-        - id
-        - first_name
-        - last_name
-        - company
-        - care_of
-        - state
-        - street_no
+    pickup_request_object:
+      type: object
+      properties:
+        id:
+          type: string
+          description: shipcloud identifier for this pickup request
+        carrier:
+          allOf:
+          - $ref: '#/components/schemas/carrier_pickup'
+          - description: carrier used for this pickup request
+        carrier_pickup_number:
+          type: string
+          description: Identifier that the carrier uses for this pickup request
+        pickup_time:
+          $ref: '#/components/schemas/pickup_time_object'
+        pickup_address:
+          $ref: '#/components/schemas/address_with_id'
+        shipments:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                description: id of the shipment included in this pickup request
+          required:
+          - id
+      required:
+      - id
+      - carrier
+      - pickup_time
+    pickup_time_object:
+      type: object
+      properties:
+        earliest:
+          type: string
+          format: date-time
+          description: Earliest pickup date and time
+        latest:
+          type: string
+          format: date-time
+          description: Latest pickup date and time
+      description: defines a time window in which the carrier should pickup shipments
+      required:
+      - earliest
+      - latest
   headers:
-    RateLimit-Interval:
-      description: The number of seconds the interval for this user is long (e.g. 60)
-      schema:
-        type: integer
-    RateLimit-Reset:
-      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
-      schema:
-        type: integer
     RateLimit-Remaining:
       description: Remaining number of request in the current interval (e.g. 111)
       schema:
@@ -431,8 +419,16 @@ components:
       description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
       schema:
         type: string
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
     RateLimit-Limit:
       description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
       schema:
         type: integer
   examples:
@@ -455,54 +451,6 @@ components:
           country: DE
           phone: 555-555
           id: 286daf26-c845-4dba-ae49-75582fbced00
-    pickup_requests_response_example_multiple:
-      value:
-      - id: 123467a6-8e15-4a59-e145-0953f31c1196
-        carrier: ups
-        carrier_pickup_number: 299A80MA91P
-        shipments:
-        - id: 199f803bf82fab79e17654213b61993fa78b0524
-        - id: 3a186c51d4281acbecf5ed38805b1db92a9d668b
-        pickup_time:
-          earliest: '2018-07-30T09:00:00+02:00'
-          latest: '2018-07-30T18:00:00+02:00'
-        pickup_date: 2018/07/30
-        pickup_address:
-          id: 7ea2a290-b456-4ecf-9010-e82b3da298f0
-          company: Apple Inc.
-          first_name: Tim
-          last_name: Cook
-          care_of: null
-          street: Infinite Loop
-          street_no: '1'
-          zip_code: '95014'
-          city: Cupertino
-          state: CA
-          country: US
-          phone: 408-996-1010
-      - id: c28a4ec0-e1ae-47a6-acae-1349ff0da52a
-        carrier: dpd
-        carrier_pickup_number: '9380'
-        shipments:
-        - id: 604681675415e96052cf8fbaba78153a2e6d6bee
-        - id: 11acaa0c4f251aaac4889d5f10329eb1aed80ff2
-        - id: 9a5b91d766a523447c16897f8e20f4d7d06c25ca
-        pickup_time:
-          earliest: '2018-07-30T09:00:00+02:00'
-          latest: '2018-07-30T18:00:00+02:00'
-        pickup_address:
-          id: 286daf26-c845-4dba-ae49-75582fbced00
-          company: Muster-Company
-          first_name: Max
-          last_name: Mustermann
-          care_of: null
-          street: Musterstraße
-          street_no: '42'
-          zip_code: '22457'
-          city: Hamburg
-          state: null
-          country: DE
-          phone: 555-555
     pickup_requests_example_with_shipment_ids:
       value:
         carrier: dpd
@@ -551,6 +499,54 @@ components:
           state: null
           country: DE
           phone: 555-555
+    pickup_requests_response_example_multiple:
+      value:
+      - id: 123467a6-8e15-4a59-e145-0953f31c1196
+        carrier: ups
+        carrier_pickup_number: 299A80MA91P
+        shipments:
+        - id: 199f803bf82fab79e17654213b61993fa78b0524
+        - id: 3a186c51d4281acbecf5ed38805b1db92a9d668b
+        pickup_time:
+          earliest: '2018-07-30T09:00:00+02:00'
+          latest: '2018-07-30T18:00:00+02:00'
+        pickup_date: 2018/07/30
+        pickup_address:
+          id: 7ea2a290-b456-4ecf-9010-e82b3da298f0
+          company: Apple Inc.
+          first_name: Tim
+          last_name: Cook
+          care_of: null
+          street: Infinite Loop
+          street_no: '1'
+          zip_code: '95014'
+          city: Cupertino
+          state: CA
+          country: US
+          phone: 408-996-1010
+      - id: c28a4ec0-e1ae-47a6-acae-1349ff0da52a
+        carrier: dpd
+        carrier_pickup_number: '9380'
+        shipments:
+        - id: 604681675415e96052cf8fbaba78153a2e6d6bee
+        - id: 11acaa0c4f251aaac4889d5f10329eb1aed80ff2
+        - id: 9a5b91d766a523447c16897f8e20f4d7d06c25ca
+        pickup_time:
+          earliest: '2018-07-30T09:00:00+02:00'
+          latest: '2018-07-30T18:00:00+02:00'
+        pickup_address:
+          id: 286daf26-c845-4dba-ae49-75582fbced00
+          company: Muster-Company
+          first_name: Max
+          last_name: Mustermann
+          care_of: null
+          street: Musterstraße
+          street_no: '42'
+          zip_code: '22457'
+          city: Hamburg
+          state: null
+          country: DE
+          phone: 555-555
   securitySchemes:
     basic_auth:
       type: http
@@ -558,6 +554,3 @@ components:
 externalDocs:
   description: Find more info at the shipcloud developer portal
   url: https://developers.shipcloud.io
-x-refined-from:
-- shipcloud_v1_oai3.json
-- shipcloud-openapi.yml

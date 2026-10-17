@@ -1,12 +1,12 @@
 openapi: 3.2.0
 info:
-  title: Shipcloud Addresses API
-  version: '1.0'
+  title: shipcloud.io Addresses API
+  description: Everything about the shipcloud api
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
   contact:
     name: Developer Support
     email: developers@shipcloud.io
-  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
-  description: 'Operations tagged Addresses across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+  version: '1.0'
 servers:
 - url: https://api.shipcloud.io/v1
 security:
@@ -167,8 +167,6 @@ paths:
       x-summary-source: derived
       operationId: postAddresses
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
   /addresses/{id}:
     parameters:
     - name: id
@@ -216,25 +214,51 @@ paths:
       x-summary-source: derived
       operationId: getAddressesById
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
 components:
+  examples:
+    address_with_id_example:
+      value:
+        id: 1c81efb7-9b95-4dd8-92e3-cac1bca3df6f
+        first_name: Max
+        last_name: Mustermann
+        company: null
+        care_of: null
+        street: Musterstraße
+        street_no: '42'
+        zip_code: '12345'
+        city: Musterstadt
+        state: null
+        country: DE
+        email: max@mustermann.baz
+        phone: '+491234567890'
+    list_of_addresses_with_id_example:
+      value:
+      - id: 1c81efb7-9b95-4dd8-92e3-cac1bca3df6f
+        first_name: Max
+        last_name: Mustermann
+        company: null
+        care_of: null
+        street: Musterstraße
+        street_no: '42'
+        zip_code: '12345'
+        city: Musterstadt
+        state: null
+        country: DE
+        email: max@mustermann.baz
+        phone: '+491234567890'
+    address_request_example:
+      value:
+        first_name: Serge
+        last_name: Sender
+        company: Sender Corp.
+        street: Sender Str.
+        street_no: '99'
+        zip_code: '20148'
+        city: Hamburg
+        country: DE
   responses:
-    '404':
-      description: The api endpoint or ressource you were trying to reach can't be found.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
-    '402':
-      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+    '500':
+      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
       headers:
         RateLimit-Limit:
           $ref: '#/components/headers/RateLimit-Limit'
@@ -259,21 +283,8 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
-    '500':
-      description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
-    '401':
-      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+    '422':
+      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
       headers:
         RateLimit-Limit:
           $ref: '#/components/headers/RateLimit-Limit'
@@ -318,8 +329,8 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
-    '422':
-      description: Your request was well-formed but couldn't be followed due to semantic errors. Please see the response body for more detailed information. A possible problem could be that you are not sending all the data that is required or data that is not necessary for this call.
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
       headers:
         RateLimit-Limit:
           $ref: '#/components/headers/RateLimit-Limit'
@@ -331,68 +342,32 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
-  headers:
-    shicloud-Request-ID:
-      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
-      schema:
-        type: string
-    RateLimit-Interval:
-      description: The number of seconds the interval for this user is long (e.g. 60)
-      schema:
-        type: integer
-    RateLimit-Reset:
-      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
-      schema:
-        type: integer
-    RateLimit-Remaining:
-      description: Remaining number of request in the current interval (e.g. 111)
-      schema:
-        type: integer
-    RateLimit-Limit:
-      description: A number that shows the overall limit of requests this user can send (e.g. 120)
-      schema:
-        type: integer
-  examples:
-    list_of_addresses_with_id_example:
-      value:
-      - id: 1c81efb7-9b95-4dd8-92e3-cac1bca3df6f
-        first_name: Max
-        last_name: Mustermann
-        company: null
-        care_of: null
-        street: Musterstraße
-        street_no: '42'
-        zip_code: '12345'
-        city: Musterstadt
-        state: null
-        country: DE
-        email: max@mustermann.baz
-        phone: '+491234567890'
-    address_with_id_example:
-      value:
-        id: 1c81efb7-9b95-4dd8-92e3-cac1bca3df6f
-        first_name: Max
-        last_name: Mustermann
-        company: null
-        care_of: null
-        street: Musterstraße
-        street_no: '42'
-        zip_code: '12345'
-        city: Musterstadt
-        state: null
-        country: DE
-        email: max@mustermann.baz
-        phone: '+491234567890'
-    address_request_example:
-      value:
-        first_name: Serge
-        last_name: Sender
-        company: Sender Corp.
-        street: Sender Str.
-        street_no: '99'
-        zip_code: '20148'
-        city: Hamburg
-        country: DE
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '404':
+      description: The api endpoint or ressource you were trying to reach can't be found.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
   schemas:
     address_with_id:
       allOf:
@@ -456,6 +431,27 @@ components:
       - city
       - zip_code
       - country
+  headers:
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
   securitySchemes:
     basic_auth:
       type: http
@@ -463,6 +459,3 @@ components:
 externalDocs:
   description: Find more info at the shipcloud developer portal
   url: https://developers.shipcloud.io
-x-refined-from:
-- shipcloud_v1_oai3.json
-- shipcloud-openapi.yml

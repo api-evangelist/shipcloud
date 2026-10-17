@@ -1,12 +1,12 @@
 openapi: 3.2.0
 info:
-  title: Shipcloud Manifests API
-  version: '1.0'
+  title: shipcloud.io Manifests API
+  description: Everything about the shipcloud api
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
   contact:
     name: Developer Support
     email: developers@shipcloud.io
-  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
-  description: 'Operations tagged Manifests across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+  version: '1.0'
 servers:
 - url: https://api.shipcloud.io/v1
 security:
@@ -68,8 +68,6 @@ paths:
       x-summary-source: derived
       operationId: postManifests
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
   /manifests/{id}:
     parameters:
     - name: id
@@ -107,20 +105,14 @@ paths:
       x-summary-source: derived
       operationId: getManifestsById
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
 components:
   headers:
-    shicloud-Request-ID:
-      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
-      schema:
-        type: string
-    RateLimit-Reset:
-      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
-      schema:
-        type: integer
     RateLimit-Interval:
       description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
       schema:
         type: integer
     RateLimit-Remaining:
@@ -131,7 +123,32 @@ components:
       description: A number that shows the overall limit of requests this user can send (e.g. 120)
       schema:
         type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
   schemas:
+    manifest:
+      type: object
+      properties:
+        carrier:
+          type: string
+          description: Carrier for whom the maifest should be created
+        posting_hub_address:
+          allOf:
+          - $ref: '#/components/schemas/address'
+          - description: Address of the hub where the shipments will be overturned to the carrier
+        shipments:
+          type: array
+          description: array of shipment IDs that are send using this manifest
+          items: {}
+        reference_number:
+          type: string
+          description: For referencing the manifest at the carrier
+      required:
+      - carrier
+      - posting_hub_address
+      - shipments
     manifest_response:
       allOf:
       - $ref: '#/components/schemas/manifest'
@@ -214,27 +231,6 @@ components:
       - city
       - zip_code
       - country
-    manifest:
-      type: object
-      properties:
-        carrier:
-          type: string
-          description: Carrier for whom the maifest should be created
-        posting_hub_address:
-          allOf:
-          - $ref: '#/components/schemas/address'
-          - description: Address of the hub where the shipments will be overturned to the carrier
-        shipments:
-          type: array
-          description: array of shipment IDs that are send using this manifest
-          items: {}
-        reference_number:
-          type: string
-          description: For referencing the manifest at the carrier
-      required:
-      - carrier
-      - posting_hub_address
-      - shipments
   examples:
     manifest_response_example:
       value:
@@ -270,6 +266,3 @@ components:
 externalDocs:
   description: Find more info at the shipcloud developer portal
   url: https://developers.shipcloud.io
-x-refined-from:
-- shipcloud_v1_oai3.json
-- shipcloud-openapi.yml

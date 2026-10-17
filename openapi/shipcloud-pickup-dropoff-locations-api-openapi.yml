@@ -1,12 +1,12 @@
 openapi: 3.2.0
 info:
-  title: Shipcloud Pickup Dropoff Locations API
-  version: '1.0'
+  title: shipcloud.io Pickup Dropoff Locations API
+  description: Everything about the shipcloud api
+  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
   contact:
     name: Developer Support
     email: developers@shipcloud.io
-  termsOfService: https://www.shipcloud.io/en/terms-and-conditions
-  description: 'Operations tagged Pickup Dropoff Locations across 2 of this provider''s published API definitions: shipcloud_v1_oai3.json, shipcloud-openapi.yml. Each path carries the servers of the definition it was published in.'
+  version: '1.0'
 servers:
 - url: https://api.shipcloud.io/v1
 security:
@@ -178,57 +178,8 @@ paths:
       x-summary-source: derived
       operationId: getPickupDropoffLocations
       x-operation-id-source: derived
-    servers:
-    - url: https://api.shipcloud.io/v1
 components:
-  headers:
-    shicloud-Request-ID:
-      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
-      schema:
-        type: string
-    RateLimit-Interval:
-      description: The number of seconds the interval for this user is long (e.g. 60)
-      schema:
-        type: integer
-    RateLimit-Reset:
-      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
-      schema:
-        type: integer
-    RateLimit-Remaining:
-      description: Remaining number of request in the current interval (e.g. 111)
-      schema:
-        type: integer
-    RateLimit-Limit:
-      description: A number that shows the overall limit of requests this user can send (e.g. 120)
-      schema:
-        type: integer
   responses:
-    '402':
-      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
-    '403':
-      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
-      headers:
-        RateLimit-Limit:
-          $ref: '#/components/headers/RateLimit-Limit'
-        RateLimit-Interval:
-          $ref: '#/components/headers/RateLimit-Interval'
-        RateLimit-Remaining:
-          $ref: '#/components/headers/RateLimit-Remaining'
-        RateLimit-Reset:
-          $ref: '#/components/headers/RateLimit-Reset'
-        X-Request-ID:
-          $ref: '#/components/headers/shicloud-Request-ID'
     '500':
       description: Something has seriously gone wrong. Don't worry, we'll have a look at it. If the error persists, please don't hesitate to contact us by sending us an email containing the `X-Request-ID` header we've returned.
       headers:
@@ -242,8 +193,8 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
-    '401':
-      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+    '403':
+      description: You are not allowed to talk to this endpoint. This can either be due to a wrong authentication or when you're trying to reach an endpoint that your account isn't allowed to access.
       headers:
         RateLimit-Limit:
           $ref: '#/components/headers/RateLimit-Limit'
@@ -288,6 +239,53 @@ components:
           $ref: '#/components/headers/RateLimit-Reset'
         X-Request-ID:
           $ref: '#/components/headers/shicloud-Request-ID'
+    '402':
+      description: You've reached a maximum that is defined in your current plan. Please upgrade to a higher plan.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+    '401':
+      description: Something has gone wrong when authorizing with our API. Please check e.g. if you're trying to use your sandbox api key with an operation that can only be used with a live API key.
+      headers:
+        RateLimit-Limit:
+          $ref: '#/components/headers/RateLimit-Limit'
+        RateLimit-Interval:
+          $ref: '#/components/headers/RateLimit-Interval'
+        RateLimit-Remaining:
+          $ref: '#/components/headers/RateLimit-Remaining'
+        RateLimit-Reset:
+          $ref: '#/components/headers/RateLimit-Reset'
+        X-Request-ID:
+          $ref: '#/components/headers/shicloud-Request-ID'
+  headers:
+    RateLimit-Interval:
+      description: The number of seconds the interval for this user is long (e.g. 60)
+      schema:
+        type: integer
+    RateLimit-Reset:
+      description: The number of seconds that shows when the request rate limit resets (e.g. 42)
+      schema:
+        type: integer
+    RateLimit-Remaining:
+      description: Remaining number of request in the current interval (e.g. 111)
+      schema:
+        type: integer
+    RateLimit-Limit:
+      description: A number that shows the overall limit of requests this user can send (e.g. 120)
+      schema:
+        type: integer
+    shicloud-Request-ID:
+      description: An internal identifier that we generate for every request. If you encounter a problem with your request, please send us this id when opening a support case.
+      schema:
+        type: string
   schemas:
     pickup_dropoff_location:
       type: object
@@ -429,6 +427,3 @@ components:
 externalDocs:
   description: Find more info at the shipcloud developer portal
   url: https://developers.shipcloud.io
-x-refined-from:
-- shipcloud_v1_oai3.json
-- shipcloud-openapi.yml
