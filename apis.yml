@@ -26,6 +26,14 @@ tags:
 - Company
 - Shipping
 - Logistics
+- Carrier
+- Labels
+- Tracking
+- E-Commerce
+tags_raw:
+- Company
+- Shipping
+- Logistics
 - Carriers
 - Labels
 - Tracking
@@ -152,6 +160,8 @@ apis:
   humanURL: https://developers.shipcloud.io/reference/
   baseURL: https://api.shipcloud.io/v1
   tags:
+  - Carrier
+  tags_raw:
   - Carriers
   properties:
   - type: OpenAPI
@@ -310,6 +320,8 @@ apis:
   humanURL: https://developers.shipcloud.io/reference/
   baseURL: https://api.shipcloud.io/v1
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -467,6 +479,8 @@ apis:
   humanURL: https://developers.shipcloud.io/reference/
   baseURL: https://api.shipcloud.io/v1
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
