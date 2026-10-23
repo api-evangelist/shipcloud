@@ -2043,3 +2043,9 @@ components:
 externalDocs:
   description: Find more info at the shipcloud developer portal
   url: https://developers.shipcloud.io
+x-provenance:
+  method: harvested
+  publisher: shipcloud
+  source: https://developers.shipcloud.io/downloads/api/oai/shipcloud_v1_oai3.json
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
